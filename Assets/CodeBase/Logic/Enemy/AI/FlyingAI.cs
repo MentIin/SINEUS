@@ -16,6 +16,7 @@ namespace CodeBase.Logic.Enemy.AI
             if (col != null)
             {
                 Vector2 force = col.transform.position - transform.position;
+                    //print(force);
                 CharacterController2D.ApplyForce(force.normalized * 10);
             }
         }
