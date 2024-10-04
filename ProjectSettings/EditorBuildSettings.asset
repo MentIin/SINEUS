@@ -17,5 +17,8 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/BoostrapScene.unity
     guid: e7187e91f09f0aa4f893e7a027b8e6a0
+  - enabled: 1
+    path: Assets/Scenes/Levels/Level1.unity
+    guid: 3b087b05c3cb74f44bf2a6fff35576f4
   m_configObjects: {}
   m_UseUCBPForAssetBundles: 0

@@ -269,6 +269,46 @@
           </e>
         </e>
         <e p="Plugins" t="Include">
+          <e p="2d-platformer-controller-master" t="Include">
+            <e p="Assets" t="Include">
+              <e p="Input" t="Include">
+                <e p="InputMaster.cs" t="Include" />
+              </e>
+              <e p="Scripts" t="Include">
+                <e p="AreaTrigger.cs" t="Include" />
+                <e p="CameraController.cs" t="Include" />
+                <e p="CharacterController2D.cs" t="Include" />
+                <e p="CharacterData.cs" t="Include" />
+                <e p="CharacterSoundManager.cs" t="Include" />
+                <e p="CheckpointReturnTrigger.cs" t="Include" />
+                <e p="CheckpointSystem.cs" t="Include" />
+                <e p="ChekpointArea.cs" t="Include" />
+                <e p="HazardController.cs" t="Include" />
+                <e p="InteractableObject.cs" t="Include" />
+                <e p="InteractableTrigger.cs" t="Include" />
+                <e p="InteractSystem.cs" t="Include" />
+                <e p="JumpPad.cs" t="Include" />
+                <e p="LogicGateTrigger.cs" t="Include" />
+                <e p="ObjectController2D.cs" t="Include" />
+                <e p="PhysicsConfig.cs" t="Include" />
+                <e p="PickUpObject.cs" t="Include" />
+                <e p="PlatformController.cs" t="Include" />
+                <e p="PlatformWaypoint.cs" t="Include" />
+                <e p="PlayerController.cs" t="Include" />
+                <e p="PowerUp.cs" t="Include" />
+                <e p="StandOnObjectController2D.cs" t="Include" />
+                <e p="Triggerable.cs" t="Include" />
+                <e p="TriggerObject.cs" t="Include" />
+              </e>
+            </e>
+            <e p="Packages" t="Include">
+              <e p="manifest.json" t="Include" />
+              <e p="packages-lock.json" t="Include" />
+            </e>
+            <e p="ProjectSettings" t="Include">
+              <e p="ProjectVersion.txt" t="Include" />
+            </e>
+          </e>
           <e p="Demigiant" t="Include">
             <e p="DOTween" t="Include">
               <e p="Modules" t="Include">
