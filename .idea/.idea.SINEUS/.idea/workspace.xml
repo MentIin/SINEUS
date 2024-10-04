@@ -46,10 +46,6 @@
       <option value="$PROJECT_DIR$/Assets/CodeBase/Logic/Health.cs" />
       <option value="$PROJECT_DIR$/Assets/CodeBase/Logic/Death.cs" />
       <option value="$PROJECT_DIR$/Assets/Plugins/2d-platformer-controller-master/Assets/Scripts/CharacterController2D.cs" />
-      <option value="$PROJECT_DIR$/Assets/CodeBase/Logic/Attacks/Attack.cs" />
-      <option value="$PROJECT_DIR$/Assets/CodeBase/Logic/Animations/PlayerAnimator.cs" />
-      <option value="$PROJECT_DIR$/Assets/CodeBase/Logic/Attacks/AttackMelee.cs" />
-      <option value="$PROJECT_DIR$/Assets/CodeBase/Logic/Player/PlayerController.cs" />
       <option value="$PROJECT_DIR$/Assets/CodeBase/Logic/Enemy/CheckPlatformEnd.cs" />
       <option value="$PROJECT_DIR$/Assets/CodeBase/Logic/Enemy/PatrolMovement.cs" />
       <option value="$PROJECT_DIR$/Assets/CodeBase/Logic/Animations/GetDamageAnimator.cs" />
@@ -57,6 +53,10 @@
       <option value="$PROJECT_DIR$/Assets/CodeBase/Logic/Enemy/Chekers/CheckPlatformEnd.cs" />
       <option value="$PROJECT_DIR$/Assets/CodeBase/Logic/Enemy/Chekers/CheckIfSeePlayer.cs" />
       <option value="$PROJECT_DIR$/Assets/CodeBase/Logic/Enemy/AI/SwordmanAI.cs" />
+      <option value="$PROJECT_DIR$/Assets/CodeBase/Logic/Attacks/Attack.cs" />
+      <option value="$PROJECT_DIR$/Assets/CodeBase/Logic/Animations/PlayerAnimator.cs" />
+      <option value="$PROJECT_DIR$/Assets/CodeBase/Logic/Player/PlayerController.cs" />
+      <option value="$PROJECT_DIR$/Assets/CodeBase/Logic/Attacks/AttackMelee.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="2my0zQThB6EkyRO7ob6MOBJFAwc" />
@@ -100,7 +100,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1728033773310</updated>
-      <workItem from="1728033782760" duration="19212000" />
+      <workItem from="1728033782760" duration="20847000" />
     </task>
     <servers />
   </component>

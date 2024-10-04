@@ -115,6 +115,12 @@
             <e p="GameTimer.cs" t="Include" />
             <e p="Health.cs" t="Include" />
             <e p="LogicExtensions.cs" t="Include" />
+            <e p="Necklace" t="Include">
+              <e p="DragingItem.cs" t="Include" />
+              <e p="MagicStone.cs" t="Include" />
+              <e p="Necklace.cs" t="Include" />
+              <e p="Slot.cs" t="Include" />
+            </e>
             <e p="Player" t="Include">
               <e p="PlayerController.cs" t="Include" />
             </e>
