@@ -173,7 +173,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      crumbling_0: -5272612332230954285
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

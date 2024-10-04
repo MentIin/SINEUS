@@ -1,5 +1,8 @@
 using CodeBase.Infrastructure.Factory;
+using CodeBase.Infrastructure.Services;
 using CodeBase.Infrastructure.Services.Audio;
+using CodeBase.UI.Services.UIFactory;
+using CodeBase.UI.Services.Windows;
 using UnityEngine;
 
 namespace CodeBase.Infrastructure.States
@@ -30,6 +33,7 @@ namespace CodeBase.Infrastructure.States
         public void Enter()
         {
             Debug.Log("Enter GameLoop");
+            AllServices.Container.Single<UIFactory>().CreateWindow(WindowType.NecklaceWin);
         }
     }
 }
