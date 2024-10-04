@@ -1,5 +1,4 @@
-﻿using System;
-using CodeBase.Infrastructure.Data;
+﻿using CodeBase.Infrastructure.Data;
 using CodeBase.Infrastructure.Services;
 using CodeBase.Infrastructure.Services.Input;
 using CodeBase.Logic.Attacks;
@@ -13,7 +12,7 @@ namespace CodeBase.Logic.Player
         public CharacterController2D controller;
         private IInputService _input;
 
-        public Action AttackStarted;
+        
 
         private void Start()
         {
@@ -24,11 +23,7 @@ namespace CodeBase.Logic.Player
         {
             if (_input.Attack())
             {
-                if (CurrentAttack.StartAttack())
-                {
-                    AttackStarted?.Invoke();
-                }
-                
+                CurrentAttack.StartAttack();
             }
             
             controller.Walk(_input.GetAxis().x);

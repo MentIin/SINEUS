@@ -1,4 +1,5 @@
-﻿using CodeBase.Logic.Enemy.Chekers;
+﻿using CodeBase.Logic.Attacks;
+using CodeBase.Logic.Enemy.Chekers;
 using UnityEngine;
 
 namespace CodeBase.Logic.Enemy.AI
@@ -8,6 +9,7 @@ namespace CodeBase.Logic.Enemy.AI
         [SerializeField] private CheckIfSeePlayer CheckIfSeePlayer;
         [SerializeField] private CheckPlatformEnd CheckPlatformEnd;
         [SerializeField] private CharacterController2D Controller2D;
+        [SerializeField] private Attack Attack;
 
         public float TargetDistance = 1f;
         
@@ -15,27 +17,26 @@ namespace CodeBase.Logic.Enemy.AI
 
         private void Update()
         {
-            float dir = CheckIfSeePlayer.Check();
+            int dir = CheckIfSeePlayer.Check();
             if (dir != 0)
             {
                 if (CheckIfSeePlayer.HitDistance >= TargetDistance)
                 {
-                    Controller2D.Walk(dir);
+                    direction = dir;
                 }
                 else
                 {
-                    Controller2D.Walk(0f);
+                    direction = 0;
+                    Attack.StartAttack();
                 }
                 
             }
-            else
+
+            if (CheckPlatformEnd.Check())
             {
-                if (CheckPlatformEnd.Check())
-                {
-                    direction *= -1;
-                }
-                Controller2D.Walk(direction);
+                direction *= -1;
             }
+            Controller2D.Walk(direction);
         }
     }
 }

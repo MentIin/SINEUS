@@ -170,7 +170,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ada8ec81e8464c288c303a4785935e1e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Team: 0
+  Team: 1
   reload: 0.1
   attackDuration: 0.2
   timeBeforeHit: 0.1
@@ -451,7 +451,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f006453675b4449699661ffa6ffebba0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _controller: {fileID: 0}
+  _controller: {fileID: 9034181516878825485}
 --- !u!1 &5130885693187826217
 GameObject:
   m_ObjectHideFlags: 0
@@ -638,7 +638,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5161036102205410336}
-  m_BodyType: 1
+  m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -778,6 +778,8 @@ MonoBehaviour:
   CheckIfSeePlayer: {fileID: 8321009038165880032}
   CheckPlatformEnd: {fileID: 678099669537148865}
   Controller2D: {fileID: 4543497848779812293}
+  Attack: {fileID: 9034181516878825485}
+  TargetDistance: 1
 --- !u!1 &6903518314449720867
 GameObject:
   m_ObjectHideFlags: 0

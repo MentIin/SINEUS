@@ -14,6 +14,7 @@ namespace CodeBase.Logic.Attacks
         public override bool StartAttack()
         {
             if (!_canAttack) return false;
+            InvokeStarted();
             StartCoroutine(Coroutine());
             return true;
         }
