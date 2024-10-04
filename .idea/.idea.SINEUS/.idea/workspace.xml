@@ -13,7 +13,11 @@
   <component name="IdeDocumentHistory">
     <changedPaths>
       <option value="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/GameBootstraper.cs" />
+      <option value="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/States/MainMenuState.cs" />
+      <option value="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/States/BootstrapState.cs" />
+      <option value="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/Services/StaticData/StaticDataService.cs" />
       <option value="$PROJECT_DIR$/Assets/CodeBase/UI/Services/UIFactory/UIFactory.cs" />
+      <option value="$PROJECT_DIR$/Assets/CodeBase/UI/Elements/Buttons/ChangeStateButton.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="2my0zQThB6EkyRO7ob6MOBJFAwc" />
@@ -57,7 +61,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1728033773310</updated>
-      <workItem from="1728033782760" duration="1060000" />
+      <workItem from="1728033782760" duration="2580000" />
     </task>
     <servers />
   </component>

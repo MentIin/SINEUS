@@ -53,9 +53,6 @@ namespace CodeBase.Infrastructure.States
 
         private async void OnLoaded()
         {
-            
-            
-            
             _gameStateMachine.Enter<GameLoopState>();
         }
         

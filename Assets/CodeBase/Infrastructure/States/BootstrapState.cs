@@ -47,7 +47,7 @@ namespace CodeBase.Infrastructure.States
 
         public void Enter()
         {
-            _gameStateMachine.Enter<MainMenuState>();
+            _gameStateMachine.Enter<LoadProgressState>();
         }
 
         private void RegisterServices(AudioMixerGroup soundsMixerGroup, AudioMixerGroup musicMixerGroup)

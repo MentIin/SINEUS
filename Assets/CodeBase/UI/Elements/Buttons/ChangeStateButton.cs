@@ -1,3 +1,5 @@
+using CodeBase.Infrastructure.Services;
+using CodeBase.Infrastructure.Services.PersistentProgress;
 using CodeBase.Infrastructure.States;
 using UnityEngine;
 using UnityEngine.UI;
@@ -10,8 +12,6 @@ namespace CodeBase.UI.Elements.Buttons
         [SerializeField] private State _state = State.MainMenu;
         private GameStateMachine _stateMachine;
         
-        [Header("Ignore if not main menu")]
-        [SerializeField]private bool _save = false;
 
         public void Construct(GameStateMachine stateMachine)
         {
@@ -22,7 +22,9 @@ namespace CodeBase.UI.Elements.Buttons
 
         private void ChangeState()
         {
+            PersistentProgressService progressService = AllServices.Container.Single<PersistentProgressService>();
             if (_state == State.MainMenu) _stateMachine.Enter<MainMenuState>();
+            else if (_state == State.NewGame) _stateMachine.Enter<LoadLevelState, int>(0);
         }
     }
 
