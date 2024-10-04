@@ -259,6 +259,7 @@ MonoBehaviour:
   reload: 0.5
   attackDuration: 0.2
   timeBeforeHit: 0.1
+  knockback: 20
   _collider2D: {fileID: 9060161720561826466}
 --- !u!1 &1724266296384981596
 GameObject:
@@ -361,6 +362,8 @@ GameObject:
   - component: {fileID: 1619482123398136451}
   - component: {fileID: 8955931493352119036}
   - component: {fileID: 5164597347006983744}
+  - component: {fileID: 1786847021331748887}
+  - component: {fileID: 4625691672033948472}
   m_Layer: 6
   m_Name: Player
   m_TagString: Untagged
@@ -520,6 +523,7 @@ MonoBehaviour:
   minWallAngle: 80
   speed: {x: 0, y: 0}
   externalForce: {x: 0, y: 0}
+  ignoreGravity: 0
   animator: {fileID: 221443289405901412}
   visual: {fileID: 0}
   extraJumps: 0
@@ -538,6 +542,36 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CurrentAttack: {fileID: 5195635006389198951}
   controller: {fileID: 8955931493352119036}
+--- !u!114 &1786847021331748887
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3000552415767531562}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a75a63d33bca47f3833ac7f589c9db1c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _maxHealth: 10
+  _currentHealth: 10
+  Team: 0
+--- !u!114 &4625691672033948472
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3000552415767531562}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 558c6ef9c2c04188a89bff6734def359, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Health: {fileID: 1786847021331748887}
+  _timeToDie: 0
+  _destroyOnDeath: 1
 --- !u!1 &3953099282228084103
 GameObject:
   m_ObjectHideFlags: 0
@@ -549,6 +583,7 @@ GameObject:
   - component: {fileID: 7649437358880576788}
   - component: {fileID: 221443289405901412}
   - component: {fileID: 904185872799017056}
+  - component: {fileID: 1718400539849719582}
   m_Layer: 6
   m_Name: Visual
   m_TagString: Untagged
@@ -608,7 +643,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f006453675b4449699661ffa6ffebba0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _controller: {fileID: 5164597347006983744}
+  _controller: {fileID: 6883687391916002020}
+--- !u!114 &1718400539849719582
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3953099282228084103}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a2e42dc853d7406fbfcefdc0ac59006b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: {fileID: 1786847021331748887}
+  renderer: {fileID: 4833733004507232061}
+  additionals:
+  - {fileID: 3053166253588726661}
+  - {fileID: 1489010281218967637}
+  - {fileID: 1564461537922489846}
+  - {fileID: 5395664808180917620}
 --- !u!1 &4827052530894434401
 GameObject:
   m_ObjectHideFlags: 0
@@ -633,12 +687,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4827052530894434401}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0.691, y: -0.246, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 7862792077804235604}
+  m_Father: {fileID: 9126845330599335685}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &6920926027674346091
 GameObject:
@@ -845,7 +899,8 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 576861221541430517}
   m_Father: {fileID: 7862792077804235604}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &5195635006389198951
@@ -861,6 +916,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Team: 0
+  damage: 1
   attackDuration: 4
   reload: 1
   timeBeforeHit: 0.1
@@ -896,7 +952,6 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 7830078166954554540}
-  - {fileID: 576861221541430517}
   - {fileID: 9126845330599335685}
   m_Father: {fileID: 5903394429877193635}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
