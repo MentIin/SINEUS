@@ -27,15 +27,26 @@ namespace CodeBase.Infrastructure.Data.PlayerData
 
         public void ChangePlace(MagicStonesTypes activeStoneStoneType, int activeStonePlace, int newPlace)
         {
+            
             if (activeStonePlace == -1)
             {
+                if (newPlace == -1) return;
                 playerPocket.Remove(activeStoneStoneType);
                 playerSlots[newPlace] = activeStoneStoneType;
             }
             else
             {
-                playerSlots[activeStonePlace] = MagicStonesTypes.Null;
-                playerSlots[newPlace] = activeStoneStoneType;
+                if (newPlace == -1)
+                {
+                    playerSlots[activeStonePlace] = MagicStonesTypes.Null;
+                    playerPocket.Add(activeStoneStoneType);
+                }
+                else
+                {
+                    playerSlots[activeStonePlace] = MagicStonesTypes.Null;
+                    playerSlots[newPlace] = activeStoneStoneType;
+                }
+               
             }
             MagicStoneChanged?.Invoke();
         }

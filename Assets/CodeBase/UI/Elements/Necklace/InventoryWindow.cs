@@ -58,7 +58,6 @@ namespace CodeBase.UI.Elements.Necklace
             foreach (var magicStoneType in persistentProgressService.Progress.GameData.playerSlots)
             {
                 
-                Debug.Log(magicStoneType);
                 if (magicStoneType == GameData.MagicStonesTypes.Null)
                 {
                     i++;
