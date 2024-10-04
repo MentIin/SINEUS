@@ -46,6 +46,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CheckIfSeeTeamInRadius: {fileID: 4117367230983475205}
   CharacterController2D: {fileID: 2722240918977728573}
+  AttackMelee: {fileID: 4541762547308881480}
+  TargetDistance: 0.5
 --- !u!1 &1445763463328249552
 GameObject:
   m_ObjectHideFlags: 0
@@ -300,7 +302,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f729d1dfa72248641971dc54f0eca573, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxSpeed: 5
+  maxSpeed: 2
   accelerationTime: 0.2
   decelerationTime: 0.2
   canUseSlopes: 0
@@ -373,8 +375,8 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 0.1, y: 0.1}
-  m_EdgeRadius: 0.3
+  m_Size: {x: 0.5, y: 0.5}
+  m_EdgeRadius: 0
 --- !u!50 &8113871264579531060
 Rigidbody2D:
   serializedVersion: 5
@@ -423,7 +425,7 @@ MonoBehaviour:
   minWallAngle: 80
   speed: {x: 0, y: 0}
   externalForce: {x: 0, y: 0}
-  ignoreGravity: 0
+  ignoreGravity: 1
   animator: {fileID: 5849129116292680300}
   visual: {fileID: 0}
   extraJumps: 0
@@ -587,7 +589,7 @@ Transform:
   m_GameObject: {fileID: 7983930810706458746}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -0.699, y: -0.121, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

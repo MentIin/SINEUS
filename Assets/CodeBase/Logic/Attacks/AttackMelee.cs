@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace CodeBase.Logic.Attacks
 {
-    class AttackMelee : Attack
+    public class AttackMelee : Attack
     {
         public float reload=0.5f;
         public float attackDuration=0.2f;
