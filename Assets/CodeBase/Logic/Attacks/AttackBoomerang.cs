@@ -14,6 +14,7 @@ namespace CodeBase.Logic.Attacks
 
         public BoomerangBullet bulletPrefab;
         [SerializeField] private Transform shotPos;
+        [SerializeField] private SpriteRenderer handRenderer;
         private Vector3 mouseClickPos;
         public override bool StartAttack()
         {
@@ -37,24 +38,19 @@ namespace CodeBase.Logic.Attacks
             bullet.damage = damage;
             bullet.parentAttack= this;
             bullet.targetPos = mouseClickPos;
+            bullet.handRenderer = handRenderer;
+
+            
+        }
+        private IEnumerator AttackReload()
+        {
             yield return new WaitForSeconds(reload);
             _canAttack = true;
         }
-        private void DealDamage()
+        public void StartReload()
         {
-
-            /*Health health;
-            foreach (var col in Physics2D.OverlapCircleAll(_collider2D.bounds.center,
-                _collider2D.radius))
-            {
-                if (col.TryGetComponent(out health))
-                {
-                    if (health.Team != Team)
-                    {
-                        health.TakeDamage(1);
-                    }
-                }
-            }*/
+            StartCoroutine(AttackReload());
         }
+        
     }
 }

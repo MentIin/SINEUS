@@ -941,6 +941,7 @@ MonoBehaviour:
   timeBeforeHit: 0.1
   bulletPrefab: {fileID: 1574328567744089382, guid: be244f6d1c856fc4d9f831f9a211f1be, type: 3}
   shotPos: {fileID: 576861221541430517}
+  handRenderer: {fileID: 3053166253588726661}
 --- !u!1 &8071787276146041474
 GameObject:
   m_ObjectHideFlags: 0
