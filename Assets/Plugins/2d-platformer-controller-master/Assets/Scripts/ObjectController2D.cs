@@ -19,7 +19,7 @@ public class ObjectController2D : MonoBehaviour {
     protected BoxCollider2D myCollider;
     protected PhysicsConfig pConfig;
     [SerializeField]
-    protected Vector2 speed = Vector2.zero;
+    public Vector2 speed = Vector2.zero;
     [SerializeField]
     protected Vector2 externalForce = Vector2.zero;
     protected float horizontalRaySpacing;

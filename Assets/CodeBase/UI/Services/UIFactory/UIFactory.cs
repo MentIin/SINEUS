@@ -6,7 +6,9 @@ using CodeBase.Infrastructure.Services.PersistentProgress;
 using CodeBase.Infrastructure.Services.SaveLoad;
 using CodeBase.Infrastructure.Services.StaticData;
 using CodeBase.Infrastructure.States;
+using CodeBase.Infrastructure.StaticData.Dialogs;
 using CodeBase.UI.Elements.Buttons;
+using CodeBase.UI.Elements.Dialogs;
 using CodeBase.UI.Services.Windows;
 using UnityEngine;
 using Object = UnityEngine.Object;
@@ -49,6 +51,14 @@ namespace CodeBase.UI.Services.UIFactory
         }
         
 
+        public void CreateDialog(DialogNodeStaticData staticData, Action<int> dialogCallback)
+        {
+            GameObject prefab = Resources.Load<GameObject>(AssetAddress.Dialog);
+            GameObject dialogGameObject = Object.Instantiate(prefab);
+            
+            dialogGameObject.GetComponent<DialogWindow>().Construct(staticData, dialogCallback);
+            
+        }
         public void Clear()
         {
             Object.DestroyImmediate(_uiRoot.gameObject);

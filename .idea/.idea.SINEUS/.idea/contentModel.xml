@@ -76,6 +76,9 @@
               <e p="MainMenuState.cs" t="Include" />
             </e>
             <e p="StaticData" t="Include">
+              <e p="Dialogs" t="Include">
+                <e p="DialogNodeStaticData.cs" t="Include" />
+              </e>
               <e p="Level" t="Include">
                 <e p="AllLevelsStaticData.cs" t="Include" />
                 <e p="LevelStaticData.cs" t="Include" />
@@ -129,11 +132,12 @@
             <e p="Player" t="Include">
               <e p="PlayerController.cs" t="Include" />
             </e>
+            <e p="Sounds" t="Include">
+              <e p="AttackSounds.cs" t="Include" />
+              <e p="LoopingSound.cs" t="Include" />
+              <e p="PlaySound.cs" t="Include" />
+            </e>
             <e p="TriggerObserver.cs" t="Include" />
-          </e>
-          <e p="Sounds" t="Include">
-            <e p="LoopingSound.cs" t="Include" />
-            <e p="PlaySound.cs" t="Include" />
           </e>
           <e p="Tools" t="Include">
             <e p="MyExtensions.cs" t="Include" />
@@ -144,6 +148,10 @@
                 <e p="ChangeStateButton.cs" t="Include" />
                 <e p="CloseWindowButton.cs" t="Include" />
                 <e p="OpenWindowButton.cs" t="Include" />
+              </e>
+              <e p="Dialogs" t="Include">
+                <e p="DialogStarter.cs" t="Include" />
+                <e p="DialogWindow.cs" t="Include" />
               </e>
             </e>
             <e p="LoadingCurtain.cs" t="Include" />

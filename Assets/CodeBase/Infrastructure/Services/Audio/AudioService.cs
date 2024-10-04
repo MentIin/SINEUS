@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using CodeBase.Infrastructure.Services.PersistentProgress;
-using CodeBase.Sounds;
+using CodeBase.Logic.Sounds;
 using UnityEngine;
 using UnityEngine.Audio;
 

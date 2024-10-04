@@ -584,6 +584,7 @@ GameObject:
   - component: {fileID: 221443289405901412}
   - component: {fileID: 904185872799017056}
   - component: {fileID: 1718400539849719582}
+  - component: {fileID: 7915772575268391020}
   m_Layer: 6
   m_Name: Visual
   m_TagString: Untagged
@@ -644,6 +645,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _controller: {fileID: 6883687391916002020}
+  _characterController: {fileID: 8955931493352119036}
+  WalkSound: {fileID: 7915772575268391020}
 --- !u!114 &1718400539849719582
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -663,6 +666,22 @@ MonoBehaviour:
   - {fileID: 1489010281218967637}
   - {fileID: 1564461537922489846}
   - {fileID: 5395664808180917620}
+--- !u!114 &7915772575268391020
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3953099282228084103}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b01529eedd04b2a9b0f1e84d24b0d0e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sound: {fileID: 8300000, guid: 65b2313bc325ecd4e953433ce86ec1f9, type: 3}
+  IgnorePause: 0
+  IgnorePosition: 0
+  _volume: 1
 --- !u!1 &4827052530894434401
 GameObject:
   m_ObjectHideFlags: 0

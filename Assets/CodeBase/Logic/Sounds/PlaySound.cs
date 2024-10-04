@@ -1,9 +1,8 @@
 using CodeBase.Infrastructure.Services;
 using CodeBase.Infrastructure.Services.Audio;
-using CodeBase.Sounds;
 using UnityEngine;
 
-namespace Assets.CodeBase.Sounds
+namespace CodeBase.Logic.Sounds
 {
     public class PlaySound : MonoBehaviour
     {
