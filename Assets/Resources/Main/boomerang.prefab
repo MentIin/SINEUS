@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 1574328567744089382}
   - component: {fileID: 4640744802019218233}
   - component: {fileID: 867168440008270377}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: boomerang
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -129,7 +129,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4913923498138775845}
   - component: {fileID: 4381427758115252850}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: ruka
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -215,7 +215,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3773369108349403527}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Visual
   m_TagString: Untagged
   m_Icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
