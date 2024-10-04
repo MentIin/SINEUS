@@ -6,6 +6,7 @@ using CodeBase.Infrastructure.Services.PersistentProgress;
 using CodeBase.Infrastructure.Services.SaveLoad;
 using CodeBase.Infrastructure.Services.StaticData;
 using CodeBase.Infrastructure.States;
+using CodeBase.UI.Elements.Buttons;
 using CodeBase.UI.Services.Windows;
 using UnityEngine;
 using Object = UnityEngine.Object;
@@ -38,11 +39,11 @@ namespace CodeBase.UI.Services.UIFactory
         public void CreateWindow(WindowType type)
         {
             WindowConfig data = _staticData.ForWindow(type);
-            var prefab = data.WindowPrefab;
+            var windowGameObject = Object.Instantiate(data.WindowPrefab);
 
-            if (type == WindowType.Settings)
+            if (type == WindowType.MainMenu)
             {
-                
+                windowGameObject.GetComponentInChildren<ChangeStateButton>().Construct(_stateMachine);
             }
             
         }

@@ -40,7 +40,7 @@ namespace CodeBase.Infrastructure.States
         {
             _loadingCurtain.UpdateLoading(100);
 
-            //_uiFactory.CreateWindow(WindowType.MainMenu);
+            _uiFactory.CreateWindow(WindowType.MainMenu);
             _loadingCurtain.Hide();
             Debug.Log("MainMenuState");
         }
