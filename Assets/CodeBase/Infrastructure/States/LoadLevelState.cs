@@ -53,6 +53,9 @@ namespace CodeBase.Infrastructure.States
 
         private async void OnLoaded()
         {
+            GameObject gameObject = _gameFactory.CreatePlayer(Vector2.zero);
+            CameraFollow(gameObject.transform);
+
             _gameStateMachine.Enter<GameLoopState>();
         }
         

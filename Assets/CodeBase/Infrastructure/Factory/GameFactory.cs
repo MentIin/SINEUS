@@ -6,6 +6,7 @@ using CodeBase.Infrastructure.Services.Random;
 using CodeBase.Infrastructure.Services.StaticData;
 using CodeBase.Infrastructure.States;
 using CodeBase.Logic.CameraLogic;
+using UnityEngine;
 
 namespace CodeBase.Infrastructure.Factory
 {
@@ -33,6 +34,13 @@ namespace CodeBase.Infrastructure.Factory
             _audioService = audioService;
             _cameraController = cameraController;
             _pauseService = pauseService;
+        }
+
+        public GameObject CreatePlayer(Vector2 pos)
+        {
+            var prefab = Resources.Load<GameObject>("Main/Player");
+            GameObject gameObject = Object.Instantiate(prefab, pos, Quaternion.identity);
+            return gameObject;
         }
     }
 }

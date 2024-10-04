@@ -1,4 +1,3 @@
-using System;
 using DG.Tweening;
 using UnityEngine;
 using UnityEngine.UI;
@@ -11,24 +10,9 @@ namespace CodeBase.Logic.CameraLogic
         [SerializeField] private Image _shade;
         private float _size;
 
-        private Transform _follow;
-
         private void Awake()
         {
             _size = _camera.orthographicSize;
-        }
-
-        public void Follow(Transform follow)
-        {
-            _follow = follow;
-        }
-
-        private void LateUpdate()
-        {
-            if (_follow != null)
-            {
-                transform.localPosition = Vector3.Lerp(transform.localPosition, _follow.position, 0.5f);
-            }
         }
 
         public void Shake(float duration, float strength, int vibrato, float randomness)
