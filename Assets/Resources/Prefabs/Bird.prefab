@@ -91,6 +91,7 @@ GameObject:
   - component: {fileID: 3865298399764649324}
   - component: {fileID: 5849129116292680300}
   - component: {fileID: 7049769328692778617}
+  - component: {fileID: 3104712343642859772}
   m_Layer: 6
   m_Name: Visual
   m_TagString: Untagged
@@ -149,6 +150,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _controller: {fileID: 4541762547308881480}
+--- !u!114 &3104712343642859772
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2297752998308563312}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a2e42dc853d7406fbfcefdc0ac59006b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: {fileID: 8835214663521237018}
+  renderer: {fileID: 9132382301455466098}
+  additionals: []
 --- !u!1 &3562208727703122119
 GameObject:
   m_ObjectHideFlags: 0
@@ -262,7 +278,6 @@ GameObject:
   - component: {fileID: 8113871264579531060}
   - component: {fileID: 2722240918977728573}
   - component: {fileID: 8835214663521237018}
-  - component: {fileID: 8278953963866575901}
   - component: {fileID: 3274879370817526131}
   m_Layer: 6
   m_Name: Bird
@@ -302,7 +317,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f729d1dfa72248641971dc54f0eca573, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxSpeed: 2
+  maxSpeed: 1
   accelerationTime: 0.2
   decelerationTime: 0.2
   canUseSlopes: 0
@@ -445,21 +460,6 @@ MonoBehaviour:
   _maxHealth: 5
   _currentHealth: 5
   Team: 1
---- !u!114 &8278953963866575901
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4265565315106729966}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a2e42dc853d7406fbfcefdc0ac59006b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  health: {fileID: 8835214663521237018}
-  renderer: {fileID: 9132382301455466098}
-  additionals: []
 --- !u!114 &3274879370817526131
 MonoBehaviour:
   m_ObjectHideFlags: 0

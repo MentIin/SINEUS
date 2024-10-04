@@ -89,7 +89,7 @@ namespace CodeBase.Logic.Attacks
                     if (health.Team != parentAttack.Team)
                     {
                         health.TakeDamage(damage);
-                        Debug.Log(" ËÈÈ‡!");
+                        Debug.Log("–ö–∏–π–π–∞!");
                         canAttack = false;
                     }
                 }
