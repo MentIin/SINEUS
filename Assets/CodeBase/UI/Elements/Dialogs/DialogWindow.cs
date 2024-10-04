@@ -1,5 +1,6 @@
 using System;
 using CodeBase.Infrastructure.StaticData.Dialogs;
+using CodeBase.UI.Services.UIFactory;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -13,9 +14,9 @@ namespace CodeBase.UI.Elements.Dialogs
         [SerializeField] private RectTransform _continueButtonContainer;
         
         private DialogNodeStaticData _nodeStaticData;
-        private Action<int> _dialogCallback;
+        private UIFactory.MyCallback _dialogCallback;
         
-        public void Construct(DialogNodeStaticData nodeStaticData, Action<int> dialogCallback)
+        public void Construct(DialogNodeStaticData nodeStaticData, UIFactory.MyCallback dialogCallback)
         {
 
             _dialogCallback = dialogCallback;
@@ -29,7 +30,7 @@ namespace CodeBase.UI.Elements.Dialogs
             
             if (_nodeStaticData.HaveCallback)
             {
-                _dialogCallback?.Invoke(_nodeStaticData.CallbackId);
+                _dialogCallback(_nodeStaticData.CallbackId);
             }
             _textMeshPro.text = _nodeStaticData.Text;
 
@@ -48,8 +49,7 @@ namespace CodeBase.UI.Elements.Dialogs
             for (int i = 0; i < _nodeStaticData.NextNodes.Length; i++)
             {
                 GameObject btn = Instantiate(_continueButtonPrefab, _continueButtonContainer);
-
-                Debug.Log(i);
+                
                 int b = i;
                 btn.GetComponent<Button>().onClick.AddListener(() =>
                 {

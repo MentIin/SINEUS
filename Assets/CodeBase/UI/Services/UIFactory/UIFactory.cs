@@ -51,11 +51,12 @@ namespace CodeBase.UI.Services.UIFactory
         }
         
 
-        public void CreateDialog(DialogNodeStaticData staticData, Action<int> dialogCallback)
+        public delegate void MyCallback(int a);
+        public void CreateDialog(DialogNodeStaticData staticData, MyCallback dialogCallback)
         {
             GameObject prefab = Resources.Load<GameObject>(AssetAddress.Dialog);
             GameObject dialogGameObject = Object.Instantiate(prefab);
-            
+            dialogCallback?.Invoke(1233333);
             dialogGameObject.GetComponent<DialogWindow>().Construct(staticData, dialogCallback);
             
         }

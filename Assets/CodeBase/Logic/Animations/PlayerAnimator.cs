@@ -24,6 +24,7 @@ namespace CodeBase.Logic.Animations
 
         private void Update()
         {
+            if (WalkSound == null) return;
             if (_characterController.speed.x > 0.1)
             {
                 WalkSound.Volume = 1f;

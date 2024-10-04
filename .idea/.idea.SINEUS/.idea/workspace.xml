@@ -61,13 +61,16 @@
       <option value="$PROJECT_DIR$/Assets/CodeBase/Logic/Enemy/FlyingMovement.cs" />
       <option value="$PROJECT_DIR$/Assets/CodeBase/Logic/Enemy/Chekers/CheckIfSeePlayerHorizontal.cs" />
       <option value="$PROJECT_DIR$/Assets/CodeBase/Logic/Enemy/Chekers/CheckIfSeePlayerInRadius.cs" />
-      <option value="$PROJECT_DIR$/Assets/CodeBase/Logic/Enemy/Chekers/CheckIfSeeTeamInRadius.cs" />
       <option value="$PROJECT_DIR$/Assets/CodeBase/Logic/Enemy/AI/FlyingAI.cs" />
       <option value="$PROJECT_DIR$/Assets/CodeBase/Sounds/AttackSounds.cs" />
       <option value="$PROJECT_DIR$/Assets/CodeBase/Logic/Sounds/AttackSounds.cs" />
       <option value="$PROJECT_DIR$/Assets/Plugins/2d-platformer-controller-master/Assets/Scripts/ObjectController2D.cs" />
       <option value="$PROJECT_DIR$/Assets/CodeBase/Logic/Animations/PlayerAnimator.cs" />
+      <option value="$PROJECT_DIR$/Assets/CodeBase/Logic/Enemy/Chekers/CheckIfSeeTeamInRadius.cs" />
+      <option value="$PROJECT_DIR$/Assets/CodeBase/UI/Elements/Dialogs/UnityEventOnDialog.cs" />
+      <option value="$PROJECT_DIR$/Assets/CodeBase/UI/Elements/Dialogs/DialogStarter.cs" />
       <option value="$PROJECT_DIR$/Assets/CodeBase/UI/Services/UIFactory/UIFactory.cs" />
+      <option value="$PROJECT_DIR$/Assets/CodeBase/UI/Elements/Dialogs/DialogWindow.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="2my0zQThB6EkyRO7ob6MOBJFAwc" />
@@ -111,7 +114,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1728033773310</updated>
-      <workItem from="1728033782760" duration="30309000" />
+      <workItem from="1728033782760" duration="32557000" />
     </task>
     <servers />
   </component>

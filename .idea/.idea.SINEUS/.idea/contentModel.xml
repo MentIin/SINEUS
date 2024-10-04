@@ -152,6 +152,7 @@
               <e p="Dialogs" t="Include">
                 <e p="DialogStarter.cs" t="Include" />
                 <e p="DialogWindow.cs" t="Include" />
+                <e p="UnityEventOnDialog.cs" t="Include" />
               </e>
             </e>
             <e p="LoadingCurtain.cs" t="Include" />

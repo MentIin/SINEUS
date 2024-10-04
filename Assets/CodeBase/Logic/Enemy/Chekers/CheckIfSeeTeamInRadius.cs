@@ -47,8 +47,8 @@ namespace CodeBase.Logic.Enemy.Chekers
             foreach (var col in _colliders)
             {
                 Vector2 direction = col.transform.position - transform.position;
-                if (!Physics2D.Raycast(transform.position,
-                    direction, direction.magnitude, CanNotSeeThrough))
+                if (Physics2D.Raycast(transform.position,
+                    direction, direction.magnitude, CanNotSeeThrough).collider == null)
                 {
                     collider2Ds.Add(col);
                 }
@@ -63,7 +63,7 @@ namespace CodeBase.Logic.Enemy.Chekers
             {
                 return null;
             }
-            Collider2D res = _colliders[0];
+            Collider2D res = null;
             float dist = Single.PositiveInfinity;
             foreach (var col in GetColliders())
             {

@@ -10,14 +10,19 @@ namespace CodeBase.UI.Elements.Dialogs
     {
         public DialogNodeStaticData StaticData;
         private UIFactory _uiFactory;
-
+        
         public Action<int> DialogCallback;
 
         private void Start()
         {
             _uiFactory = AllServices.Container.Single<UIFactory>();
             
-            _uiFactory.CreateDialog(StaticData, DialogCallback);
+            _uiFactory.CreateDialog(StaticData, Callback);
+        }
+
+        private void Callback(int id)
+        {
+            DialogCallback?.Invoke(id);
         }
     }
 }
