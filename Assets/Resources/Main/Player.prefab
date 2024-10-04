@@ -184,7 +184,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7830078166954554540}
   - component: {fileID: 9060161720561826466}
-  - component: {fileID: 4567237189301416067}
+  - component: {fileID: 6883687391916002020}
   m_Layer: 6
   m_Name: MeleeAttack
   m_TagString: Untagged
@@ -243,7 +243,7 @@ CircleCollider2D:
   m_CompositeOrder: 0
   m_Offset: {x: 0.7, y: 0}
   m_Radius: 0.5
---- !u!114 &4567237189301416067
+--- !u!114 &6883687391916002020
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -256,7 +256,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Team: 0
-  reload: 0.1
+  reload: 0.5
   attackDuration: 0.2
   timeBeforeHit: 0.1
   _collider2D: {fileID: 9060161720561826466}
@@ -536,7 +536,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d19a21d4c014504bd92cb0e82bc78ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CurrentAttack: {fileID: 4567237189301416067}
+  CurrentAttack: {fileID: 5195635006389198951}
   controller: {fileID: 8955931493352119036}
 --- !u!1 &3953099282228084103
 GameObject:
@@ -609,6 +609,37 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _controller: {fileID: 5164597347006983744}
+--- !u!1 &4827052530894434401
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 576861221541430517}
+  m_Layer: 6
+  m_Name: ShotPos
+  m_TagString: Untagged
+  m_Icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &576861221541430517
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4827052530894434401}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.691, y: -0.246, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 7862792077804235604}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &6920926027674346091
 GameObject:
   m_ObjectHideFlags: 0
@@ -785,6 +816,56 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &8008148015283993699
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 9126845330599335685}
+  - component: {fileID: 5195635006389198951}
+  m_Layer: 6
+  m_Name: BoomerangAttack
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &9126845330599335685
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8008148015283993699}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 7862792077804235604}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5195635006389198951
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8008148015283993699}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6f453b97dd44174fb59aca6bbc90133, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Team: 0
+  attackDuration: 4
+  reload: 1
+  timeBeforeHit: 0.1
+  bulletPrefab: {fileID: 1574328567744089382, guid: be244f6d1c856fc4d9f831f9a211f1be, type: 3}
+  shotPos: {fileID: 576861221541430517}
 --- !u!1 &8071787276146041474
 GameObject:
   m_ObjectHideFlags: 0
@@ -815,5 +896,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 7830078166954554540}
+  - {fileID: 576861221541430517}
+  - {fileID: 9126845330599335685}
   m_Father: {fileID: 5903394429877193635}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
