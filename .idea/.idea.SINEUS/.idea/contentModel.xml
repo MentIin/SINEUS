@@ -85,6 +85,8 @@
           </e>
           <e p="Logic" t="Include">
             <e p="Animations" t="Include">
+              <e p="GetDamageAnimator.cs" t="Include" />
+              <e p="GetDamageSimpleAnimation.cs" t="Include" />
               <e p="PlayerAnimator.cs" t="Include" />
             </e>
             <e p="Attacks" t="Include">
@@ -99,10 +101,26 @@
             <e p="ConstantRotation.cs" t="Include" />
             <e p="Death.cs" t="Include" />
             <e p="DestroyAfterTime.cs" t="Include" />
+            <e p="Enemy" t="Include">
+              <e p="AI" t="Include">
+                <e p="SwordmanAI.cs" t="Include" />
+              </e>
+              <e p="Chekers" t="Include">
+                <e p="CheckIfSeePlayer.cs" t="Include" />
+                <e p="CheckPlatformEnd.cs" t="Include" />
+              </e>
+              <e p="PatrolMovement.cs" t="Include" />
+            </e>
             <e p="GameConstants.cs" t="Include" />
             <e p="GameTimer.cs" t="Include" />
             <e p="Health.cs" t="Include" />
             <e p="LogicExtensions.cs" t="Include" />
+            <e p="Necklace" t="Include">
+              <e p="DragingItem.cs" t="Include" />
+              <e p="MagicStone.cs" t="Include" />
+              <e p="Necklace.cs" t="Include" />
+              <e p="Slot.cs" t="Include" />
+            </e>
             <e p="Player" t="Include">
               <e p="PlayerController.cs" t="Include" />
             </e>
@@ -134,9 +152,6 @@
               </e>
             </e>
           </e>
-        </e>
-        <e p="Input" t="Include">
-          <e p="InputMaster.cs" t="Include" />
         </e>
         <e p="NaughtyAttributes" t="Include">
           <e p="package.json" t="Include" />

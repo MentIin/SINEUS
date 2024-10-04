@@ -8,12 +8,14 @@ namespace CodeBase.Logic.Attacks
         public float reload=0.5f;
         public float attackDuration=0.2f;
         public float timeBeforeHit = 0.1f;
+        public float knockback = 20f;
         
         public CircleCollider2D _collider2D;
         private bool _canAttack = true;
         public override bool StartAttack()
         {
             if (!_canAttack) return false;
+            InvokeStarted();
             StartCoroutine(Coroutine());
             return true;
         }
@@ -29,6 +31,7 @@ namespace CodeBase.Logic.Attacks
         private void DealDamage()
         {
             Health health;
+            CharacterController2D characterController2D;
             foreach (var col in Physics2D.OverlapCircleAll(_collider2D.bounds.center,
                 _collider2D.radius))
             {
@@ -36,6 +39,10 @@ namespace CodeBase.Logic.Attacks
                 {
                     if (health.Team != Team)
                     {
+                        if (col.TryGetComponent(out characterController2D))
+                        {
+                            characterController2D.ApplyForce(new Vector2(transform.right.x *-1, 0.5f) * knockback);
+                        }
                         health.TakeDamage(1);
                     }
                 }
