@@ -15,13 +15,14 @@ namespace CodeBase.Infrastructure.Services.StaticData
         
         private static readonly string LevelsStaticData = "StaticData/Levels/AllLevelsStaticData";
         private static readonly string WindowsStaticData = "StaticData/UI/WindowsStaticData";
-
+        public AllLevelsStaticData AllLevels;
 
 
         public void Load()
         {
             LoadLevelsData();
             LoadWindowsData();
+            AllLevels = Resources.Load<AllLevelsStaticData>(LevelsStaticData);
         }
 
         private void LoadWindowsData()

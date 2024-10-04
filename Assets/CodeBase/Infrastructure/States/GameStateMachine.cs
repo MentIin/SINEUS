@@ -3,7 +3,9 @@ using System.Collections.Generic;
 using CodeBase.Infrastructure.Factory;
 using CodeBase.Infrastructure.Services;
 using CodeBase.Infrastructure.Services.Audio;
+using CodeBase.Infrastructure.Services.Input;
 using CodeBase.Infrastructure.Services.PersistentProgress;
+using CodeBase.Infrastructure.Services.Random;
 using CodeBase.Infrastructure.Services.SaveLoad;
 using CodeBase.Infrastructure.Services.StaticData;
 using CodeBase.Logic.CameraLogic;
@@ -62,6 +64,10 @@ namespace CodeBase.Infrastructure.States
                 _allServices.Single<ISaveLoadService>(), _allServices.Single<StaticDataService>());
             _states[typeof(MainMenuState)] = new MainMenuState(this, _allServices.Single<PersistentProgressService>(),
                 _allServices.Single<UIFactory>(), _loadingCurtain, _sceneLoader);
+            
+            _states[typeof(LoadLevelState)] = new LoadLevelState(this,  _sceneLoader, _allServices.Single<GameFactory>(),
+                _allServices.Single<StaticDataService>(), _allServices.Single<IRandomService>(), _allServices.Single<PersistentProgressService>(),
+                _allServices.Single<IInputService>(), _loadingCurtain, _cameraController);
         }
     }
 }

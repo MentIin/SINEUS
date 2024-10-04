@@ -44,7 +44,7 @@ namespace CodeBase.Infrastructure.States
             _cameraController.SetScaleToDefault();
             _cameraController.RemoveShade();
             
-            _sceneLoader.Load(GameSceneName, OnLoaded);
+            _sceneLoader.Load(_staticDataService.AllLevels.Levels[levelId].Scene.name, OnLoaded);
         }
 
         public void Exit()
