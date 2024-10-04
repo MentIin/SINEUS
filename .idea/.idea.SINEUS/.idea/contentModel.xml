@@ -78,6 +78,7 @@
             <e p="StaticData" t="Include">
               <e p="Level" t="Include">
                 <e p="AllLevelsStaticData.cs" t="Include" />
+                <e p="LevelStaticData.cs" t="Include" />
               </e>
               <e p="WindowStaticData.cs" t="Include" />
             </e>
