@@ -21,6 +21,20 @@ namespace CodeBase.Infrastructure.Services.Input
             _coroutineRunner.StartCoroutine(Check());
         }
 
+        public bool JumpStart()
+        {
+            return UnityEngine.Input.GetKeyDown(KeyCode.Space) || UnityEngine.Input.GetKeyDown(KeyCode.W);
+        }
+        public bool JumpEnd()
+        {
+            return UnityEngine.Input.GetKeyUp(KeyCode.Space) || UnityEngine.Input.GetKeyUp(KeyCode.W);
+        }
+
+        public bool Attack()
+        {
+            return UnityEngine.Input.GetMouseButtonDown(0);
+        }
+
         public Vector2 GetAxis()
         {
             return new Vector2(UnityEngine.Input.GetAxis(Horizontal), UnityEngine.Input.GetAxis(Vertical)).normalized;

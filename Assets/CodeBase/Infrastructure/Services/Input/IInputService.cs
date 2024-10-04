@@ -7,5 +7,8 @@ namespace CodeBase.Infrastructure.Services.Input
         Vector2 GetAxis();
         void ClearInput();
         void Initialize();
+        bool JumpStart();
+        bool JumpEnd();
+        bool Attack();
     }
 }

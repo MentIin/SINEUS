@@ -84,15 +84,24 @@
             </e>
           </e>
           <e p="Logic" t="Include">
+            <e p="Animations" t="Include">
+              <e p="PlayerAnimator.cs" t="Include" />
+            </e>
+            <e p="Attacks" t="Include">
+              <e p="Attack.cs" t="Include" />
+              <e p="AttackMelee.cs" t="Include" />
+            </e>
             <e p="CameraLogic" t="Include">
               <e p="CameraController.cs" t="Include" />
               <e p="CameraFollow.cs" t="Include" />
               <e p="CameraShake.cs" t="Include" />
             </e>
             <e p="ConstantRotation.cs" t="Include" />
+            <e p="Death.cs" t="Include" />
             <e p="DestroyAfterTime.cs" t="Include" />
             <e p="GameConstants.cs" t="Include" />
             <e p="GameTimer.cs" t="Include" />
+            <e p="Health.cs" t="Include" />
             <e p="LogicExtensions.cs" t="Include" />
             <e p="Player" t="Include">
               <e p="PlayerController.cs" t="Include" />

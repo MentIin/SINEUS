@@ -300,6 +300,15 @@ public class CharacterController2D : ObjectController2D {
         if (collisions.onSlope && collisions.groundAngle > maxSlopeAngle && collisions.groundAngle < minWallAngle) {
             direction = 0;
         }
+
+
+        if (direction > 0) transform.eulerAngles = new Vector3(0, 0, 0);
+        if (direction < 0)
+        {
+            transform.eulerAngles = new Vector3(0, 180, 0);
+            direction *= -1;
+        }
+
         if (CanMove() && !Dashing && airStaggerTime <= 0) {
             if (OnLadder) {
                 if(direction != 0) {
