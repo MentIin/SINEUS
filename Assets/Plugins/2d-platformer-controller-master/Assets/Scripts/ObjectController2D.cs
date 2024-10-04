@@ -31,6 +31,8 @@ public class ObjectController2D : MonoBehaviour {
     protected float ignorePlatformsTime = 0;
 
     protected float minimumMoveThreshold = 0.01f;
+    
+    public bool ignoreGravity=false;
 
     public bool FacingRight { get; set; } // false == left, true == right
     public bool IgnoreFriction { get; set; }
@@ -87,6 +89,7 @@ public class ObjectController2D : MonoBehaviour {
     /// Updates the character's vertical speed according to gravity, gravity scale and other properties
     /// </summary>
     protected virtual void UpdateGravity() {
+        if (ignoreGravity) return;
         float g = pConfig.gravity * gravityScale * Time.fixedDeltaTime;
         if (speed.y > 0) {
             speed.y += g;

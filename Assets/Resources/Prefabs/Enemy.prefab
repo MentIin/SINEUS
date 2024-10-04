@@ -776,7 +776,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13b8008c6d4b454da11dd69c474d2152, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CheckIfSeePlayer: {fileID: 8321009038165880032}
+  checkIfSeePlayerHorizontal: {fileID: 8321009038165880032}
   CheckPlatformEnd: {fileID: 678099669537148865}
   Controller2D: {fileID: 4543497848779812293}
   Attack: {fileID: 9034181516878825485}

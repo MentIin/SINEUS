@@ -91,7 +91,9 @@
             </e>
             <e p="Attacks" t="Include">
               <e p="Attack.cs" t="Include" />
+              <e p="AttackBoomerang.cs" t="Include" />
               <e p="AttackMelee.cs" t="Include" />
+              <e p="BoomerangBullet.cs" t="Include" />
             </e>
             <e p="CameraLogic" t="Include">
               <e p="CameraController.cs" t="Include" />
@@ -103,12 +105,15 @@
             <e p="DestroyAfterTime.cs" t="Include" />
             <e p="Enemy" t="Include">
               <e p="AI" t="Include">
+                <e p="FlyingAI.cs" t="Include" />
                 <e p="SwordmanAI.cs" t="Include" />
               </e>
               <e p="Chekers" t="Include">
-                <e p="CheckIfSeePlayer.cs" t="Include" />
+                <e p="CheckIfSeePlayerHorizontal.cs" t="Include" />
+                <e p="CheckIfSeeTeamInRadius.cs" t="Include" />
                 <e p="CheckPlatformEnd.cs" t="Include" />
               </e>
+              <e p="FlyingMovement.cs" t="Include" />
               <e p="PatrolMovement.cs" t="Include" />
             </e>
             <e p="GameConstants.cs" t="Include" />
