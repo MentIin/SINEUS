@@ -32,9 +32,17 @@
       <option value="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/StaticData/Level/AllLevelsStaticData.cs" />
       <option value="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/Services/StaticData/StaticDataService.cs" />
       <option value="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/SceneLoader.cs" />
-      <option value="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/States/LoadLevelState.cs" />
       <option value="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/States/GameStateMachine.cs" />
+      <option value="$PROJECT_DIR$/Assets/Plugins/2d-platformer-controller-master/Assets/Scripts/CameraController.cs" />
+      <option value="$PROJECT_DIR$/Assets/Plugins/2d-platformer-controller-master/Assets/Scripts/CharacterController2D.cs" />
+      <option value="$PROJECT_DIR$/Assets/Plugins/2d-platformer-controller-master/Assets/Scripts/PlayerController.cs" />
+      <option value="$PROJECT_DIR$/Assets/Plugins/2d-platformer-controller-master/Assets/Scripts/PlatformController.cs" />
+      <option value="$PROJECT_DIR$/Assets/Plugins/2d-platformer-controller-master/Assets/Scripts/CharacterData.cs" />
+      <option value="$PROJECT_DIR$/Assets/CodeBase/Logic/Player/PlayerController.cs" />
       <option value="$PROJECT_DIR$/Assets/CodeBase/Logic/CameraLogic/CameraController.cs" />
+      <option value="$PROJECT_DIR$/Assets/CodeBase/Logic/CameraLogic/CameraFollow.cs" />
+      <option value="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/Factory/GameFactory.cs" />
+      <option value="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/States/LoadLevelState.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="2my0zQThB6EkyRO7ob6MOBJFAwc" />
@@ -78,7 +86,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1728033773310</updated>
-      <workItem from="1728033782760" duration="5216000" />
+      <workItem from="1728033782760" duration="7586000" />
     </task>
     <servers />
   </component>

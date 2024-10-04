@@ -94,6 +94,9 @@
             <e p="GameConstants.cs" t="Include" />
             <e p="GameTimer.cs" t="Include" />
             <e p="LogicExtensions.cs" t="Include" />
+            <e p="Player" t="Include">
+              <e p="PlayerController.cs" t="Include" />
+            </e>
             <e p="TriggerObserver.cs" t="Include" />
           </e>
           <e p="Sounds" t="Include">
@@ -122,6 +125,9 @@
               </e>
             </e>
           </e>
+        </e>
+        <e p="Input" t="Include">
+          <e p="InputMaster.cs" t="Include" />
         </e>
         <e p="NaughtyAttributes" t="Include">
           <e p="package.json" t="Include" />
@@ -276,14 +282,11 @@
               </e>
               <e p="Scripts" t="Include">
                 <e p="AreaTrigger.cs" t="Include" />
-                <e p="CameraController.cs" t="Include" />
                 <e p="CharacterController2D.cs" t="Include" />
                 <e p="CharacterData.cs" t="Include" />
                 <e p="CharacterSoundManager.cs" t="Include" />
-                <e p="CheckpointReturnTrigger.cs" t="Include" />
                 <e p="CheckpointSystem.cs" t="Include" />
                 <e p="ChekpointArea.cs" t="Include" />
-                <e p="HazardController.cs" t="Include" />
                 <e p="InteractableObject.cs" t="Include" />
                 <e p="InteractableTrigger.cs" t="Include" />
                 <e p="InteractSystem.cs" t="Include" />
@@ -294,8 +297,6 @@
                 <e p="PickUpObject.cs" t="Include" />
                 <e p="PlatformController.cs" t="Include" />
                 <e p="PlatformWaypoint.cs" t="Include" />
-                <e p="PlayerController.cs" t="Include" />
-                <e p="PowerUp.cs" t="Include" />
                 <e p="StandOnObjectController2D.cs" t="Include" />
                 <e p="Triggerable.cs" t="Include" />
                 <e p="TriggerObject.cs" t="Include" />

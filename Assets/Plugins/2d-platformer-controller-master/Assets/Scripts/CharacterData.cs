@@ -1,8 +1,5 @@
-﻿using System.Collections.Generic;
-using UnityEditor;
-using UnityEngine;
+﻿using UnityEngine;
 
-[RequireComponent(typeof(Animator))]
 [RequireComponent(typeof(CharacterController2D))]
 /// <summary>
 /// Used to store an character's attributes

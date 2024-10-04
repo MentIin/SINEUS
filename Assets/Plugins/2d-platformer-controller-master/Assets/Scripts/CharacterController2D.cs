@@ -6,7 +6,6 @@ using UnityEngine;
 /// This is a component used alongside CharacterData that controls all the movement and physics operations
 /// </summary>
 [RequireComponent(typeof(CharacterData))]
-[RequireComponent(typeof(Animator))]
 public class CharacterController2D : ObjectController2D {
     // Animation attributes and names
     private static readonly string ANIMATION_H_SPEED = "hSpeed";
@@ -22,7 +21,7 @@ public class CharacterController2D : ObjectController2D {
 
     // Other Componenents
     private CharacterData cData;
-    private Animator animator;
+    public Animator animator;
     private CharacterSoundManager soundManager;
     [SerializeField]
     private SpriteRenderer visual;
@@ -52,7 +51,6 @@ public class CharacterController2D : ObjectController2D {
     /// </summary>
     public override void Start() {
         cData = GetComponent<CharacterData>();
-        animator = GetComponent<Animator>();
         soundManager = GetComponent<CharacterSoundManager>();
         OnLadder = false;
         Dashing = false;
