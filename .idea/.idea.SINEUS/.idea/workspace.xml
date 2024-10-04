@@ -34,6 +34,7 @@
       <option value="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/SceneLoader.cs" />
       <option value="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/States/LoadLevelState.cs" />
       <option value="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/States/GameStateMachine.cs" />
+      <option value="$PROJECT_DIR$/Assets/CodeBase/Logic/CameraLogic/CameraController.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="2my0zQThB6EkyRO7ob6MOBJFAwc" />
@@ -77,7 +78,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1728033773310</updated>
-      <workItem from="1728033782760" duration="4503000" />
+      <workItem from="1728033782760" duration="4818000" />
     </task>
     <servers />
   </component>
