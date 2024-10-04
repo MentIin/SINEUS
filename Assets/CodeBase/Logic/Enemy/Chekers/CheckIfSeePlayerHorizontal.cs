@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace CodeBase.Logic.Enemy.Chekers
 {
-    public class CheckIfSeePlayer : MonoBehaviour
+    public class CheckIfSeePlayerHorizontal : MonoBehaviour
     {
         [SerializeField] private LayerMask cannotSeeThroughMask;
         [SerializeField] private float _distance=30f;

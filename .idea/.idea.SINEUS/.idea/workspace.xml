@@ -57,6 +57,12 @@
       <option value="$PROJECT_DIR$/Assets/CodeBase/Logic/Animations/PlayerAnimator.cs" />
       <option value="$PROJECT_DIR$/Assets/CodeBase/Logic/Player/PlayerController.cs" />
       <option value="$PROJECT_DIR$/Assets/CodeBase/Logic/Attacks/AttackMelee.cs" />
+      <option value="$PROJECT_DIR$/Assets/CodeBase/Logic/Enemy/FlyingMovement.cs" />
+      <option value="$PROJECT_DIR$/Assets/CodeBase/Logic/Enemy/Chekers/CheckIfSeePlayerHorizontal.cs" />
+      <option value="$PROJECT_DIR$/Assets/CodeBase/Logic/Enemy/Chekers/CheckIfSeePlayerInRadius.cs" />
+      <option value="$PROJECT_DIR$/Assets/CodeBase/Logic/Enemy/Chekers/CheckIfSeeTeamInRadius.cs" />
+      <option value="$PROJECT_DIR$/Assets/CodeBase/Logic/Enemy/AI/FlyingAI.cs" />
+      <option value="$PROJECT_DIR$/Assets/Plugins/2d-platformer-controller-master/Assets/Scripts/ObjectController2D.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="2my0zQThB6EkyRO7ob6MOBJFAwc" />
@@ -100,7 +106,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1728033773310</updated>
-      <workItem from="1728033782760" duration="20847000" />
+      <workItem from="1728033782760" duration="24405000" />
     </task>
     <servers />
   </component>

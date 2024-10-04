@@ -6,7 +6,7 @@ namespace CodeBase.Logic.Enemy.AI
 {
     public class SwordmanAI : MonoBehaviour
     {
-        [SerializeField] private CheckIfSeePlayer CheckIfSeePlayer;
+        [SerializeField] private CheckIfSeePlayerHorizontal checkIfSeePlayerHorizontal;
         [SerializeField] private CheckPlatformEnd CheckPlatformEnd;
         [SerializeField] private CharacterController2D Controller2D;
         [SerializeField] private Attack Attack;
@@ -17,10 +17,10 @@ namespace CodeBase.Logic.Enemy.AI
 
         private void Update()
         {
-            int dir = CheckIfSeePlayer.Check();
+            int dir = checkIfSeePlayerHorizontal.Check();
             if (dir != 0)
             {
-                if (CheckIfSeePlayer.HitDistance >= TargetDistance)
+                if (checkIfSeePlayerHorizontal.HitDistance >= TargetDistance)
                 {
                     direction = dir;
                 }
