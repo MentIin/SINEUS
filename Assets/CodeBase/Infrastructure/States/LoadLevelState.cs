@@ -56,6 +56,7 @@ namespace CodeBase.Infrastructure.States
             GameObject gameObject = _gameFactory.CreatePlayer(Vector2.zero);
             CameraFollow(gameObject.transform);
 
+            
             _gameStateMachine.Enter<GameLoopState>();
         }
         

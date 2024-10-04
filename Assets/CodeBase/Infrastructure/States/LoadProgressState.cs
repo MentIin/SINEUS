@@ -46,6 +46,18 @@ namespace CodeBase.Infrastructure.States
         {
             PlayerProgress playerProgress = new PlayerProgress();
             
+            playerProgress.GameData.playerPocket.Add(GameData.MagicStonesTypes.MeleeAttack);
+            playerProgress.GameData.playerPocket.Add(GameData.MagicStonesTypes.BoomerangAttack);
+
+            for (int i = 0; i < 5; i++)
+            {
+                playerProgress.GameData.playerSlots[i] = 
+                    (GameData.MagicStonesTypes.Null);
+
+            }
+
+
+            playerProgress.GameData.playerSlots[2] = (GameData.MagicStonesTypes.BoomerangAttack);
             // some start values
             
             return playerProgress;

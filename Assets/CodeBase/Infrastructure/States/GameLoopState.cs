@@ -33,7 +33,7 @@ namespace CodeBase.Infrastructure.States
         public void Enter()
         {
             Debug.Log("Enter GameLoop");
-            //AllServices.Container.Single<UIFactory>().CreateWindow(WindowType.NecklaceWin);
+            AllServices.Container.Single<UIFactory>().CreateWindow(WindowType.NecklaceWin);
         }
     }
 }
