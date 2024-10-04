@@ -256,6 +256,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Team: 0
+  reload: 0.1
+  attackDuration: 0.2
+  timeBeforeHit: 0.1
   _collider2D: {fileID: 9060161720561826466}
 --- !u!1 &1724266296384981596
 GameObject:
