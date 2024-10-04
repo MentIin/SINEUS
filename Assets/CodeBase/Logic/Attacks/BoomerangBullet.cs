@@ -102,6 +102,7 @@ namespace CodeBase.Logic.Attacks
         }
         private void NadoelKrutitsa()
         {
+            parentAttack.GetComponent<AttackBoomerang>().StartReload();
             handRenderer.sprite = handFull;
             visual.DOKill();
             Destroy(gameObject);

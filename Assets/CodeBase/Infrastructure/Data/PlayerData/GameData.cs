@@ -1,4 +1,7 @@
-﻿using System;
+﻿using NUnit.Framework;
+using System;
+using System.Collections;
+using System.Collections.Generic;
 
 namespace CodeBase.Infrastructure.Data.PlayerData
 {
@@ -10,6 +13,10 @@ namespace CodeBase.Infrastructure.Data.PlayerData
             MeleeAttack=0,
             SingleShot=1,
             ZoneSplash=2,
+            BoomerangAttack=3,
         }
+        public List<MagicStone> playerPocket = new List<MagicStone>();
+        public List<Slot> playerSlots = new List<Slot>();
+
     }
 }

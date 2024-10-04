@@ -9,6 +9,6 @@ public class MagicStone : MonoBehaviour
     {
         if (stoneType == GameData.MagicStonesTypes.MeleeAttack) Debug.Log("melee");
         if (stoneType == GameData.MagicStonesTypes.SingleShot) Debug.Log("shot");
-        if (stoneType == GameData.MagicStonesTypes.ZoneSplash) return;
+        if (stoneType == GameData.MagicStonesTypes.BoomerangAttack) return;
     }
 }

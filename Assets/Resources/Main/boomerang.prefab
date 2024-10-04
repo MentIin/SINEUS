@@ -49,6 +49,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damage: 0
   parentAttack: {fileID: 0}
+  handRenderer: {fileID: 0}
+  handFull: {fileID: 21300000, guid: 21ec962bee2acf04eb74f2e67de302ee, type: 3}
+  handEmpty: {fileID: 5785090870898371951, guid: da58a02d5b740c44ba296ebee41615be, type: 3}
   speed: 9
   speedCoof: 2
   _collider2D: {fileID: 867168440008270377}
@@ -144,8 +147,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5262837824986078469}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.173, y: 0.191, z: 0}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -195,7 +198,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 21ec962bee2acf04eb74f2e67de302ee, type: 3}
+  m_Sprite: {fileID: -296437191918092263, guid: 83a61584df9216641b5cdd1954ce8822, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
