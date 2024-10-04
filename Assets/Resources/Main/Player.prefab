@@ -540,7 +540,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d19a21d4c014504bd92cb0e82bc78ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CurrentAttack: {fileID: 5195635006389198951}
+  CurrentAttack: {fileID: 6883687391916002020}
   controller: {fileID: 8955931493352119036}
 --- !u!114 &1786847021331748887
 MonoBehaviour:

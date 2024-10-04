@@ -14,6 +14,7 @@ namespace CodeBase.Logic.Attacks
 
         public BoomerangBullet bulletPrefab;
         [SerializeField] private Transform shotPos;
+        [SerializeField] private SpriteRenderer handRenderer;
         private Vector3 mouseClickPos;
         public override bool StartAttack()
         {

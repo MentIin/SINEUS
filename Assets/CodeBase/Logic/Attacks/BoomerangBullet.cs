@@ -10,6 +10,10 @@ namespace CodeBase.Logic.Attacks
         [HideInInspector] public int damage;
         [HideInInspector] public Attack parentAttack;
 
+        [HideInInspector] public SpriteRenderer handRenderer;
+        [SerializeField] private Sprite handFull;
+        [SerializeField] private Sprite handEmpty;
+
         public float speed;
         [SerializeField] private float speedCoof = 3;
 
@@ -22,7 +26,7 @@ namespace CodeBase.Logic.Attacks
         private float minDist = 0.1f;
 
         private Rigidbody2D rb;
-        private GameObject player;
+        //private GameObject player;
 
         private bool canAttack = true;
         [SerializeField] private float attackDelay = 0.1f;
@@ -31,7 +35,7 @@ namespace CodeBase.Logic.Attacks
         [SerializeField] private int lifeTime = 10;
         private void Start()
         {
-            player = FindFirstObjectByType<PlayerController>().gameObject;
+            //player = FindFirstObjectByType<PlayerController>().gameObject;
 
             timeBtwAttack = attackDelay;
 
@@ -39,6 +43,7 @@ namespace CodeBase.Logic.Attacks
             rb.gravityScale = 0;
             rb.freezeRotation = true;
             visual.DORotate(new Vector3(0, 0, 360), 0.1f, RotateMode.FastBeyond360).SetLoops(-1, LoopType.Restart).SetRelative();
+            handRenderer.sprite = handEmpty;
             OnAttack();
 
             Invoke("NadoelKrutitsa", lifeTime);
@@ -59,8 +64,8 @@ namespace CodeBase.Logic.Attacks
             if (isTargetPos)
             {
                 rb.linearVelocity = Vector2.zero;
-                transform.position = Vector2.Lerp(transform.position, player.transform.position, speed * speedCoof * Time.deltaTime);
-                if (Mathf.Abs(Vector2.Distance(transform.position, player.transform.position)) < minDist)
+                transform.position = Vector2.Lerp(transform.position, parentAttack.transform.position, speed * speedCoof * Time.deltaTime);
+                if (Mathf.Abs(Vector2.Distance(transform.position, parentAttack.transform.position)) < minDist)
                 {
                     NadoelKrutitsa();
                 }
@@ -97,6 +102,7 @@ namespace CodeBase.Logic.Attacks
         }
         private void NadoelKrutitsa()
         {
+            handRenderer.sprite = handFull;
             visual.DOKill();
             Destroy(gameObject);
         }
