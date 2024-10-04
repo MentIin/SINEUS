@@ -456,12 +456,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: {fileID: 8835214663521237018}
-  renderer: {fileID: 0}
-  additionals:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 9132382301455466098}
+  renderer: {fileID: 9132382301455466098}
+  additionals: []
 --- !u!114 &3274879370817526131
 MonoBehaviour:
   m_ObjectHideFlags: 0
