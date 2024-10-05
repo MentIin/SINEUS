@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using CodeBase.Infrastructure.StaticData;
 using UnityEngine;
 
 namespace CodeBase.Infrastructure.Data.PlayerData
@@ -10,6 +11,8 @@ namespace CodeBase.Infrastructure.Data.PlayerData
         public List<MagicStoneSerializableData> playerPocket = new List<MagicStoneSerializableData>();
         public MagicStoneSerializableData[] playerSlots = new MagicStoneSerializableData[5];
 
+
+        public List<MagicStonesTypes> Looted= new List<MagicStonesTypes>();
         public Action MagicStoneChanged;
         
         
@@ -32,7 +35,25 @@ namespace CodeBase.Infrastructure.Data.PlayerData
             if (activeStonePlace == -1)
             {
                 if (newPlace == -1) return;
+                
+                
                 playerPocket.Remove(activeStoneStoneType);
+
+                if (activeStoneStoneType.Type == MagicStonesTypes.BoomerangAttack ||
+                    activeStoneStoneType.Type == MagicStonesTypes.BubbleAttack ||
+                    activeStoneStoneType.Type == MagicStonesTypes.ZoneSplash)
+                {
+                    foreach (var data in playerSlots)
+                    {
+                        if (data.Type == MagicStonesTypes.BoomerangAttack ||
+                            data.Type == MagicStonesTypes.BubbleAttack ||
+                            data.Type == MagicStonesTypes.ZoneSplash)
+                        {
+                            return;
+                        }
+                    }
+                }
+                
                 playerSlots[newPlace] = activeStoneStoneType;
             }
             else
@@ -85,6 +106,16 @@ namespace CodeBase.Infrastructure.Data.PlayerData
 
             Debug.LogWarning("Not found");
             return -1;
+        }
+
+        public void Loot(StoneStaticData staticData)
+        {
+            playerPocket.Add(new MagicStoneSerializableData
+            {
+                Type = staticData.Type,
+                Usages = staticData.Usages,
+            });
+            MagicStoneChanged?.Invoke();
         }
     }
 

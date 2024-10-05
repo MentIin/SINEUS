@@ -141,6 +141,9 @@
             <e p="Health.cs" t="Include" />
             <e p="InteractionZone.cs" t="Include" />
             <e p="LogicExtensions.cs" t="Include" />
+            <e p="Loot" t="Include">
+              <e p="Collectable.cs" t="Include" />
+            </e>
             <e p="Player" t="Include">
               <e p="PlayerController.cs" t="Include" />
             </e>

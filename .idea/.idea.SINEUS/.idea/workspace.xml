@@ -58,7 +58,6 @@
       <option value="$PROJECT_DIR$/Assets/CodeBase/Logic/Stones/BubbleStone.cs" />
       <option value="$PROJECT_DIR$/Assets/CodeBase/Logic/Attacks/AttackBoomerang.cs" />
       <option value="$PROJECT_DIR$/Assets/CodeBase/Logic/Attacks/BubbleAttack.cs" />
-      <option value="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/Data/PlayerData/GameData.cs" />
       <option value="$PROJECT_DIR$/Assets/CodeBase/Logic/Stones/FireAttackStone.cs" />
       <option value="$PROJECT_DIR$/Assets/CodeBase/Logic/Stones/ChangeAttackStone.cs" />
       <option value="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/States/LoadProgressState.cs" />
@@ -79,6 +78,7 @@
       <option value="$PROJECT_DIR$/Assets/Plugins/2d-platformer-controller-master/Assets/Scripts/CharacterController2D.cs" />
       <option value="$PROJECT_DIR$/Assets/CodeBase/Logic/Enemy/AI/RiderAI.cs" />
       <option value="$PROJECT_DIR$/Assets/CodeBase/Logic/InteractionZone.cs" />
+      <option value="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/Data/PlayerData/GameData.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="2my0zQThB6EkyRO7ob6MOBJFAwc" />
@@ -132,7 +132,7 @@
       <updated>1728033773310</updated>
       <workItem from="1728033782760" duration="39952000" />
       <workItem from="1728105496514" duration="9648000" />
-      <workItem from="1728117553459" duration="30226000" />
+      <workItem from="1728117553459" duration="31986000" />
     </task>
     <servers />
   </component>
