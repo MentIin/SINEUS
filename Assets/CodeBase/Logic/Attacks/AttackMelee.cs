@@ -5,10 +5,13 @@ namespace CodeBase.Logic.Attacks
 {
     public class AttackMelee : Attack
     {
+        public int Damage = 1;
         public float reload=0.5f;
         public float attackDuration=0.2f;
         public float timeBeforeHit = 0.1f;
         public float knockback = 20f;
+
+        public GameObject FirePrefab;
         
         public CircleCollider2D _collider2D;
         private bool _canAttack = true;
@@ -43,10 +46,14 @@ namespace CodeBase.Logic.Attacks
                         {
                             characterController2D.ApplyForce(new Vector2(transform.right.x *-1, 0.5f) * knockback);
                         }
-                        health.TakeDamage(1);
+                        health.TakeDamage(Damage);
+
+                        Fire.DealFire(health, FirePrefab);
                     }
                 }
             }
         }
+
+        
     }
 }

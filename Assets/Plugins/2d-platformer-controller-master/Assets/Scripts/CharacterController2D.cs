@@ -126,7 +126,6 @@ public class CharacterController2D : ObjectController2D {
 
         if (collisions.onGround && deltaMove.x != 0 && speed.y <= 0) {
             HandleSlopeChange(ref deltaMove);
-            print(deltaMove);
         }
 
         if (deltaMove.y > 0 || (deltaMove.y < 0 && (!collisions.onSlope || deltaMove.x == 0))) {

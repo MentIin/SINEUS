@@ -96,8 +96,12 @@
             <e p="Attacks" t="Include">
               <e p="Attack.cs" t="Include" />
               <e p="AttackBoomerang.cs" t="Include" />
+              <e p="AttackBubble.cs" t="Include" />
               <e p="AttackMelee.cs" t="Include" />
               <e p="BoomerangBullet.cs" t="Include" />
+              <e p="BubbleAttack.cs" t="Include" />
+              <e p="BulletBubble.cs" t="Include" />
+              <e p="Fire.cs" t="Include" />
             </e>
             <e p="CameraLogic" t="Include">
               <e p="CameraController.cs" t="Include" />
@@ -135,6 +139,8 @@
             <e p="Stones" t="Include">
               <e p="BaseStone.cs" t="Include" />
               <e p="BoomerangStone.cs" t="Include" />
+              <e p="BubbleStone.cs" t="Include" />
+              <e p="FireAttackStone.cs" t="Include" />
               <e p="GravityStone.cs" t="Include" />
               <e p="JumpStone.cs" t="Include" />
             </e>
