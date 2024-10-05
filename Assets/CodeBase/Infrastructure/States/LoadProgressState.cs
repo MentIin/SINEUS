@@ -46,11 +46,9 @@ namespace CodeBase.Infrastructure.States
         {
             PlayerProgress playerProgress = new PlayerProgress();
             
-            playerProgress.GameData.playerPocket.Add(GameData.MagicStonesTypes.Gravity);
+            //playerProgress.GameData.playerPocket.Add(GameData.MagicStonesTypes.Gravity);
             playerProgress.GameData.playerPocket.Add(GameData.MagicStonesTypes.BoomerangAttack);
-            playerProgress.GameData.playerPocket.Add(GameData.MagicStonesTypes.BubbleAttack);
-            playerProgress.GameData.playerPocket.Add(GameData.MagicStonesTypes.Jump);
-            playerProgress.GameData.playerPocket.Add(GameData.MagicStonesTypes.ZoneSplash);
+            playerProgress.GameData.playerPocket.Add(GameData.MagicStonesTypes.Fire);
 
             for (int i = 0; i < 5; i++)
             {

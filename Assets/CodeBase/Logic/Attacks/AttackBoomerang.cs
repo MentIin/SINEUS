@@ -5,9 +5,12 @@ namespace CodeBase.Logic.Attacks
     class AttackBoomerang : Attack
     {
         public int damage = 1;
+
         //public float attackDuration = 1.5f;
         public float reload=1;
         public float timeBeforeHit = 0.1f;
+        
+        public GameObject FirePrefab;
 
         //public CircleCollider2D _collider2D;
         private bool _canAttack=true;
@@ -35,6 +38,7 @@ namespace CodeBase.Logic.Attacks
             Quaternion bulletRotation = Quaternion.Euler(transform.rotation.x, transform.rotation.y, angle);
 
             BoomerangBullet bullet = Instantiate(bulletPrefab, shotPos.position, bulletRotation);
+            bullet.FirePrefab = FirePrefab;
             bullet.damage = damage;
             bullet.parentAttack= this;
             bullet.targetPos = mouseClickPos;

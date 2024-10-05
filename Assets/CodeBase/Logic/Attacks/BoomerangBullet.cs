@@ -1,3 +1,4 @@
+using CodeBase.Infrastructure;
 using CodeBase.Logic.Player;
 using DG.Tweening;
 using Unity.Burst.Intrinsics;
@@ -8,6 +9,9 @@ namespace CodeBase.Logic.Attacks
     public class BoomerangBullet : MonoBehaviour
     {
         [HideInInspector] public int damage;
+
+
+        [HideInInspector] public GameObject FirePrefab;
         [HideInInspector] public Attack parentAttack;
 
         [HideInInspector] public SpriteRenderer handRenderer;
@@ -94,7 +98,13 @@ namespace CodeBase.Logic.Attacks
                     if (health.Team != parentAttack.Team)
                     {
                         health.TakeDamage(damage);
+                        
                         Debug.Log("Киййа!");
+
+                        if (FirePrefab != null)
+                        {
+                            Fire.DealFire(health, FirePrefab);
+                        }
                         canAttack = false;
                     }
                 }

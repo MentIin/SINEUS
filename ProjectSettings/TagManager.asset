@@ -44,5 +44,8 @@ TagManager:
   - name: Mob
     uniqueID: 3408154843
     locked: 0
+  - name: Effects
+    uniqueID: 1437929853
+    locked: 0
   m_RenderingLayers:
   - Default
