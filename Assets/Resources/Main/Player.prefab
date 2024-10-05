@@ -1088,6 +1088,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Type: 8
   Data: {fileID: 3630623645110600068}
+  Controller2D: {fileID: 8955931493352119036}
 --- !u!1 &6920926027674346091
 GameObject:
   m_ObjectHideFlags: 0

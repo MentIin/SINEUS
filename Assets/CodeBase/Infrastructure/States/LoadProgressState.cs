@@ -49,8 +49,18 @@ namespace CodeBase.Infrastructure.States
             //playerProgress.GameData.playerPocket.Add(GameData.MagicStonesTypes.Gravity);
             playerProgress.GameData.playerPocket.Add(new MagicStoneSerializableData
             {
+                Type = GameData.MagicStonesTypes.Jump,
+                Usages = 2
+            });
+            playerProgress.GameData.playerPocket.Add(new MagicStoneSerializableData
+            {
+                Type = GameData.MagicStonesTypes.Gravity,
+                Usages = 2
+            });
+            playerProgress.GameData.playerPocket.Add(new MagicStoneSerializableData
+            {
                 Type = GameData.MagicStonesTypes.BoomerangAttack,
-                Usages = 10
+                Usages = 2
             });
             playerProgress.GameData.playerPocket.Add(new MagicStoneSerializableData
             {

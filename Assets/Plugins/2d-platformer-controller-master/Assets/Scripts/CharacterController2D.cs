@@ -46,6 +46,8 @@ public class CharacterController2D : ObjectController2D {
     public bool Immobile { get; set; }
     public bool Dashing { get; set; }
 
+    public Action Jumped;
+
     /// <summary>
     /// Start is called on the frame when a script is enabled just before
     /// any of the Update methods is called the first time.
@@ -300,7 +302,7 @@ public class CharacterController2D : ObjectController2D {
         }
         animator.SetFloat(ANIMATION_H_SPEED, speed.x);
         animator.SetFloat(ANIMATION_V_SPEED, TotalSpeed.y);
-        animator.SetFloat(ANIMATION_EX_SPEED, externalForce.x);
+        animator.SetFloat(ANIMATION_EX_SPEED, Mathf.Abs(externalForce.x));
         animator.SetBool(ANIMATION_GROUNDED, collisions.onGround);
         animator.SetBool(ANIMATION_DASHING, Dashing);
         animator.SetBool(ANIMATION_WALL, collisions.hHit);
@@ -403,6 +405,8 @@ public class CharacterController2D : ObjectController2D {
                 speed.y = Mathf.Sqrt(-2 * pConfig.gravity * height); // * gravityScale
                 externalForce.y = 0;
                 animator.SetTrigger(ANIMATION_JUMP);
+                Jumped?.Invoke();
+                
                 if (cData.jumpCancelStagger) {
                     airStaggerTime = 0;
                 }

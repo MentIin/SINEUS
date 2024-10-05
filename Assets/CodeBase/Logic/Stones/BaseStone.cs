@@ -43,16 +43,24 @@ namespace CodeBase.Logic.Stones
                 magicStonesTypesList.Add(magicStoneSerializableData.Type);
             }
             
+            
             if (magicStonesTypesList.Contains(Type) && !Active)
             {
+                if (GameData.UsagesLeftSlots(Type) <= 0)
+                {
+                    return;
+                }
                 Active = true;
+                
                 Debug.Log("Magic stone is equipped - " + Type.ToString());
                 Activate();
 
             }else if (!magicStonesTypesList.Contains(Type) && Active)
             {
-                Debug.Log("Magic stone is off - " + Type.ToString());
                 Active = false;
+                
+                Debug.Log("Magic stone is off - " + Type.ToString());
+                
                 Deactivate();
             }
         }

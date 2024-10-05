@@ -1,4 +1,5 @@
-﻿using CodeBase.Logic.Attacks;
+﻿using System;
+using CodeBase.Logic.Attacks;
 using CodeBase.Logic.Player;
 using UnityEngine.Serialization;
 
@@ -15,9 +16,15 @@ namespace CodeBase.Logic.Stones
             StoneAttack.AttackStarted += AttackStarted;
         }
 
+        private void OnDestroy()
+        {
+            StoneAttack.AttackStarted -= AttackStarted;
+        }
+
         private void AttackStarted()
         {
-            GameData.Use(Type);
+            if (!Active) return;
+            GameData.Spend(Type);
             if (GameData.UsagesLeftSlots(Type) <= 0)
             {
                 Deactivate();
@@ -31,11 +38,6 @@ namespace CodeBase.Logic.Stones
 
         protected override void Activate()
         {
-            if (GameData.UsagesLeftSlots(Type) <= 0)
-            {
-                return;
-            }
-
             PlayerController.SetAttack(StoneAttack);
         }
     }
