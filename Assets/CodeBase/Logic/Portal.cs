@@ -1,16 +1,17 @@
+using CodeBase.Infrastructure.Services;
+using CodeBase.Infrastructure.States;
 using UnityEngine;
 
 public class Portal : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    private GameStateMachine gameStateMachine;
     void Start()
     {
-        
+        gameStateMachine=AllServices.Container.Single<GameStateMachine>();
     }
 
-    // Update is called once per frame
-    void Update()
+    public void LoadNewLevel(int id)
     {
-        
+        gameStateMachine.Enter<LoadLevelState, int>(id);
     }
 }
