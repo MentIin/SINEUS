@@ -6,6 +6,7 @@ using CodeBase.Infrastructure.Services.Random;
 using CodeBase.Infrastructure.Services.StaticData;
 using CodeBase.Infrastructure.States;
 using CodeBase.Logic.CameraLogic;
+using CodeBase.Logic.Stones;
 using UnityEngine;
 
 namespace CodeBase.Infrastructure.Factory
@@ -40,6 +41,8 @@ namespace CodeBase.Infrastructure.Factory
         {
             var prefab = Resources.Load<GameObject>("Main/Player");
             GameObject gameObject = Object.Instantiate(prefab, pos, Quaternion.identity);
+            GravityStone stone=gameObject.GetComponentInChildren<GravityStone>();
+            stone.camera = _cameraController;
             return gameObject;
         }
     }
