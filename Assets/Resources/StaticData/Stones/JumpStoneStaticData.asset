@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: JumpStoneStaticData
   m_EditorClassIdentifier: 
   Type: 8
-  Icon: {fileID: 104265018347861113, guid: 512058ebddb86af4fa8dd361fd0ec2c5, type: 3}
+  Icon: {fileID: 21300000, guid: d93a206550d360c45916b39de95d1461, type: 3}

@@ -50,6 +50,7 @@ namespace CodeBase.Infrastructure.States
             playerProgress.GameData.playerPocket.Add(GameData.MagicStonesTypes.BoomerangAttack);
             playerProgress.GameData.playerPocket.Add(GameData.MagicStonesTypes.BubbleAttack);
             playerProgress.GameData.playerPocket.Add(GameData.MagicStonesTypes.Jump);
+            playerProgress.GameData.playerPocket.Add(GameData.MagicStonesTypes.ZoneSplash);
 
             for (int i = 0; i < 5; i++)
             {
