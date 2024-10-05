@@ -46,6 +46,8 @@ public class CharacterController2D : ObjectController2D {
     public bool Immobile { get; set; }
     public bool Dashing { get; set; }
 
+    public Action Jumped;
+
     /// <summary>
     /// Start is called on the frame when a script is enabled just before
     /// any of the Update methods is called the first time.
@@ -403,6 +405,8 @@ public class CharacterController2D : ObjectController2D {
                 speed.y = Mathf.Sqrt(-2 * pConfig.gravity * height); // * gravityScale
                 externalForce.y = 0;
                 animator.SetTrigger(ANIMATION_JUMP);
+                Jumped?.Invoke();
+                
                 if (cData.jumpCancelStagger) {
                     airStaggerTime = 0;
                 }
