@@ -27,7 +27,6 @@
   </component>
   <component name="IdeDocumentHistory">
     <changedPaths>
-      <option value="$PROJECT_DIR$/Assets/CodeBase/Logic/Enemy/FlyingMovement.cs" />
       <option value="$PROJECT_DIR$/Assets/CodeBase/Logic/Enemy/Chekers/CheckIfSeePlayerHorizontal.cs" />
       <option value="$PROJECT_DIR$/Assets/CodeBase/Logic/Enemy/Chekers/CheckIfSeePlayerInRadius.cs" />
       <option value="$PROJECT_DIR$/Assets/CodeBase/Sounds/AttackSounds.cs" />
@@ -64,7 +63,6 @@
       <option value="$PROJECT_DIR$/Assets/CodeBase/Logic/Attacks/AttackBoomerang.cs" />
       <option value="$PROJECT_DIR$/Assets/CodeBase/Logic/Attacks/BubbleAttack.cs" />
       <option value="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/Data/PlayerData/GameData.cs" />
-      <option value="$PROJECT_DIR$/Assets/Plugins/2d-platformer-controller-master/Assets/Scripts/ObjectController2D.cs" />
       <option value="$PROJECT_DIR$/Assets/CodeBase/Logic/Stones/FireAttackStone.cs" />
       <option value="$PROJECT_DIR$/Assets/CodeBase/Logic/Stones/ChangeAttackStone.cs" />
       <option value="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/States/LoadProgressState.cs" />
@@ -78,6 +76,8 @@
       <option value="$PROJECT_DIR$/Assets/CodeBase/Logic/Attacks/AttackProjectile.cs" />
       <option value="$PROJECT_DIR$/Assets/CodeBase/Logic/Attacks/Projectiles/BulletBubble.cs" />
       <option value="$PROJECT_DIR$/Assets/CodeBase/Logic/Attacks/Projectiles/Bullet.cs" />
+      <option value="$PROJECT_DIR$/Assets/Plugins/2d-platformer-controller-master/Assets/Scripts/ObjectController2D.cs" />
+      <option value="$PROJECT_DIR$/Assets/CodeBase/Logic/Enemy/AI/SwordmanAI.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="2my0zQThB6EkyRO7ob6MOBJFAwc" />
@@ -131,7 +131,7 @@
       <updated>1728033773310</updated>
       <workItem from="1728033782760" duration="39952000" />
       <workItem from="1728105496514" duration="9648000" />
-      <workItem from="1728117553459" duration="23292000" />
+      <workItem from="1728117553459" duration="24170000" />
     </task>
     <servers />
   </component>
@@ -161,13 +161,13 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Assets/Plugins/2d-platformer-controller-master/Assets/Scripts/ObjectController2D.cs</url>
-          <line>248</line>
+          <line>247</line>
           <properties documentPath="C:\Apps\GameDev\Projects\SINEUS\Assets\Plugins\2d-platformer-controller-master\Assets\Scripts\ObjectController2D.cs" initialLine="241" containingFunctionPresentation="method 'HorizontalCollisions'">
             <startOffsets>
-              <option value="10441" />
+              <option value="10414" />
             </startOffsets>
             <endOffsets>
-              <option value="10442" />
+              <option value="10415" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="2" />
