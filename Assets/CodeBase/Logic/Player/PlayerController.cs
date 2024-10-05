@@ -21,6 +21,7 @@ namespace CodeBase.Logic.Player
 
         private void Update()
         {
+
             if (_input.Attack())
             {
                 CurrentAttack.StartAttack();

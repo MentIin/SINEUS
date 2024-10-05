@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -65,7 +66,13 @@ public class CharacterController2D : ObjectController2D {
         UpdateDash();
         UpdateAirStagger();
         collisions.Reset();
+
+        if (speed.y is Single.NaN)
+        {
+            speed.y = 0f;
+        }
         Move((TotalSpeed) * Time.fixedDeltaTime);
+        
         PostMove();
         SetAnimations();
     }
@@ -80,7 +87,9 @@ public class CharacterController2D : ObjectController2D {
     public override Vector2 Move(Vector2 deltaMove) {
         int layer = gameObject.layer;
         gameObject.layer = Physics2D.IgnoreRaycastLayer;
+        
         PreMove(ref deltaMove);
+
         float xDir = Mathf.Sign(deltaMove.x);
         if (deltaMove.x != 0) {
             // Slope checks and processing
@@ -101,6 +110,7 @@ public class CharacterController2D : ObjectController2D {
             externalForce.y = 0;
             speed.y = -cData.wallSlideSpeed;
         }
+
         if (collisions.onSlope && collisions.groundAngle >= minWallAngle &&
             collisions.groundDirection != xDir && speed.y < 0) {
             float sin = Mathf.Sin(collisions.groundAngle * Mathf.Deg2Rad);
@@ -113,10 +123,15 @@ public class CharacterController2D : ObjectController2D {
             collisions.hHit = Physics2D.Raycast(origin, Vector2.left * collisions.groundDirection,
                 1f, collisionMask);
         }
+
         if (collisions.onGround && deltaMove.x != 0 && speed.y <= 0) {
+            print(deltaMove);
             HandleSlopeChange(ref deltaMove);
+            print(deltaMove);
         }
+
         if (deltaMove.y > 0 || (deltaMove.y < 0 && (!collisions.onSlope || deltaMove.x == 0))) {
+
             VerticalCollisions(ref deltaMove);
         }
         Debug.DrawRay(transform.position, deltaMove * 3f, Color.green);
@@ -161,12 +176,14 @@ public class CharacterController2D : ObjectController2D {
         for (int i = 0; i < verticalRayCount; i++) {
             Vector2 rayOrigin = directionY == -1 ? raycastOrigins.bottomLeft : raycastOrigins.topLeft;
             rayOrigin += Vector2.right * (verticalRaySpacing * i + deltaMove.x);
-            RaycastHit2D hit = Physics2D.Raycast(rayOrigin, Vector2.up * directionY,
+            RaycastHit2D hit = Physics2D.Raycast(rayOrigin, Vector2.up * gravityScale * directionY,
                 rayLength, collisionMask);
-            Debug.DrawRay(rayOrigin, Vector2.up * directionY * rayLength, Color.red);
+            Debug.DrawRay(rayOrigin, Vector2.up  * gravityScale* directionY * rayLength, Color.red);
             // for one way platforms
-            if (ignorePlatformsTime <= 0 && directionY < 0 && !hit) {
-                RaycastHit2D[] hits = Physics2D.RaycastAll(rayOrigin, Vector2.down,
+            if (ignorePlatformsTime <= 0 && directionY < 0 && !hit)
+            {
+                Vector2 VECTOR_DOWN = Vector2.down * gravityScale;
+                RaycastHit2D[] hits = Physics2D.RaycastAll(rayOrigin, VECTOR_DOWN,
                     rayLength, pConfig.owPlatformMask);
                 foreach (RaycastHit2D h in hits) {
                     if (h.distance > 0) {
@@ -302,10 +319,10 @@ public class CharacterController2D : ObjectController2D {
         }
 
 
-        if (direction > 0) transform.eulerAngles = new Vector3(0, 0, 0);
+        if (direction > 0) transform.eulerAngles = new Vector3(0, 0, transform.eulerAngles.z);
         if (direction < 0)
         {
-            transform.eulerAngles = new Vector3(0, 180, 0);
+            transform.eulerAngles = new Vector3(0, 180, transform.eulerAngles.z);
             direction *= -1;
         }
 
@@ -381,7 +398,8 @@ public class CharacterController2D : ObjectController2D {
                     IgnoreLadders();
                     ResetJumpsAndDashes();
                 }
-                speed.y = Mathf.Sqrt(-2 * pConfig.gravity * height);
+                //speed.y = Mathf.Sqrt(-2 * pConfig.gravity * height);
+                speed.y = Mathf.Sqrt(-2 * pConfig.gravity * height); // * gravityScale
                 externalForce.y = 0;
                 animator.SetTrigger(ANIMATION_JUMP);
                 if (cData.jumpCancelStagger) {
@@ -409,7 +427,8 @@ public class CharacterController2D : ObjectController2D {
     /// Ends the jump ealier by setting the vertical speed to the minimum jump speed if it's higher
     /// </summary>
     public void EndJump() {
-        float yMove = Mathf.Sqrt(-2 * pConfig.gravity * cData.minJumpHeight);
+        //float yMove = Mathf.Sqrt(-2 * pConfig.gravity * cData.minJumpHeight);
+        float yMove = Mathf.Sqrt(-2 * pConfig.gravity * cData.minJumpHeight *gravityScale);
         if (speed.y > yMove) {
             speed.y = yMove;
         }
@@ -518,7 +537,12 @@ public class CharacterController2D : ObjectController2D {
         }
         float radius = myCollider.bounds.extents.x;
         Vector2 topOrigin = ((Vector2) myCollider.bounds.center) + Vector2.up * (myCollider.bounds.extents.y - radius);
-        Vector2 bottomOrigin = ((Vector2) myCollider.bounds.center) + Vector2.down *
+        Vector2 VECTOR_DOWN = Vector2.down;
+        if (transform.eulerAngles.z == 180)
+        {
+            VECTOR_DOWN = Vector2.up;
+        }
+        Vector2 bottomOrigin = ((Vector2) myCollider.bounds.center) + VECTOR_DOWN *
             (myCollider.bounds.extents.y + radius + skinWidth);
         if (!OnLadder && direction != 0 && Mathf.Abs(direction) > ladderClimbThreshold) {
             Collider2D hit = Physics2D.OverlapCircle(direction == -1 ? bottomOrigin : topOrigin,

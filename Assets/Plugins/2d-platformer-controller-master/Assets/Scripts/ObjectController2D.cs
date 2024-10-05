@@ -90,7 +90,7 @@ public class ObjectController2D : MonoBehaviour {
     /// </summary>
     protected virtual void UpdateGravity() {
         if (ignoreGravity) return;
-        float g = pConfig.gravity * gravityScale * Time.fixedDeltaTime;
+        float g = pConfig.gravity * Time.fixedDeltaTime;
         if (speed.y > 0) {
             speed.y += g;
         } else {
@@ -106,6 +106,7 @@ public class ObjectController2D : MonoBehaviour {
             return;
         }
         float friction = collisions.onGround ? pConfig.groundFriction : pConfig.airFriction;
+        
         externalForce = Vector2.MoveTowards(externalForce, Vector2.zero,
             externalForce.magnitude * friction * Time.fixedDeltaTime);
         if(externalForce.magnitude <= minimumMoveThreshold) {
@@ -181,12 +182,17 @@ public class ObjectController2D : MonoBehaviour {
     protected void CheckGround(float direction) {
         for (int i = 0; i < verticalRayCount; i++) {
             Vector2 rayOrigin = direction == 1 ? raycastOrigins.bottomLeft : raycastOrigins.bottomRight;
+            if (gravityScale < 0)
+            {
+                rayOrigin = direction == 1 ? raycastOrigins.topLeft : raycastOrigins.topRight;
+            }
             rayOrigin += (direction == 1 ? Vector2.right : Vector2.left) * (verticalRaySpacing * i);
             rayOrigin.y += skinWidth * 2;
-            RaycastHit2D hit = Physics2D.Raycast(rayOrigin, Vector2.down,
+            var VECTOR_DOWN = Vector2.down * gravityScale;
+            RaycastHit2D hit = Physics2D.Raycast(rayOrigin, VECTOR_DOWN,
                 skinWidth * 4f, collisionMask);
             if (!hit && ignorePlatformsTime <= 0) {
-                hit = Physics2D.Raycast(rayOrigin, Vector2.down,
+                hit = Physics2D.Raycast(rayOrigin, VECTOR_DOWN,
                     skinWidth * 4f, pConfig.owPlatformMask);
                 if (hit.distance <= 0) {
                     continue;
@@ -194,12 +200,12 @@ public class ObjectController2D : MonoBehaviour {
             }
             if (hit) {
                 collisions.onGround = true;
-                collisions.groundAngle = Vector2.Angle(hit.normal, Vector2.up);
+                collisions.groundAngle = Vector2.Angle(hit.normal, Vector2.up * gravityScale);
                 collisions.groundDirection = Mathf.Sign(hit.normal.x);
                 collisions.groundLayer = hit.collider.gameObject.layer;
                 collisions.vHit = hit;
                 collisions.below = true;
-                Debug.DrawRay(rayOrigin, Vector2.down * skinWidth * 2, Color.blue);
+                Debug.DrawRay(rayOrigin, VECTOR_DOWN * skinWidth * 2, Color.blue);
                 break;
             }
         }
@@ -215,12 +221,12 @@ public class ObjectController2D : MonoBehaviour {
         float rayLength = Mathf.Abs(deltaMove.x) + skinWidth;
         for (int i = 0; i < horizontalRayCount; i++) {
             Vector2 rayOrigin = directionX == -1 ? raycastOrigins.bottomLeft : raycastOrigins.bottomRight;
-            rayOrigin += Vector2.up * (horizontalRaySpacing * i);
+            rayOrigin += Vector2.up * (horizontalRaySpacing * i) * gravityScale;
             RaycastHit2D hit = Physics2D.Raycast(rayOrigin, Vector2.right * directionX,
                 rayLength, collisionMask);
             Debug.DrawRay(rayOrigin, Vector2.right * directionX * rayLength, Color.red);
             if (hit) {
-                float angle = Vector2.Angle(hit.normal, Vector2.up);
+                float angle = Vector2.Angle(hit.normal, Vector2.up * gravityScale);
                 if (i == 0 && !collisions.onSlope && angle < minWallAngle) {
                     collisions.onGround = true;
                     collisions.groundAngle = angle;
@@ -269,9 +275,9 @@ public class ObjectController2D : MonoBehaviour {
             rayOrigin += Vector2.right * (verticalRaySpacing * i + deltaMove.x);
             RaycastHit2D hit = Physics2D.Raycast(rayOrigin, Vector2.up * directionY,
                 rayLength, collisionMask);
-            Debug.DrawRay(rayOrigin, Vector2.up * directionY * rayLength, Color.red);
+            Debug.DrawRay(rayOrigin, Vector2.up* directionY * rayLength, Color.red);
             if (directionY < 0 && !hit) {
-                hit = Physics2D.Raycast(rayOrigin, Vector2.up * directionY,
+                hit = Physics2D.Raycast(rayOrigin, Vector2.up* directionY,
                     rayLength, pConfig.owPlatformMask);
             }
             if (hit) {
@@ -329,14 +335,15 @@ public class ObjectController2D : MonoBehaviour {
     /// <param name="deltaMove">The current character deltaMove</param>
     protected virtual void HandleSlopeChange(ref Vector2 deltaMove) {
         float directionX = Mathf.Sign(deltaMove.x);
+        Vector2 VECTOR_DOWN = Vector2.down * gravityScale;
         if (deltaMove.y > 0) {
             // climb steeper slope
             float rayLength = Mathf.Abs(deltaMove.x) + skinWidth * 2;
             Vector2 rayOrigin = (directionX == -1 ? raycastOrigins.bottomLeft : raycastOrigins.bottomRight) +
-                Vector2.up * deltaMove.y;
+                Vector2.up* gravityScale * deltaMove.y;
             RaycastHit2D hit = Physics2D.Raycast(rayOrigin, Vector2.right * directionX, rayLength, collisionMask);
             if (hit) {
-                float angle = Vector2.Angle(hit.normal, Vector2.up);
+                float angle = Vector2.Angle(hit.normal, Vector2.up* gravityScale);
                 if (angle != collisions.groundAngle) {
                     deltaMove.x = (hit.distance - skinWidth) * directionX;
                     collisions.groundAngle = angle;
@@ -345,10 +352,10 @@ public class ObjectController2D : MonoBehaviour {
             } else {
                 // climb milder slope or flat ground
                 rayOrigin = (directionX == -1 ? raycastOrigins.bottomLeft : raycastOrigins.bottomRight) + deltaMove;
-                hit = Physics2D.Raycast(rayOrigin, Vector2.down, 1f, collisionMask);
-                Debug.DrawRay(rayOrigin, Vector2.down, Color.yellow);
+                hit = Physics2D.Raycast(rayOrigin, VECTOR_DOWN, 1f, collisionMask);
+                Debug.DrawRay(rayOrigin, VECTOR_DOWN, Color.yellow);
                 if (hit && hit.collider.gameObject.layer == collisions.groundLayer) {
-                    float angle = Vector2.Angle(hit.normal, Vector2.up);
+                    float angle = Vector2.Angle(hit.normal, Vector2.up * gravityScale);
                     float overshoot = 0;
                     if (angle < collisions.groundAngle) {
                         if (angle > 0) {
@@ -373,8 +380,8 @@ public class ObjectController2D : MonoBehaviour {
             float rayLength = Mathf.Abs(deltaMove.y) + skinWidth;
             Vector2 rayOrigin = (directionX == -1 ? raycastOrigins.bottomRight : raycastOrigins.bottomLeft) +
                 Vector2.right * deltaMove.x;
-            RaycastHit2D hit = Physics2D.Raycast(rayOrigin, Vector2.down, rayLength, collisionMask);
-            float angle = Vector2.Angle(hit.normal, Vector2.up);
+            RaycastHit2D hit = Physics2D.Raycast(rayOrigin, VECTOR_DOWN, rayLength, collisionMask);
+            float angle = Vector2.Angle(hit.normal, Vector2.up * gravityScale);
             if (hit && angle < collisions.groundAngle) {
                 deltaMove.y = -(hit.distance - skinWidth);
                 collisions.groundAngle = angle;
@@ -382,11 +389,11 @@ public class ObjectController2D : MonoBehaviour {
             } else {
                 // descend steeper slope
                 rayOrigin = (directionX == 1 ? raycastOrigins.bottomLeft : raycastOrigins.bottomRight) + deltaMove;
-                hit = Physics2D.Raycast(rayOrigin, Vector2.down, 1f, collisionMask);
-                Debug.DrawRay(rayOrigin, Vector2.down, Color.yellow);
+                hit = Physics2D.Raycast(rayOrigin, VECTOR_DOWN, 1f, collisionMask);
+                Debug.DrawRay(rayOrigin, VECTOR_DOWN, Color.yellow);
                 if (hit && Mathf.Sign(hit.normal.x) == directionX &&
                     hit.collider.gameObject.layer == collisions.groundLayer) {
-                    angle = Vector2.Angle(hit.normal, Vector2.up);
+                    angle = Vector2.Angle(hit.normal, Vector2.up * gravityScale);
                     float overshoot = 0;
                     if (angle > collisions.groundAngle && Mathf.Sign(hit.normal.x) == (FacingRight ? 1 : -1)) {
                         if (collisions.groundAngle > 0) {

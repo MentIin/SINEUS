@@ -35,7 +35,6 @@
       <option value="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/Services/Input/StandaloneInputService.cs" />
       <option value="$PROJECT_DIR$/Assets/CodeBase/Logic/Health.cs" />
       <option value="$PROJECT_DIR$/Assets/CodeBase/Logic/Death.cs" />
-      <option value="$PROJECT_DIR$/Assets/Plugins/2d-platformer-controller-master/Assets/Scripts/CharacterController2D.cs" />
       <option value="$PROJECT_DIR$/Assets/CodeBase/Logic/Enemy/CheckPlatformEnd.cs" />
       <option value="$PROJECT_DIR$/Assets/CodeBase/Logic/Enemy/PatrolMovement.cs" />
       <option value="$PROJECT_DIR$/Assets/CodeBase/Logic/Animations/GetDamageAnimator.cs" />
@@ -44,7 +43,6 @@
       <option value="$PROJECT_DIR$/Assets/CodeBase/Logic/Enemy/Chekers/CheckIfSeePlayer.cs" />
       <option value="$PROJECT_DIR$/Assets/CodeBase/Logic/Enemy/AI/SwordmanAI.cs" />
       <option value="$PROJECT_DIR$/Assets/CodeBase/Logic/Attacks/Attack.cs" />
-      <option value="$PROJECT_DIR$/Assets/CodeBase/Logic/Player/PlayerController.cs" />
       <option value="$PROJECT_DIR$/Assets/CodeBase/Logic/Attacks/AttackMelee.cs" />
       <option value="$PROJECT_DIR$/Assets/CodeBase/Logic/Enemy/FlyingMovement.cs" />
       <option value="$PROJECT_DIR$/Assets/CodeBase/Logic/Enemy/Chekers/CheckIfSeePlayerHorizontal.cs" />
@@ -52,7 +50,6 @@
       <option value="$PROJECT_DIR$/Assets/CodeBase/Logic/Enemy/AI/FlyingAI.cs" />
       <option value="$PROJECT_DIR$/Assets/CodeBase/Sounds/AttackSounds.cs" />
       <option value="$PROJECT_DIR$/Assets/CodeBase/Logic/Sounds/AttackSounds.cs" />
-      <option value="$PROJECT_DIR$/Assets/Plugins/2d-platformer-controller-master/Assets/Scripts/ObjectController2D.cs" />
       <option value="$PROJECT_DIR$/Assets/CodeBase/Logic/Enemy/Chekers/CheckIfSeeTeamInRadius.cs" />
       <option value="$PROJECT_DIR$/Assets/CodeBase/UI/Elements/Dialogs/UnityEventOnDialog.cs" />
       <option value="$PROJECT_DIR$/Assets/CodeBase/UI/Elements/Dialogs/DialogStarter.cs" />
@@ -63,10 +60,8 @@
       <option value="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/Services/StaticData/StaticDataService.cs" />
       <option value="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/Data/PlayerData/PlayerProgress.cs" />
       <option value="$PROJECT_DIR$/Assets/CodeBase/UI/Elements/Necklace/MagicStone.cs" />
-      <option value="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/States/LoadProgressState.cs" />
       <option value="$PROJECT_DIR$/Assets/CodeBase/UI/Elements/Necklace/Slot.cs" />
       <option value="$PROJECT_DIR$/Assets/CodeBase/UI/Elements/Necklace/InventoryWindow.cs" />
-      <option value="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/Data/PlayerData/GameData.cs" />
       <option value="$PROJECT_DIR$/Assets/CodeBase/Logic/Animations/PlayerAnimator.cs" />
       <option value="$PROJECT_DIR$/Assets/CodeBase/Logic/Stones/BoomerangStone.cs" />
       <option value="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/States/GameStateMachine.cs" />
@@ -76,7 +71,12 @@
       <option value="$PROJECT_DIR$/Assets/CodeBase/UI/Elements/Buttons/OpenWindowButton.cs" />
       <option value="$PROJECT_DIR$/Assets/CodeBase/UI/Services/UIFactory/UIFactory.cs" />
       <option value="$PROJECT_DIR$/Assets/CodeBase/Logic/Stones/BaseStone.cs" />
+      <option value="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/Data/PlayerData/GameData.cs" />
+      <option value="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/States/LoadProgressState.cs" />
       <option value="$PROJECT_DIR$/Assets/CodeBase/Logic/Stones/GravityStone.cs" />
+      <option value="$PROJECT_DIR$/Assets/CodeBase/Logic/Player/PlayerController.cs" />
+      <option value="$PROJECT_DIR$/Assets/Plugins/2d-platformer-controller-master/Assets/Scripts/ObjectController2D.cs" />
+      <option value="$PROJECT_DIR$/Assets/Plugins/2d-platformer-controller-master/Assets/Scripts/CharacterController2D.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="2my0zQThB6EkyRO7ob6MOBJFAwc" />
@@ -121,7 +121,7 @@
       <option name="presentableId" value="Default" />
       <updated>1728033773310</updated>
       <workItem from="1728033782760" duration="39952000" />
-      <workItem from="1728105496514" duration="2637000" />
+      <workItem from="1728105496514" duration="6122000" />
     </task>
     <servers />
   </component>
