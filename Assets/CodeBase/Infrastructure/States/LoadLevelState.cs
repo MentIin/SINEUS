@@ -6,6 +6,7 @@ using CodeBase.Infrastructure.Services.Random;
 using CodeBase.Infrastructure.Services.StaticData;
 using CodeBase.Logic.CameraLogic;
 using CodeBase.UI;
+using CodeBase.UI.Services.UIFactory;
 using UnityEngine;
 
 namespace CodeBase.Infrastructure.States
@@ -21,12 +22,14 @@ namespace CodeBase.Infrastructure.States
         private readonly IInputService _inputService;
         private readonly LoadingCurtain _loadingCurtain;
         private CameraController _cameraController;
+        private readonly UIFactory _uiFactory;
 
         private const string GameSceneName = "GameScene";
 
         public LoadLevelState(GameStateMachine gameStateMachine, SceneLoader sceneLoader, GameFactory gameFactory,
             StaticDataService staticDataService, IRandomService randomService, PersistentProgressService progressService,
-            IInputService inputService, LoadingCurtain loadingCurtain, CameraController cameraController)
+            IInputService inputService, LoadingCurtain loadingCurtain,
+            CameraController cameraController, UIFactory uiFactory)
         {
             _gameStateMachine = gameStateMachine;
             _sceneLoader = sceneLoader;
@@ -37,6 +40,7 @@ namespace CodeBase.Infrastructure.States
             _inputService = inputService;
             _loadingCurtain = loadingCurtain;
             _cameraController = cameraController;
+            _uiFactory = uiFactory;
         }
 
         public void Enter(int levelId)
@@ -56,6 +60,7 @@ namespace CodeBase.Infrastructure.States
             GameObject gameObject = _gameFactory.CreatePlayer(Vector2.zero);
             CameraFollow(gameObject.transform);
 
+            _uiFactory.CreateHUD();
             
             _gameStateMachine.Enter<GameLoopState>();
         }

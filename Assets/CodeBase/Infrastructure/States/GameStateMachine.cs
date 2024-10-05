@@ -65,9 +65,13 @@ namespace CodeBase.Infrastructure.States
             _states[typeof(MainMenuState)] = new MainMenuState(this, _allServices.Single<PersistentProgressService>(),
                 _allServices.Single<UIFactory>(), _loadingCurtain, _sceneLoader);
             
-            _states[typeof(LoadLevelState)] = new LoadLevelState(this,  _sceneLoader, _allServices.Single<GameFactory>(),
-                _allServices.Single<StaticDataService>(), _allServices.Single<IRandomService>(), _allServices.Single<PersistentProgressService>(),
-                _allServices.Single<IInputService>(), _loadingCurtain, _cameraController);
+            _states[typeof(LoadLevelState)] = new LoadLevelState(this,  _sceneLoader, 
+                _allServices.Single<GameFactory>(),
+                _allServices.Single<StaticDataService>(),
+                _allServices.Single<IRandomService>(),
+                _allServices.Single<PersistentProgressService>(),
+                _allServices.Single<IInputService>(), _loadingCurtain, _cameraController,
+                _allServices.Single<UIFactory>());
         }
     }
 }

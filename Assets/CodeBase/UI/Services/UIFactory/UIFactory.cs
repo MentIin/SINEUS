@@ -64,5 +64,12 @@ namespace CodeBase.UI.Services.UIFactory
         {
             Object.DestroyImmediate(_uiRoot.gameObject);
         }
+
+        public void CreateHUD()
+        {
+            GameObject prefab = Resources.Load<GameObject>(AssetAddress.HUD);
+            GameObject go = Object.Instantiate(prefab);
+            go.GetComponentInChildren<OpenWindowButton>().Construct(this);
+        }
     }
 }
