@@ -149,7 +149,7 @@ public class ObjectController2D : MonoBehaviour {
             speed.y < 0) {
             speed.x = 0;
             Vector2 origin = collisions.groundDirection == -1 ? raycastOrigins.bottomRight : raycastOrigins.bottomRight;
-            collisions.hHit = Physics2D.Raycast(origin, Vector2.left * collisions.groundDirection,
+            collisions.hHit = Physics2D.Raycast(origin, transform.right * collisions.groundDirection * -1,
                 1f, collisionMask);
         }
         if (deltaMove.y > 0 || (deltaMove.y < 0 && (!collisions.onSlope || deltaMove.x == 0))) {
@@ -178,14 +178,19 @@ public class ObjectController2D : MonoBehaviour {
     /// </summary>
     /// <param name="direction">Direction the character is moving, -1 = left, 1 = right</param>
     protected void CheckGround(float direction) {
-        for (int i = 0; i < verticalRayCount; i++) {
+        for (int i = 0; i < verticalRayCount; i++)
+        {
+
+            direction = 1;
             Vector2 rayOrigin = direction == 1 ? raycastOrigins.bottomLeft : raycastOrigins.bottomRight;
             if (gravityScale < 0)
             {
                 rayOrigin = direction == 1 ? raycastOrigins.topLeft : raycastOrigins.topRight;
             }
-            rayOrigin += (direction == 1 ? Vector2.right : Vector2.left) * (verticalRaySpacing * i);
+            rayOrigin += (Vector2)(direction == 1 ? Vector2.right : Vector2.right) * (verticalRaySpacing * i);
             rayOrigin.y += skinWidth * 2;
+            Debug.DrawRay(rayOrigin, Vector2.up  * gravityScale* Vector2.down, Color.red);
+
             var VECTOR_DOWN = Vector2.down * gravityScale;
             RaycastHit2D hit = Physics2D.Raycast(rayOrigin, VECTOR_DOWN,
                 skinWidth * 4f, collisionMask);
@@ -215,23 +220,31 @@ public class ObjectController2D : MonoBehaviour {
     /// </summary>
     /// <param name="deltaMove">The current object deltaMove used for the raycast lenght</param>
     protected void HorizontalCollisions(ref Vector2 deltaMove) {
+        
         float directionX = Mathf.Sign(deltaMove.x);
+        
+        
+        if (transform.right == Vector3.left) directionX *= -1;
+        print(directionX);
         float rayLength = Mathf.Abs(deltaMove.x) + skinWidth;
         for (int i = 0; i < horizontalRayCount; i++) {
             Vector2 rayOrigin = directionX == -1 ? raycastOrigins.bottomLeft : raycastOrigins.bottomRight;
             rayOrigin += Vector2.up * (horizontalRaySpacing * i) * gravityScale;
+            
             RaycastHit2D hit = Physics2D.Raycast(rayOrigin, Vector2.right * directionX,
                 rayLength, collisionMask);
-            Debug.DrawRay(rayOrigin, Vector2.right * directionX * rayLength, Color.red);
+            Debug.DrawRay(rayOrigin,
+                Vector2.right * directionX * rayLength,
+                Color.magenta);
             if (hit) {
                 float angle = Vector2.Angle(hit.normal, Vector2.up * gravityScale);
                 if (i == 0 && !collisions.onSlope && angle < minWallAngle) {
                     collisions.onGround = true;
                     collisions.groundAngle = angle;
                     collisions.groundDirection = Mathf.Sign(hit.normal.x);
-                    deltaMove.x -= (hit.distance - skinWidth) * directionX;
+                    //deltaMove.x -= (hit.distance - skinWidth) * directionX* directionX;
                     ClimbSlope(ref deltaMove);
-                    deltaMove.x += (hit.distance - skinWidth) * directionX;
+                    deltaMove.x += (hit.distance - skinWidth) * directionX * directionX;
                     rayLength = Mathf.Min(Mathf.Abs(deltaMove.x) + skinWidth, hit.distance);
                 }
                 if (!(i == 0 && collisions.onSlope)) {
@@ -270,7 +283,7 @@ public class ObjectController2D : MonoBehaviour {
         float rayLength = Mathf.Abs(deltaMove.y) + skinWidth;
         for (int i = 0; i < verticalRayCount; i++) {
             Vector2 rayOrigin = directionY == -1 ? raycastOrigins.bottomLeft : raycastOrigins.topLeft;
-            rayOrigin += Vector2.right * (verticalRaySpacing * i + deltaMove.x);
+            rayOrigin += (Vector2)Vector2.right * (verticalRaySpacing * i + deltaMove.x);
             RaycastHit2D hit = Physics2D.Raycast(rayOrigin, Vector2.up * directionY,
                 rayLength, collisionMask);
             Debug.DrawRay(rayOrigin, Vector2.up* directionY * rayLength, Color.red);
@@ -333,13 +346,15 @@ public class ObjectController2D : MonoBehaviour {
     /// <param name="deltaMove">The current character deltaMove</param>
     protected virtual void HandleSlopeChange(ref Vector2 deltaMove) {
         float directionX = Mathf.Sign(deltaMove.x);
+        
+        return;
         Vector2 VECTOR_DOWN = Vector2.down * gravityScale;
         if (deltaMove.y > 0) {
             // climb steeper slope
             float rayLength = Mathf.Abs(deltaMove.x) + skinWidth * 2;
             Vector2 rayOrigin = (directionX == -1 ? raycastOrigins.bottomLeft : raycastOrigins.bottomRight) +
                 Vector2.up* gravityScale * deltaMove.y;
-            RaycastHit2D hit = Physics2D.Raycast(rayOrigin, Vector2.right * directionX, rayLength, collisionMask);
+            RaycastHit2D hit = Physics2D.Raycast(rayOrigin, transform.right * directionX, rayLength, collisionMask);
             if (hit) {
                 float angle = Vector2.Angle(hit.normal, Vector2.up* gravityScale);
                 if (angle != collisions.groundAngle) {
@@ -377,7 +392,7 @@ public class ObjectController2D : MonoBehaviour {
             // descend milder slope or flat ground
             float rayLength = Mathf.Abs(deltaMove.y) + skinWidth;
             Vector2 rayOrigin = (directionX == -1 ? raycastOrigins.bottomRight : raycastOrigins.bottomLeft) +
-                Vector2.right * deltaMove.x;
+                (Vector2)transform.right * deltaMove.x;
             RaycastHit2D hit = Physics2D.Raycast(rayOrigin, VECTOR_DOWN, rayLength, collisionMask);
             float angle = Vector2.Angle(hit.normal, Vector2.up * gravityScale);
             if (hit && angle < collisions.groundAngle) {

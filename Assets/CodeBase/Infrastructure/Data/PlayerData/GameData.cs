@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using UnityEngine;
 
 namespace CodeBase.Infrastructure.Data.PlayerData
 {
@@ -55,6 +56,35 @@ namespace CodeBase.Infrastructure.Data.PlayerData
                
             }
             MagicStoneChanged?.Invoke();
+        }
+
+        public void Use(MagicStonesTypes type)
+        {
+            foreach (var stoneSerializableData in playerSlots)
+            {
+                if (stoneSerializableData.Type == type)
+                {
+                    Debug.Log(stoneSerializableData.Usages);
+                    stoneSerializableData.Usages--;
+                    
+                    MagicStoneChanged?.Invoke();
+                    return;
+                }
+            }
+        }
+
+        public int UsagesLeftSlots(MagicStonesTypes type)
+        {
+            foreach (var stoneSerializableData in playerSlots)
+            {
+                if (stoneSerializableData.Type == type)
+                {
+                    return stoneSerializableData.Usages;
+                }
+            }
+
+            Debug.LogWarning("Not found");
+            return -1;
         }
     }
 

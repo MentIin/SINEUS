@@ -100,7 +100,6 @@
               <e p="AttackCircleWave.cs" t="Include" />
               <e p="AttackMelee.cs" t="Include" />
               <e p="BoomerangBullet.cs" t="Include" />
-              <e p="BubbleAttack.cs" t="Include" />
               <e p="BulletBubble.cs" t="Include" />
               <e p="BulletSimple.cs" t="Include" />
               <e p="Fire.cs" t="Include" />
@@ -127,6 +126,9 @@
               <e p="FlyingMovement.cs" t="Include" />
               <e p="PatrolMovement.cs" t="Include" />
             </e>
+            <e p="Enviroment" t="Include">
+              <e p="ParalaxBehaviour.cs" t="Include" />
+            </e>
             <e p="GameConstants.cs" t="Include" />
             <e p="GameTimer.cs" t="Include" />
             <e p="Health.cs" t="Include" />
@@ -141,12 +143,10 @@
             </e>
             <e p="Stones" t="Include">
               <e p="BaseStone.cs" t="Include" />
-              <e p="BoomerangStone.cs" t="Include" />
-              <e p="BubbleStone.cs" t="Include" />
+              <e p="ChangeAttackStone.cs" t="Include" />
               <e p="FireAttackStone.cs" t="Include" />
               <e p="GravityStone.cs" t="Include" />
               <e p="JumpStone.cs" t="Include" />
-              <e p="WaveAttackStone.cs" t="Include" />
             </e>
             <e p="TriggerObserver.cs" t="Include" />
           </e>

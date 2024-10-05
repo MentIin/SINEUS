@@ -173,10 +173,13 @@ public class CharacterController2D : ObjectController2D {
         float rayLength = Mathf.Abs(deltaMove.y) + skinWidth;
         for (int i = 0; i < verticalRayCount; i++) {
             Vector2 rayOrigin = directionY == -1 ? raycastOrigins.bottomLeft : raycastOrigins.topLeft;
-            rayOrigin += Vector2.right * (verticalRaySpacing * i + deltaMove.x);
+
+
+            rayOrigin += (Vector2)Vector2.right * (verticalRaySpacing * i + deltaMove.x );
+            
             RaycastHit2D hit = Physics2D.Raycast(rayOrigin, Vector2.up * gravityScale * directionY,
                 rayLength, collisionMask);
-            Debug.DrawRay(rayOrigin, Vector2.up  * gravityScale* directionY * rayLength, Color.red);
+            //Debug.DrawRay(rayOrigin, Vector2.up  * gravityScale* directionY * rayLength, Color.red);
             // for one way platforms
             if (ignorePlatformsTime <= 0 && directionY < 0 && !hit)
             {

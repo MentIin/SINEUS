@@ -26,6 +26,8 @@ public class AttackBubble : Attack
         mouseClickPos = new Vector3(mouseClickPos.x, mouseClickPos.y, 0);
         _canAttack = false;
 
+        InvokeStarted();
+        
         for (int i = 0; i < bubblesCount; i++)
         {
             Vector2 myPos = shotPos.position;
