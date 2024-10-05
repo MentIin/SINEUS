@@ -29,5 +29,11 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Levels/Belozerci.unity
     guid: 0521fbf12d77a874b96fd9580ae8543e
+  - enabled: 1
+    path: Assets/Scenes/Levels/ChurchOutside.unity
+    guid: eca4f09b8df7b404192db4c0456cce27
+  - enabled: 1
+    path: Assets/Scenes/Levels/ChurchInside.unity
+    guid: fc122e7123b89ac4eb67e1b738158563
   m_configObjects: {}
   m_UseUCBPForAssetBundles: 0
