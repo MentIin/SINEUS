@@ -15,7 +15,9 @@ MonoBehaviour:
   NextNodes:
   - NextNode: {fileID: 11400000, guid: d29842cdcca583f49a194f7a4113c705, type: 2}
     ContinueButtonLabel: "\u0414\u0430\u043B\u044C\u0448\u0435"
+  Name: "\u0414\u0435\u0434 \u0412\u043E\u0432\u0430"
   Text: "\u041B\u0443\u0447\u0448\u0435\u0435 \u0432 \u043C\u0438\u0440\u0435 \u043C\u0435\u0436\u0434\u0443
     \u043F\u0440\u043E\u0447\u0438\u043C."
+  icon: {fileID: -9047516357461717769, guid: 70812eeeceff0714d8ab1c0ca4e16953, type: 3}
   HaveCallback: 0
   CallbackId: 0

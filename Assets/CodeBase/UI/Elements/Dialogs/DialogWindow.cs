@@ -12,6 +12,8 @@ namespace CodeBase.UI.Elements.Dialogs
         [SerializeField] private TextMeshProUGUI _textMeshPro;
         [SerializeField] private GameObject _continueButtonPrefab;
         [SerializeField] private RectTransform _continueButtonContainer;
+        [SerializeField] private TextMeshProUGUI _nameTextField;
+        [SerializeField] private Image _iconImage;
         
         private DialogNodeStaticData _nodeStaticData;
         private UIFactory.MyCallback _dialogCallback;
@@ -33,6 +35,8 @@ namespace CodeBase.UI.Elements.Dialogs
                 _dialogCallback(_nodeStaticData.CallbackId);
             }
             _textMeshPro.text = _nodeStaticData.Text;
+            _nameTextField.text=_nodeStaticData.Name;
+            _iconImage.sprite = _nodeStaticData.icon;
 
 
 

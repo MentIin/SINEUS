@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: da58a02d5b740c44ba296ebee41615be
+guid: b3795e8c2b15cb0408ae6cd51d12b6c1
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 5785090870898371951
-    second: dvornik2_0001_emptyhand_0
+      213: -4356742769125260858
+    second: dvornik2_0000_broom 1_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -46,7 +46,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -113,23 +113,23 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: dvornik2_0001_emptyhand_0
+      name: dvornik2_0000_broom 1_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 159
-        height: 181
-      alignment: 9
-      pivot: {x: 0.15066056, y: 0.8492064}
+        width: 86
+        height: 368
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: f6da0411f75c84050800000000000000
-      internalID: 5785090870898371951
+      spriteID: 6c18984d88db983c0800000000000000
+      internalID: -4356742769125260858
       vertices: []
       indices: 
       edges: []
@@ -138,7 +138,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: e150c5a2c4ee65c4b943828221fc0f03
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      dvornik2_0001_emptyhand_0: 5785090870898371951
+      dvornik2_0000_broom 1_0: -4356742769125260858
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

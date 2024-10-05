@@ -10,8 +10,13 @@ namespace CodeBase.Infrastructure.StaticData.Dialogs
     {
         public NextNodeData[] NextNodes = new NextNodeData[0];
 
+        public string Name;
+
         [TextArea]
         public string Text;
+
+        public Sprite icon;
+
 
         [Space(10)]
         public bool HaveCallback=false;
