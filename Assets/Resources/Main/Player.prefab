@@ -87,6 +87,57 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &657296143087301873
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3136689600094717124}
+  - component: {fileID: 3015008114115407815}
+  m_Layer: 2
+  m_Name: BubbleAttack hamonBeat
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3136689600094717124
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 657296143087301873}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 7862792077804235604}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3015008114115407815
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 657296143087301873}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0417412e854992a4a8074726f686ee60, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Team: 0
+  damage: 1
+  reload: 2
+  timeBeforeHit: 0.4
+  bulletPrefab: {fileID: 2003408222891277531, guid: e0becaa66b6a0ce4ea9a10fb1fafee2b, type: 3}
+  bubblesCount: 4
+  shotPos: {fileID: 576861221541430517}
 --- !u!1 &789764176159514232
 GameObject:
   m_ObjectHideFlags: 0
@@ -669,7 +720,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d19a21d4c014504bd92cb0e82bc78ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CurrentAttack: {fileID: 6883687391916002020}
+  CurrentAttack: {fileID: 3015008114115407815}
   controller: {fileID: 8955931493352119036}
 --- !u!114 &1786847021331748887
 MonoBehaviour:
@@ -840,7 +891,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 9126845330599335685}
+  m_Father: {fileID: 7862792077804235604}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &5870890984200656761
 GameObject:
@@ -1093,8 +1144,7 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 576861221541430517}
+  m_Children: []
   m_Father: {fileID: 7862792077804235604}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &5195635006389198951
@@ -1111,8 +1161,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Team: 0
   damage: 1
-  attackDuration: 4
-  reload: 1
+  reload: 0.6
   timeBeforeHit: 0.1
   bulletPrefab: {fileID: 1574328567744089382, guid: be244f6d1c856fc4d9f831f9a211f1be, type: 3}
   shotPos: {fileID: 576861221541430517}
@@ -1148,5 +1197,7 @@ Transform:
   m_Children:
   - {fileID: 7830078166954554540}
   - {fileID: 9126845330599335685}
+  - {fileID: 3136689600094717124}
+  - {fileID: 576861221541430517}
   m_Father: {fileID: 5903394429877193635}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

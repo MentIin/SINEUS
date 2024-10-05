@@ -53,11 +53,12 @@ MonoBehaviour:
   handFull: {fileID: 21300000, guid: 21ec962bee2acf04eb74f2e67de302ee, type: 3}
   handEmpty: {fileID: 5785090870898371951, guid: da58a02d5b740c44ba296ebee41615be, type: 3}
   speed: 9
-  speedCoof: 2
+  speedCoof: 3
   _collider2D: {fileID: 867168440008270377}
   visual: {fileID: 3773369108349403527}
   targetPos: {x: 0, y: 0, z: 0}
-  attackDelay: 0.1
+  minDist: 0.2
+  attackDelay: 0.2
   lifeTime: 10
 --- !u!50 &4640744802019218233
 Rigidbody2D:

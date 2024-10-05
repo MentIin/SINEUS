@@ -23,7 +23,7 @@ namespace CodeBase.Logic.Attacks
 
         [HideInInspector] public Vector3 targetPos = Vector3.zero;
         private bool isTargetPos = false;
-        private float minDist = 0.1f;
+        [SerializeField] private float minDist = 0.05f;
 
         private Rigidbody2D rb;
         //private GameObject player;

@@ -5,7 +5,7 @@ namespace CodeBase.Logic.Attacks
     class AttackBoomerang : Attack
     {
         public int damage = 1;
-        public float attackDuration = 1.5f;
+        //public float attackDuration = 1.5f;
         public float reload=1;
         public float timeBeforeHit = 0.1f;
 
