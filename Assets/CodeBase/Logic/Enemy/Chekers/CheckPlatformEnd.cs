@@ -20,6 +20,12 @@ namespace CodeBase.Logic.Enemy.Chekers
             {
                 return true;
             }
+            
+            pos = _collider2D.bounds.center + _collider2D.bounds.extents.x * transform.right;
+            if (Physics2D.OverlapCircle(pos, 0.3f, GroundMask))
+            {
+                return true;
+            }
 
             return false;
         }

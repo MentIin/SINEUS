@@ -1,6 +1,5 @@
 using CodeBase.Logic;
 using CodeBase.Logic.Attacks;
-using Unity.VisualScripting;
 using UnityEngine;
 [RequireComponent(typeof(BoxCollider2D))]
 [RequireComponent(typeof(Rigidbody2D))]
@@ -14,26 +13,27 @@ public class KilingZone : Attack
         rb = GetComponent<Rigidbody2D>();
         rb.bodyType=RigidbodyType2D.Static;
         collider = GetComponent<BoxCollider2D>();
-        collider.isTrigger = false;
+        collider.isTrigger = true;
     }
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void OnTriggerEnter2D(Collider2D col)
     {
-        StartAttack();
+        Health health;
+        if (col.TryGetComponent(out health))
+        {
+            if (health.Team != this.Team)
+            {
+                health.TakeDamage(damage);
+                Debug.Log("sdoh");
+            }
+        }
     }
     private void DealDamage()
     {
 
-        Health health;
+        
         foreach (var col in Physics2D.OverlapBoxAll(collider.bounds.center, collider.size, 0))
         {
-            if (col.TryGetComponent(out health))
-            {
-                if (health.Team != this.Team)
-                {
-                    health.TakeDamage(damage);
-                    Debug.Log("sdoh");
-                }
-            }
+            
         }
     }
 

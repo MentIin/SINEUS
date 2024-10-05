@@ -92,6 +92,7 @@
               <e p="GetDamageAnimator.cs" t="Include" />
               <e p="GetDamageSimpleAnimation.cs" t="Include" />
               <e p="PlayerAnimator.cs" t="Include" />
+              <e p="RiderAnimator.cs" t="Include" />
             </e>
             <e p="Attacks" t="Include">
               <e p="Attack.cs" t="Include" />
@@ -120,6 +121,7 @@
             <e p="Enemy" t="Include">
               <e p="AI" t="Include">
                 <e p="FlyingAI.cs" t="Include" />
+                <e p="RiderAI.cs" t="Include" />
                 <e p="SwordmanAI.cs" t="Include" />
               </e>
               <e p="Chekers" t="Include">
@@ -131,12 +133,17 @@
               <e p="PatrolMovement.cs" t="Include" />
             </e>
             <e p="Enviroment" t="Include">
+              <e p="KilingZone.cs" t="Include" />
               <e p="ParalaxBehaviour.cs" t="Include" />
             </e>
             <e p="GameConstants.cs" t="Include" />
             <e p="GameTimer.cs" t="Include" />
             <e p="Health.cs" t="Include" />
+            <e p="InteractionZone.cs" t="Include" />
             <e p="LogicExtensions.cs" t="Include" />
+            <e p="Loot" t="Include">
+              <e p="Collectable.cs" t="Include" />
+            </e>
             <e p="Player" t="Include">
               <e p="PlayerController.cs" t="Include" />
             </e>
