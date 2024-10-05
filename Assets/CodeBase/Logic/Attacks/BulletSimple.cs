@@ -1,32 +1,35 @@
 using CodeBase.Logic;
 using CodeBase.Logic.Attacks;
 using UnityEngine;
-
-public class BulletBubble : MonoBehaviour
+[RequireComponent(typeof(Rigidbody2D))]
+public class BulletSimple : MonoBehaviour
 {
     [HideInInspector] public int damage;
     [HideInInspector] public Attack parentAttack;
 
     [SerializeField] private CircleCollider2D _collider2D;
 
-    [SerializeField] private float speed=4;
-    [SerializeField] private float frequency = 15;
-    [SerializeField] private float magnitude = 0.3f;
-    private Vector3 pos;
-    public float startTime;
+    [SerializeField] private float speed;
+    [SerializeField] private float lifeTime = 10;
 
-    [SerializeField] private int lifeTime = 10;
+    private Rigidbody2D rb;
     private void Start()
     {
-        pos= transform.position;
-        _collider2D = GetComponent<CircleCollider2D>();
-        Invoke("Lopnul", lifeTime);
-        startTime = Time.time;
+        rb = GetComponent<Rigidbody2D>();
+        rb.gravityScale = 0;
+        rb.freezeRotation = true;
 
+        _collider2D = GetComponent<CircleCollider2D>();
+
+        Invoke("Smert", lifeTime);
     }
     private void Update()
     {
-        SinusMoving();
+        Move();
+    }
+    private void Move()
+    {
+        rb.linearVelocity=transform.right*speed;
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -44,17 +47,12 @@ public class BulletBubble : MonoBehaviour
                 if (health.Team != parentAttack.Team)
                 {
                     health.TakeDamage(damage);
-                    Lopnul();
+                    Smert();
                 }
             }
         }
     }
-    private void SinusMoving()
-    {
-        pos += transform.right * Time.deltaTime * speed;
-        transform.position = pos+transform.up*Mathf.Sin((startTime+Time.time)*frequency)*magnitude;
-    }
-    private void Lopnul()
+    private void Smert()
     {
         Destroy(gameObject);
     }

@@ -307,12 +307,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Team: 0
-  Damage: 1
   reload: 0.5
   attackDuration: 0.2
   timeBeforeHit: 0.1
   knockback: 20
-  FirePrefab: {fileID: 0}
   _collider2D: {fileID: 9060161720561826466}
 --- !u!1 &1724266296384981596
 GameObject:
@@ -433,7 +431,8 @@ Transform:
   - {fileID: 4175689314274439656}
   - {fileID: 4667660389913703090}
   - {fileID: 8996809928507058336}
-  - {fileID: 4023137624740361888}
+  - {fileID: 3176195967406589176}
+  - {fileID: 8801480668391867213}
   m_Father: {fileID: 5903394429877193635}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2073517644574288304
@@ -482,6 +481,54 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Type: 4
   BoomerangAttack: {fileID: 5195635006389198951}
+  BaseAttack: {fileID: 6883687391916002020}
+  PlayerController: {fileID: 5164597347006983744}
+--- !u!1 &2243541591792252277
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3176195967406589176}
+  - component: {fileID: 1435335930682604859}
+  m_Layer: 6
+  m_Name: CircleWave
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3176195967406589176
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2243541591792252277}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2670995396025498374}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1435335930682604859
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2243541591792252277}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c55c92048823ce848ab59f0d0f9c7ed1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Type: 3
+  WaveAttack: {fileID: 3082270066337328508}
   BaseAttack: {fileID: 6883687391916002020}
   PlayerController: {fileID: 5164597347006983744}
 --- !u!1 &2931924833778534509
@@ -865,54 +912,6 @@ MonoBehaviour:
   IgnorePause: 0
   IgnorePosition: 0
   _volume: 1
---- !u!1 &3975933966876339926
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 4023137624740361888}
-  - component: {fileID: 5732166343845779472}
-  m_Layer: 6
-  m_Name: Fire
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &4023137624740361888
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3975933966876339926}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 2670995396025498374}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &5732166343845779472
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3975933966876339926}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 77d56ea55bf840de866b41d73cb71327, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Type: 7
-  FirePrefab: {fileID: 9114300920738143281, guid: ece4b95857ff65149a390891f09990c9, type: 3}
-  AttackBoomerang: {fileID: 5195635006389198951}
-  AttackMelee: {fileID: 6883687391916002020}
 --- !u!1 &4827052530894434401
 GameObject:
   m_ObjectHideFlags: 0
@@ -944,6 +943,54 @@ Transform:
   m_Children: []
   m_Father: {fileID: 7862792077804235604}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &5644152229464598904
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8801480668391867213}
+  - component: {fileID: 2540440058695262989}
+  m_Layer: 6
+  m_Name: BubbleStone
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8801480668391867213
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5644152229464598904}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2670995396025498374}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2540440058695262989
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5644152229464598904}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7aa66432b195497429fb56c11565d242, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Type: 5
+  BubbleAttack: {fileID: 3015008114115407815}
+  BaseAttack: {fileID: 6883687391916002020}
+  PlayerController: {fileID: 5164597347006983744}
 --- !u!1 &5870890984200656761
 GameObject:
   m_ObjectHideFlags: 0
@@ -1214,7 +1261,6 @@ MonoBehaviour:
   damage: 1
   reload: 0.6
   timeBeforeHit: 0.1
-  FirePrefab: {fileID: 0}
   bulletPrefab: {fileID: 1574328567744089382, guid: be244f6d1c856fc4d9f831f9a211f1be, type: 3}
   shotPos: {fileID: 576861221541430517}
   handRenderer: {fileID: 3053166253588726661}
@@ -1251,5 +1297,56 @@ Transform:
   - {fileID: 9126845330599335685}
   - {fileID: 3136689600094717124}
   - {fileID: 576861221541430517}
+  - {fileID: 4696304447056264146}
   m_Father: {fileID: 5903394429877193635}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &8643261023909873667
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4696304447056264146}
+  - component: {fileID: 3082270066337328508}
+  m_Layer: 2
+  m_Name: WaveCircleAttack
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4696304447056264146
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8643261023909873667}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 7862792077804235604}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3082270066337328508
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8643261023909873667}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 07cc4b6a5264fe14fba758bf391339b7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Team: 0
+  damage: 1
+  reload: 1
+  timeBeforeHit: 0.1
+  bulletPrefab: {fileID: 8929593465618746367, guid: 451ebcd7495682d41a799aea5f70be45, type: 3}
+  shotPos: {fileID: 5903394429877193635}
