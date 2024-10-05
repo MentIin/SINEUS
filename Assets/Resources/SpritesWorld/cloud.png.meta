@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 58745005c2e460245a06642088e980f1
+guid: a0fa3794dbdcb114bb27ae05dd024aa1
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -954815551512249668
-    second: snowground_0
+      213: -6981827254641702772
+    second: cloud_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: snowground_0
+      name: cloud_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 1024
-        height: 256
+        x: 37
+        y: 32
+        width: 540
+        height: 207
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: cbaf7129050dfb2f0800000000000000
-      internalID: -954815551512249668
+      spriteID: c88c0fb6a119b1f90800000000000000
+      internalID: -6981827254641702772
       vertices: []
       indices: 
       edges: []
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      snowground_0: -954815551512249668
+      cloud_0: -6981827254641702772
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
