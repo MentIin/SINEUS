@@ -132,6 +132,10 @@
               <e p="LoopingSound.cs" t="Include" />
               <e p="PlaySound.cs" t="Include" />
             </e>
+            <e p="Stones" t="Include">
+              <e p="BaseStone.cs" t="Include" />
+              <e p="BoomerangStone.cs" t="Include" />
+            </e>
             <e p="TriggerObserver.cs" t="Include" />
           </e>
           <e p="Tools" t="Include">

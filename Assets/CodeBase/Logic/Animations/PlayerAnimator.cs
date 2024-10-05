@@ -3,13 +3,15 @@ using CodeBase.Logic.Attacks;
 using CodeBase.Logic.Player;
 using CodeBase.Logic.Sounds;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 namespace CodeBase.Logic.Animations
 {
     [RequireComponent(typeof(Animator))]
     public class PlayerAnimator : MonoBehaviour
     {
-        [SerializeField] private Attack _controller;
+        [FormerlySerializedAs("_controller")] 
+        [SerializeField] private Attack _attack;
         [SerializeField] private CharacterController2D _characterController;
         public PlaySound WalkSound;
         
@@ -19,7 +21,7 @@ namespace CodeBase.Logic.Animations
         {
             if (WalkSound != null) WalkSound.StartPlaying();
             _anim = GetComponent<Animator>();
-            _controller.AttackStarted += AttackStart;
+            _attack.AttackStarted += AttackStart;
         }
 
         private void Update()

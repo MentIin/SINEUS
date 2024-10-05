@@ -26,8 +26,6 @@
   </component>
   <component name="IdeDocumentHistory">
     <changedPaths>
-      <option value="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/StaticData/Level/LevelStaticData.cs" />
-      <option value="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/StaticData/Level/AllLevelsStaticData.cs" />
       <option value="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/SceneLoader.cs" />
       <option value="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/States/GameStateMachine.cs" />
       <option value="$PROJECT_DIR$/Assets/Plugins/2d-platformer-controller-master/Assets/Scripts/CameraController.cs" />
@@ -77,6 +75,8 @@
       <option value="$PROJECT_DIR$/Assets/CodeBase/UI/Elements/Necklace/Slot.cs" />
       <option value="$PROJECT_DIR$/Assets/CodeBase/UI/Elements/Necklace/InventoryWindow.cs" />
       <option value="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/Data/PlayerData/GameData.cs" />
+      <option value="$PROJECT_DIR$/Assets/CodeBase/Logic/Stones/BaseStone.cs" />
+      <option value="$PROJECT_DIR$/Assets/CodeBase/Logic/Stones/BoomerangStone.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="2my0zQThB6EkyRO7ob6MOBJFAwc" />
@@ -121,6 +121,7 @@
       <option name="presentableId" value="Default" />
       <updated>1728033773310</updated>
       <workItem from="1728033782760" duration="39952000" />
+      <workItem from="1728105496514" duration="1898000" />
     </task>
     <servers />
   </component>

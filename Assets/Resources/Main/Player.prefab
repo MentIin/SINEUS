@@ -348,6 +348,86 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1838299448761161253
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2670995396025498374}
+  m_Layer: 6
+  m_Name: Stones
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2670995396025498374
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1838299448761161253}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 4175689314274439656}
+  m_Father: {fileID: 5903394429877193635}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2073517644574288304
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4175689314274439656}
+  - component: {fileID: 8142450138655927077}
+  m_Layer: 6
+  m_Name: Boomerang
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4175689314274439656
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2073517644574288304}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2670995396025498374}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8142450138655927077
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2073517644574288304}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8335493cc02348f2a11c56197298ccd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Type: 4
+  BoomerangAttack: {fileID: 5195635006389198951}
+  BaseAttack: {fileID: 6883687391916002020}
+  PlayerController: {fileID: 5164597347006983744}
 --- !u!1 &3000552415767531562
 GameObject:
   m_ObjectHideFlags: 0
@@ -386,6 +466,7 @@ Transform:
   m_Children:
   - {fileID: 7649437358880576788}
   - {fileID: 7862792077804235604}
+  - {fileID: 2670995396025498374}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &3630623645110600068
@@ -540,7 +621,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d19a21d4c014504bd92cb0e82bc78ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CurrentAttack: {fileID: 5195635006389198951}
+  CurrentAttack: {fileID: 6883687391916002020}
   controller: {fileID: 8955931493352119036}
 --- !u!114 &1786847021331748887
 MonoBehaviour:
@@ -644,7 +725,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f006453675b4449699661ffa6ffebba0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _controller: {fileID: 6883687391916002020}
+  _attack: {fileID: 6883687391916002020}
   _characterController: {fileID: 8955931493352119036}
   WalkSound: {fileID: 7915772575268391020}
 --- !u!114 &1718400539849719582
