@@ -1,5 +1,6 @@
 using CodeBase.Logic;
 using CodeBase.Logic.Attacks;
+using Unity.VisualScripting;
 using UnityEngine;
 [RequireComponent(typeof(BoxCollider2D))]
 [RequireComponent(typeof(Rigidbody2D))]
@@ -13,9 +14,9 @@ public class KilingZone : Attack
         rb = GetComponent<Rigidbody2D>();
         rb.bodyType=RigidbodyType2D.Static;
         collider = GetComponent<BoxCollider2D>();
-        collider.isTrigger = true;
+        collider.isTrigger = false;
     }
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnCollisionEnter2D(Collision2D collision)
     {
         StartAttack();
     }
