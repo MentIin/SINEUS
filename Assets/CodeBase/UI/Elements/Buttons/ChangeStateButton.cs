@@ -24,7 +24,7 @@ namespace CodeBase.UI.Elements.Buttons
         {
             PersistentProgressService progressService = AllServices.Container.Single<PersistentProgressService>();
             if (_state == State.MainMenu) _stateMachine.Enter<MainMenuState>();
-            else if (_state == State.NewGame) _stateMachine.Enter<LoadLevelState, int>(0);
+            else if (_state == State.NewGame) _stateMachine.Enter<LoadLevelState, int>(1);
         }
     }
 
