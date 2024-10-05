@@ -126,6 +126,9 @@
               <e p="FlyingMovement.cs" t="Include" />
               <e p="PatrolMovement.cs" t="Include" />
             </e>
+            <e p="Enviroment" t="Include">
+              <e p="ParalaxBehaviour.cs" t="Include" />
+            </e>
             <e p="GameConstants.cs" t="Include" />
             <e p="GameTimer.cs" t="Include" />
             <e p="Health.cs" t="Include" />
