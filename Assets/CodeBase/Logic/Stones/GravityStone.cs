@@ -7,6 +7,7 @@ namespace CodeBase.Logic.Stones
     {
         public CharacterController2D CharacterController;
 
+
         private bool _antigravity = false;
         protected override void Deactivate()
         {
