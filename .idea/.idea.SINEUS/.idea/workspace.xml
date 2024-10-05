@@ -28,10 +28,6 @@
   </component>
   <component name="IdeDocumentHistory">
     <changedPaths>
-      <option value="$PROJECT_DIR$/Assets/CodeBase/UI/Elements/Dialogs/DialogWindow.cs" />
-      <option value="$PROJECT_DIR$/Assets/CodeBase/Logic/Necklace/MagicStone.cs" />
-      <option value="$PROJECT_DIR$/Assets/CodeBase/UI/Elements/Necklace/Necklace.cs" />
-      <option value="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/Services/StaticData/StaticDataService.cs" />
       <option value="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/Data/PlayerData/PlayerProgress.cs" />
       <option value="$PROJECT_DIR$/Assets/CodeBase/Logic/Animations/PlayerAnimator.cs" />
       <option value="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/States/GameStateMachine.cs" />
@@ -77,8 +73,12 @@
       <option value="$PROJECT_DIR$/Assets/CodeBase/Logic/Enemy/AI/RiderAI.cs" />
       <option value="$PROJECT_DIR$/Assets/CodeBase/Logic/InteractionZone.cs" />
       <option value="$PROJECT_DIR$/Assets/CodeBase/Logic/Loot/Collectable.cs" />
-      <option value="$PROJECT_DIR$/Assets/CodeBase/Logic/Loot/StoneReciver.cs" />
       <option value="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/Data/PlayerData/GameData.cs" />
+      <option value="$PROJECT_DIR$/Assets/CodeBase/Logic/Loot/StoneReciver.cs" />
+      <option value="$PROJECT_DIR$/Assets/CodeBase/Logic/Sounds/LevelAuidio.cs" />
+      <option value="$PROJECT_DIR$/Assets/CodeBase/Logic/Loot/ChangeColorWhenStoneRecived.cs" />
+      <option value="$PROJECT_DIR$/Assets/CodeBase/Logic/Enemy/Boss/SongData.cs" />
+      <option value="$PROJECT_DIR$/Assets/CodeBase/Logic/Enemy/Boss/BossBrain.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="2my0zQThB6EkyRO7ob6MOBJFAwc" />
@@ -132,7 +132,7 @@
       <updated>1728033773310</updated>
       <workItem from="1728033782760" duration="39952000" />
       <workItem from="1728105496514" duration="9648000" />
-      <workItem from="1728117553459" duration="33135000" />
+      <workItem from="1728117553459" duration="36674000" />
     </task>
     <servers />
   </component>
