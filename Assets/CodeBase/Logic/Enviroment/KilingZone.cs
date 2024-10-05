@@ -15,24 +15,25 @@ public class KilingZone : Attack
         collider = GetComponent<BoxCollider2D>();
         collider.isTrigger = true;
     }
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnTriggerEnter2D(Collider2D col)
     {
-        StartAttack();
+        Health health;
+        if (col.TryGetComponent(out health))
+        {
+            if (health.Team != this.Team)
+            {
+                health.TakeDamage(damage);
+                Debug.Log("sdoh");
+            }
+        }
     }
     private void DealDamage()
     {
 
-        Health health;
+        
         foreach (var col in Physics2D.OverlapBoxAll(collider.bounds.center, collider.size, 0))
         {
-            if (col.TryGetComponent(out health))
-            {
-                if (health.Team != this.Team)
-                {
-                    health.TakeDamage(damage);
-                    Debug.Log("sdoh");
-                }
-            }
+            
         }
     }
 

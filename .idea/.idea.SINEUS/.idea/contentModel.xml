@@ -131,6 +131,7 @@
               <e p="PatrolMovement.cs" t="Include" />
             </e>
             <e p="Enviroment" t="Include">
+              <e p="KilingZone.cs" t="Include" />
               <e p="ParalaxBehaviour.cs" t="Include" />
             </e>
             <e p="GameConstants.cs" t="Include" />
