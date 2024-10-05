@@ -61,7 +61,7 @@ public class CharacterController2D : ObjectController2D {
     /// <summary>
     /// This function is called every fixed framerate frame, if the MonoBehaviour is enabled.
     /// </summary>
-    public override void FixedUpdate() {
+    public override void Update() {
         UpdateTimers();
         UpdateDash();
         UpdateAirStagger();
@@ -71,7 +71,7 @@ public class CharacterController2D : ObjectController2D {
         {
             speed.y = 0f;
         }
-        Move((TotalSpeed) * Time.fixedDeltaTime);
+        Move((TotalSpeed) * Time.deltaTime);
         
         PostMove();
         SetAnimations();
@@ -115,8 +115,8 @@ public class CharacterController2D : ObjectController2D {
             collisions.groundDirection != xDir && speed.y < 0) {
             float sin = Mathf.Sin(collisions.groundAngle * Mathf.Deg2Rad);
             float cos = Mathf.Cos(collisions.groundAngle * Mathf.Deg2Rad);
-            deltaMove.x = cos * cData.wallSlideSpeed * Time.fixedDeltaTime * collisions.groundDirection;
-            deltaMove.y = sin * -cData.wallSlideSpeed * Time.fixedDeltaTime;
+            deltaMove.x = cos * cData.wallSlideSpeed * Time.deltaTime * collisions.groundDirection;
+            deltaMove.y = sin * -cData.wallSlideSpeed * Time.deltaTime;
             speed.y = -cData.wallSlideSpeed;
             speed.x = 0;
             Vector2 origin = collisions.groundDirection == -1 ? raycastOrigins.bottomRight : raycastOrigins.bottomRight;
@@ -343,10 +343,10 @@ public class CharacterController2D : ObjectController2D {
             }
             if (acc > 0) {
                 if(externalForce.x != 0 && Mathf.Sign(externalForce.x) != Mathf.Sign(direction)) {
-                    externalForce.x += direction * (1 / acc) * cData.maxSpeed * Time.fixedDeltaTime;
+                    externalForce.x += direction * (1 / acc) * cData.maxSpeed * Time.deltaTime;
                 } else {
                     if (Mathf.Abs(speed.x) < cData.maxSpeed) {
-                        speed.x += direction * (1 / acc) * cData.maxSpeed * Time.fixedDeltaTime;
+                        speed.x += direction * (1 / acc) * cData.maxSpeed * Time.deltaTime;
                         speed.x = Mathf.Min(Mathf.Abs(speed.x), cData.maxSpeed * Mathf.Abs(direction)) *
                             Mathf.Sign(speed.x);
                     }
@@ -357,7 +357,7 @@ public class CharacterController2D : ObjectController2D {
             }
             if (direction == 0 || Mathf.Sign(direction) != Mathf.Sign(speed.x)) {
                 if (dec > 0) {
-                    speed.x = Mathf.MoveTowards(speed.x, 0, (1 / dec) * cData.maxSpeed * Time.fixedDeltaTime);
+                    speed.x = Mathf.MoveTowards(speed.x, 0, (1 / dec) * cData.maxSpeed * Time.deltaTime);
                 } else {
                     speed.x = 0;
                 }
@@ -553,12 +553,12 @@ public class CharacterController2D : ObjectController2D {
             }
         }
         if (OnLadder) {
-            float newX = Mathf.MoveTowards(transform.position.x, ladderX, 5f * Time.fixedDeltaTime);
+            float newX = Mathf.MoveTowards(transform.position.x, ladderX, 5f * Time.deltaTime);
             transform.Translate(newX - transform.position.x, 0, 0);
             ResetJumpsAndDashes();
             if (cData.ladderAccelerationTime > 0) {
                 if (Mathf.Abs(speed.y) < cData.ladderSpeed) {
-                    speed.y += direction * (1 / cData.ladderAccelerationTime) * cData.ladderSpeed * Time.fixedDeltaTime;
+                    speed.y += direction * (1 / cData.ladderAccelerationTime) * cData.ladderSpeed * Time.deltaTime;
                 }
             } else {
                 speed.y = cData.ladderSpeed * direction;
@@ -566,7 +566,7 @@ public class CharacterController2D : ObjectController2D {
             if (direction == 0 || Mathf.Sign(direction) != Mathf.Sign(speed.y)) {
                 if (cData.ladderDecelerationTime > 0) {
                     speed.y = Mathf.MoveTowards(speed.x, 0, (1 / cData.ladderDecelerationTime) *
-                        cData.ladderSpeed * Time.fixedDeltaTime);
+                        cData.ladderSpeed * Time.deltaTime);
                 } else {
                     speed.y = 0;
                 }
@@ -575,11 +575,11 @@ public class CharacterController2D : ObjectController2D {
                 speed.y = Mathf.Min(speed.y, cData.ladderSpeed);
             }
             // checks ladder end
-            Collider2D hit = Physics2D.OverlapCircle(topOrigin + Vector2.up * (speed.y * Time.fixedDeltaTime + radius),
+            Collider2D hit = Physics2D.OverlapCircle(topOrigin + Vector2.up * (speed.y * Time.deltaTime + radius),
                 0, pConfig.ladderMask);
             if (!hit) {
                 hit = Physics2D.OverlapCircle(bottomOrigin + Vector2.up *
-                    (speed.y * Time.fixedDeltaTime + radius - skinWidth * 3), skinWidth, pConfig.ladderMask);
+                    (speed.y * Time.deltaTime + radius - skinWidth * 3), skinWidth, pConfig.ladderMask);
                 if (!hit) {
                     OnLadder = false;
                     if (speed.y > 0) {
@@ -595,17 +595,17 @@ public class CharacterController2D : ObjectController2D {
     /// </summary>
     private void UpdateDash() {
         if (dashCooldown > 0) {
-            dashCooldown -= Time.fixedDeltaTime;
+            dashCooldown -= Time.deltaTime;
         }
     }
 
     private void UpdateAirStagger() {
         if (airStaggerTime > 0 && !Dashing) {
-            airStaggerTime -= Time.fixedDeltaTime;
+            airStaggerTime -= Time.deltaTime;
             externalForce = Vector2.MoveTowards(externalForce, Vector2.zero,
-                pConfig.staggerSpeedFalloff * Time.fixedDeltaTime);
+                pConfig.staggerSpeedFalloff * Time.deltaTime);
             speed = Vector2.MoveTowards(speed, Vector2.zero,
-                pConfig.staggerSpeedFalloff * Time.fixedDeltaTime);
+                pConfig.staggerSpeedFalloff * Time.deltaTime);
         }
     }
 
@@ -614,16 +614,16 @@ public class CharacterController2D : ObjectController2D {
     /// </summary>
     private void UpdateTimers() {
         if (ignorePlatformsTime > 0) {
-            ignorePlatformsTime -= Time.fixedDeltaTime;
+            ignorePlatformsTime -= Time.deltaTime;
         }
         if (ignoreLaddersTime > 0) {
-            ignoreLaddersTime -= Time.fixedDeltaTime;
+            ignoreLaddersTime -= Time.deltaTime;
         }
         if (stunTime > 0) {
-            stunTime -= Time.fixedDeltaTime;
+            stunTime -= Time.deltaTime;
         }
         if (invulnerableTime > 0) {
-            invulnerableTime -= Time.fixedDeltaTime;
+            invulnerableTime -= Time.deltaTime;
         }
     }
 

@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 [RequireComponent(typeof(BoxCollider2D))]
 [RequireComponent(typeof(Rigidbody2D))]
@@ -55,9 +53,9 @@ public class ObjectController2D : MonoBehaviour {
     /// <summary>
     /// This function is called every fixed framerate frame, if the MonoBehaviour is enabled.
     /// </summary>
-    public virtual void FixedUpdate() {
+    public virtual void Update() {
         collisions.Reset();
-        Move((TotalSpeed) * Time.fixedDeltaTime);
+        Move((TotalSpeed) * Time.deltaTime);
         PostMove();
     }
 
@@ -90,7 +88,7 @@ public class ObjectController2D : MonoBehaviour {
     /// </summary>
     protected virtual void UpdateGravity() {
         if (ignoreGravity) return;
-        float g = pConfig.gravity * Time.fixedDeltaTime;
+        float g = pConfig.gravity * Time.deltaTime;
         if (speed.y > 0) {
             speed.y += g;
         } else {
@@ -108,7 +106,7 @@ public class ObjectController2D : MonoBehaviour {
         float friction = collisions.onGround ? pConfig.groundFriction : pConfig.airFriction;
         
         externalForce = Vector2.MoveTowards(externalForce, Vector2.zero,
-            externalForce.magnitude * friction * Time.fixedDeltaTime);
+            externalForce.magnitude * friction * Time.deltaTime);
         if(externalForce.magnitude <= minimumMoveThreshold) {
             externalForce = Vector2.zero;
         }
@@ -122,7 +120,7 @@ public class ObjectController2D : MonoBehaviour {
         UpdateGravity();
         if (collisions.onSlope && collisions.groundAngle > maxSlopeAngle &&
             (collisions.groundAngle < minWallAngle || speed.x == 0)) {
-            externalForce.x += -pConfig.gravity * pConfig.groundFriction * collisions.groundDirection * Time.fixedDeltaTime / 4;
+            externalForce.x += -pConfig.gravity * pConfig.groundFriction * collisions.groundDirection * Time.deltaTime / 4;
         }
     }
 
