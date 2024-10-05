@@ -302,7 +302,7 @@ public class CharacterController2D : ObjectController2D {
         }
         animator.SetFloat(ANIMATION_H_SPEED, speed.x);
         animator.SetFloat(ANIMATION_V_SPEED, TotalSpeed.y);
-        animator.SetFloat(ANIMATION_EX_SPEED, externalForce.x);
+        animator.SetFloat(ANIMATION_EX_SPEED, Mathf.Abs(externalForce.x));
         animator.SetBool(ANIMATION_GROUNDED, collisions.onGround);
         animator.SetBool(ANIMATION_DASHING, Dashing);
         animator.SetBool(ANIMATION_WALL, collisions.hHit);

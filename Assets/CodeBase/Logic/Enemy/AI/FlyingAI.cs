@@ -20,6 +20,7 @@ namespace CodeBase.Logic.Enemy.AI
         private void Awake()
         {
             _characterData = CharacterController2D.GetComponent<CharacterData>();
+            
         }
 
         private void Update()
@@ -27,13 +28,17 @@ namespace CodeBase.Logic.Enemy.AI
             Collider2D col = CheckIfSeeTeamInRadius.GetCollider();
             if (col != null)
             {
+                CharacterController2D.SetGravityScale(0f);
+                CharacterController2D.ignoreGravity = true;
                 Vector3 target = col.transform.position;
                 Follow(target);
             }
             else
             {
-                Follow(transform.position + Vector3.down*0.1f);
+                CharacterController2D.ignoreGravity = false;
+                CharacterController2D.SetGravityScale(0.1f);
             }
+            
         }
 
         private void Follow(Vector3 target)
@@ -46,10 +51,16 @@ namespace CodeBase.Logic.Enemy.AI
                 return;
             }
 
-            _totalForce += force.normalized * _characterData.maxSpeed * Time.deltaTime / 3f;
+            Vector2 newForce = force.normalized * _characterData.maxSpeed * Time.deltaTime / 3f;
+            
+            _totalForce += newForce;
             _totalForce = _totalForce - _totalForce * Time.deltaTime;
+            if (_totalForce.y < -0.1f)
+            {
+                _totalForce.y = -0.1f;
+            }
 
-            CharacterController2D.Move(_totalForce);
+            CharacterController2D.ApplyForce(_totalForce);
         }
     }
 }
