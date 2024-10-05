@@ -45,15 +45,20 @@ namespace CodeBase.Infrastructure.States
         private PlayerProgress GetNewProgress()
         {
             PlayerProgress playerProgress = new PlayerProgress();
-            
+
             //playerProgress.GameData.playerPocket.Add(GameData.MagicStonesTypes.Gravity);
-            playerProgress.GameData.playerPocket.Add(GameData.MagicStonesTypes.BoomerangAttack);
-            playerProgress.GameData.playerPocket.Add(GameData.MagicStonesTypes.Fire);
+            playerProgress.GameData.playerPocket.Add(new MagicStoneSerializableData
+            {
+                Type = GameData.MagicStonesTypes.BoomerangAttack,
+                Usages = 10
+            });
 
             for (int i = 0; i < 5; i++)
             {
-                playerProgress.GameData.playerSlots[i] = 
-                    (GameData.MagicStonesTypes.Null);
+                playerProgress.GameData.playerSlots[i] = new MagicStoneSerializableData{
+                    Type = GameData.MagicStonesTypes.Null
+                    
+                };
 
             }
 

@@ -55,24 +55,24 @@ namespace CodeBase.UI.Elements.Necklace
                 }
             }
             
-            foreach (var magicStoneType in persistentProgressService.Progress.GameData.playerSlots)
+            foreach (var magicStoneSerializableData in persistentProgressService.Progress.GameData.playerSlots)
             {
                 
-                if (magicStoneType == GameData.MagicStonesTypes.Null)
+                if (magicStoneSerializableData.Type == GameData.MagicStonesTypes.Null)
                 {
                     i++;
                     continue;
                 }
                 
                 
-                StoneStaticData staticData = staticDataService.ForStone(magicStoneType);
+                StoneStaticData staticData = staticDataService.ForStone(magicStoneSerializableData.Type);
 
                 
                 GameObject go = Instantiate(DragItemPrefab, slots[i].transform);
                 slots[i].activeStone = go.GetComponent<MagicStone>();
                 go.transform.localPosition = Vector3.zero;
                 go.GetComponent<MagicStone>().place = i;
-                go.GetComponent<MagicStone>().stoneType = magicStoneType;
+                go.GetComponent<MagicStone>().stoneData = magicStoneSerializableData;
                 go.GetComponentInChildren<Image>().sprite = staticData.Icon;
                 i++;
             }
@@ -85,13 +85,13 @@ namespace CodeBase.UI.Elements.Necklace
                 Destroy(stone.gameObject);
             }
             
-            foreach (var magicStoneType in persistentProgressService.Progress.GameData.playerPocket)
+            foreach (var stoneSerializableData in persistentProgressService.Progress.GameData.playerPocket)
             {
-                StoneStaticData staticData = staticDataService.ForStone(magicStoneType);
+                StoneStaticData staticData = staticDataService.ForStone(stoneSerializableData.Type);
 
                 GameObject go = Instantiate(DragItemPrefab, Pocket);
                 go.GetComponent<MagicStone>().place = -1;
-                go.GetComponent<MagicStone>().stoneType = magicStoneType;
+                go.GetComponent<MagicStone>().stoneData = stoneSerializableData;
                 go.GetComponentInChildren<Image>().sprite = staticData.Icon;
             }
         }

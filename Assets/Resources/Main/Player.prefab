@@ -307,10 +307,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Team: 0
+  Damage: 1
   reload: 0.5
   attackDuration: 0.2
   timeBeforeHit: 0.1
   knockback: 20
+  FirePrefab: {fileID: 0}
   _collider2D: {fileID: 9060161720561826466}
 --- !u!1 &1724266296384981596
 GameObject:
@@ -431,6 +433,7 @@ Transform:
   - {fileID: 4175689314274439656}
   - {fileID: 4667660389913703090}
   - {fileID: 8996809928507058336}
+  - {fileID: 6785601167444852623}
   - {fileID: 3176195967406589176}
   - {fileID: 8801480668391867213}
   m_Father: {fileID: 5903394429877193635}
@@ -943,6 +946,54 @@ Transform:
   m_Children: []
   m_Father: {fileID: 7862792077804235604}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &5309736103684166185
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6785601167444852623}
+  - component: {fileID: 3233398302651050585}
+  m_Layer: 6
+  m_Name: Fire
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6785601167444852623
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5309736103684166185}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2670995396025498374}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3233398302651050585
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5309736103684166185}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 77d56ea55bf840de866b41d73cb71327, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Type: 7
+  FirePrefab: {fileID: 9114300920738143281, guid: ece4b95857ff65149a390891f09990c9, type: 3}
+  AttackBoomerang: {fileID: 5195635006389198951}
+  AttackMelee: {fileID: 6883687391916002020}
 --- !u!1 &5644152229464598904
 GameObject:
   m_ObjectHideFlags: 0
@@ -1261,6 +1312,7 @@ MonoBehaviour:
   damage: 1
   reload: 0.6
   timeBeforeHit: 0.1
+  FirePrefab: {fileID: 0}
   bulletPrefab: {fileID: 1574328567744089382, guid: be244f6d1c856fc4d9f831f9a211f1be, type: 3}
   shotPos: {fileID: 576861221541430517}
   handRenderer: {fileID: 3053166253588726661}

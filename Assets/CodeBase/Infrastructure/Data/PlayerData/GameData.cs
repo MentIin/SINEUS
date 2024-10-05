@@ -1,17 +1,13 @@
-﻿using NUnit.Framework;
-using System;
-using System.Collections;
+﻿using System;
 using System.Collections.Generic;
-using CodeBase.UI.Elements.Necklace;
-using UnityEngine;
 
 namespace CodeBase.Infrastructure.Data.PlayerData
 {
     [Serializable]
     public class GameData
     {
-        public List<MagicStonesTypes> playerPocket = new List<MagicStonesTypes>();
-        public MagicStonesTypes[] playerSlots = new MagicStonesTypes[5];
+        public List<MagicStoneSerializableData> playerPocket = new List<MagicStoneSerializableData>();
+        public MagicStoneSerializableData[] playerSlots = new MagicStoneSerializableData[5];
 
         public Action MagicStoneChanged;
         
@@ -29,7 +25,7 @@ namespace CodeBase.Infrastructure.Data.PlayerData
             Jump=8,
         }
 
-        public void ChangePlace(MagicStonesTypes activeStoneStoneType, int activeStonePlace, int newPlace)
+        public void ChangePlace(MagicStoneSerializableData activeStoneStoneType, int activeStonePlace, int newPlace)
         {
             
             if (activeStonePlace == -1)
@@ -42,17 +38,30 @@ namespace CodeBase.Infrastructure.Data.PlayerData
             {
                 if (newPlace == -1)
                 {
-                    playerSlots[activeStonePlace] = MagicStonesTypes.Null;
+                    playerSlots[activeStonePlace] = new MagicStoneSerializableData
+                    {
+                        Type = MagicStonesTypes.Null
+                    };
                     playerPocket.Add(activeStoneStoneType);
                 }
                 else
                 {
-                    playerSlots[activeStonePlace] = MagicStonesTypes.Null;
+                    playerSlots[activeStonePlace] =  new MagicStoneSerializableData
+                    {
+                        Type = MagicStonesTypes.Null
+                    };
                     playerSlots[newPlace] = activeStoneStoneType;
                 }
                
             }
             MagicStoneChanged?.Invoke();
         }
+    }
+
+    [Serializable]
+    public class MagicStoneSerializableData
+    {
+        public GameData.MagicStonesTypes Type;
+        public int Usages;
     }
 }

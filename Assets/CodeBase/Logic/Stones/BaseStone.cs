@@ -1,4 +1,5 @@
-﻿using System.Linq;
+﻿using System.Collections.Generic;
+using System.Linq;
 using CodeBase.Infrastructure.Data.PlayerData;
 using CodeBase.Infrastructure.Services;
 using CodeBase.Infrastructure.Services.PersistentProgress;
@@ -28,13 +29,20 @@ namespace CodeBase.Logic.Stones
 
         private void MagicStoneChanged()
         {
-            if (_progressGameData.playerSlots.Contains(Type) && !_active)
+            List<GameData.MagicStonesTypes> magicStonesTypesList = new List<GameData.MagicStonesTypes>();
+
+            foreach (var magicStoneSerializableData in _progressGameData.playerSlots)
+            {
+                magicStonesTypesList.Add(magicStoneSerializableData.Type);
+            }
+            
+            if (magicStonesTypesList.Contains(Type) && !_active)
             {
                 _active = true;
                 Debug.Log("Magic stone is equipped - " + Type.ToString());
                 Activate();
 
-            }else if (!_progressGameData.playerSlots.Contains(Type) && _active)
+            }else if (!magicStonesTypesList.Contains(Type) && _active)
             {
                 Debug.Log("Magic stone is off - " + Type.ToString());
                 _active = false;
