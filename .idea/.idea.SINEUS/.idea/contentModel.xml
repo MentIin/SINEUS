@@ -150,6 +150,7 @@
             </e>
             <e p="Sounds" t="Include">
               <e p="AttackSounds.cs" t="Include" />
+              <e p="LevelAuidio.cs" t="Include" />
               <e p="LoopingSound.cs" t="Include" />
               <e p="PlaySound.cs" t="Include" />
             </e>
