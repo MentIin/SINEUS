@@ -1,4 +1,6 @@
-﻿using System;
+﻿using CodeBase.Infrastructure.Services;
+using CodeBase.Logic.CameraLogic;
+using System;
 using UnityEngine;
 
 namespace CodeBase.Logic.Stones
@@ -7,8 +9,17 @@ namespace CodeBase.Logic.Stones
     {
         public CharacterController2D CharacterController;
 
+        private CameraController camera;
+        private float defSize;
+        [SerializeField] private float newSize=10;
+        [SerializeField] private float changeTime = 0.3f;
 
         private bool _antigravity = false;
+        private void Start()
+        {
+            //camera = AllServices.Container.Single<CameraController>();
+            //defSize = camera.GetComponent<Camera>().orthographicSize;
+        }
         protected override void Deactivate()
         {
             DefaultGravity();
@@ -50,6 +61,8 @@ namespace CodeBase.Logic.Stones
             CharacterController.SetGravityScale(1f);
             CharacterController.transform.eulerAngles = new Vector3(0f, CharacterController.transform.eulerAngles.y,
                 0f);
+            //camera.SetScale(defSize, changeTime);
+
         }
 
         private void Antigravity()
@@ -57,6 +70,7 @@ namespace CodeBase.Logic.Stones
             CharacterController.SetGravityScale(-1f);
             CharacterController.transform.eulerAngles = new Vector3(0f, CharacterController.transform.eulerAngles.y,
                 180f);
+            //camera.SetScale(newSize, changeTime);
         }
     }
 }
