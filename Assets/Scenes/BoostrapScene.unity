@@ -911,7 +911,7 @@ MonoBehaviour:
     m_Bits: 1
   owPlatformMask:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 128
   ladderMask:
     serializedVersion: 2
     m_Bits: 0
