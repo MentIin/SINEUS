@@ -22,13 +22,12 @@
     </file-type-list>
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$USER_HOME$/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.visualscripting@1.9.4/Runtime/VisualScripting.Core/Reflection/Optimization/StaticFieldAccessor.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/CodeBase/Logic/Attacks/AttackBoomerang.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/CodeBase/Logic/Stones/BubbleStone.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <changedPaths>
-      <option value="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/Services/Input/StandaloneInputService.cs" />
-      <option value="$PROJECT_DIR$/Assets/CodeBase/Logic/Health.cs" />
       <option value="$PROJECT_DIR$/Assets/CodeBase/Logic/Death.cs" />
       <option value="$PROJECT_DIR$/Assets/CodeBase/Logic/Enemy/CheckPlatformEnd.cs" />
       <option value="$PROJECT_DIR$/Assets/CodeBase/Logic/Enemy/PatrolMovement.cs" />
@@ -50,34 +49,36 @@
       <option value="$PROJECT_DIR$/Assets/CodeBase/UI/Elements/Dialogs/DialogWindow.cs" />
       <option value="$PROJECT_DIR$/Assets/CodeBase/Logic/Necklace/MagicStone.cs" />
       <option value="$PROJECT_DIR$/Assets/CodeBase/UI/Elements/Necklace/Necklace.cs" />
-      <option value="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/StaticData/StoneStaticData.cs" />
       <option value="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/Services/StaticData/StaticDataService.cs" />
       <option value="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/Data/PlayerData/PlayerProgress.cs" />
-      <option value="$PROJECT_DIR$/Assets/CodeBase/UI/Elements/Necklace/MagicStone.cs" />
-      <option value="$PROJECT_DIR$/Assets/CodeBase/UI/Elements/Necklace/Slot.cs" />
-      <option value="$PROJECT_DIR$/Assets/CodeBase/UI/Elements/Necklace/InventoryWindow.cs" />
       <option value="$PROJECT_DIR$/Assets/CodeBase/Logic/Animations/PlayerAnimator.cs" />
       <option value="$PROJECT_DIR$/Assets/CodeBase/Logic/Stones/BoomerangStone.cs" />
       <option value="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/States/GameStateMachine.cs" />
-      <option value="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/States/LoadLevelState.cs" />
       <option value="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/AssetManagement/AssetPath.cs" />
       <option value="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/States/GameLoopState.cs" />
       <option value="$PROJECT_DIR$/Assets/CodeBase/UI/Elements/Buttons/OpenWindowButton.cs" />
       <option value="$PROJECT_DIR$/Assets/CodeBase/UI/Services/UIFactory/UIFactory.cs" />
-      <option value="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/Data/PlayerData/GameData.cs" />
       <option value="$PROJECT_DIR$/Assets/CodeBase/Logic/Player/PlayerController.cs" />
-      <option value="$PROJECT_DIR$/Assets/Plugins/2d-platformer-controller-master/Assets/Scripts/ObjectController2D.cs" />
       <option value="$PROJECT_DIR$/Assets/CodeBase/Logic/Stones/JumpStone.cs" />
       <option value="$PROJECT_DIR$/Assets/Plugins/2d-platformer-controller-master/Assets/Scripts/JumpPad.cs" />
       <option value="$PROJECT_DIR$/Assets/CodeBase/Logic/Stones/GravityStone.cs" />
-      <option value="$PROJECT_DIR$/Assets/CodeBase/Logic/Stones/BaseStone.cs" />
       <option value="$PROJECT_DIR$/Assets/CodeBase/Logic/Attacks/AttackMelee.cs" />
       <option value="$PROJECT_DIR$/Assets/CodeBase/Logic/Attacks/BoomerangBullet.cs" />
       <option value="$PROJECT_DIR$/Assets/CodeBase/Logic/Attacks/AttackBoomerang.cs" />
       <option value="$PROJECT_DIR$/Assets/CodeBase/Logic/Stones/FireAttackStone.cs" />
-      <option value="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/States/LoadProgressState.cs" />
-      <option value="$PROJECT_DIR$/Assets/Plugins/2d-platformer-controller-master/Assets/Scripts/CharacterController2D.cs" />
       <option value="$PROJECT_DIR$/Assets/CodeBase/Logic/Attacks/Fire.cs" />
+      <option value="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/StaticData/StoneStaticData.cs" />
+      <option value="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/Data/PlayerData/GameData.cs" />
+      <option value="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/States/LoadProgressState.cs" />
+      <option value="$PROJECT_DIR$/Assets/CodeBase/UI/Elements/Necklace/Slot.cs" />
+      <option value="$PROJECT_DIR$/Assets/CodeBase/UI/Elements/Necklace/InventoryWindow.cs" />
+      <option value="$PROJECT_DIR$/Assets/CodeBase/Logic/Stones/BaseStone.cs" />
+      <option value="$PROJECT_DIR$/Assets/CodeBase/UI/Elements/Necklace/MagicStone.cs" />
+      <option value="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/StaticData/Level/LevelStaticData.cs" />
+      <option value="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/States/LoadLevelState.cs" />
+      <option value="$PROJECT_DIR$/Assets/Plugins/2d-platformer-controller-master/Assets/Scripts/CharacterController2D.cs" />
+      <option value="$PROJECT_DIR$/Assets/Plugins/2d-platformer-controller-master/Assets/Scripts/ObjectController2D.cs" />
+      <option value="$PROJECT_DIR$/Assets/Plugins/2d-platformer-controller-master/Assets/Scripts/StandOnObjectController2D.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="2my0zQThB6EkyRO7ob6MOBJFAwc" />
@@ -94,6 +95,14 @@
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
+    <configuration name="Standalone Player" type="RunUnityExe" factoryName="Unity Executable">
+      <option name="EXE_PATH" value="$USER_HOME$/Desktop/WebglBuild/SINEUS\SINEUS.exe" />
+      <option name="PROGRAM_PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="C:\Users\Демьян\Desktop\WebglBuild\SINEUS" />
+      <option name="PASS_PARENT_ENVS" value="1" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <method v="2" />
+    </configuration>
     <configuration name="Attach to Unity Editor &amp; Play" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="UNITY_ATTACH_AND_PLAY" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
@@ -123,7 +132,7 @@
       <updated>1728033773310</updated>
       <workItem from="1728033782760" duration="39952000" />
       <workItem from="1728105496514" duration="9648000" />
-      <workItem from="1728117553459" duration="2129000" />
+      <workItem from="1728117553459" duration="6338000" />
     </task>
     <servers />
   </component>

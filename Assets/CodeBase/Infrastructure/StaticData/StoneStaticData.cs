@@ -13,5 +13,6 @@ namespace CodeBase.Infrastructure.StaticData
     {
         public GameData.MagicStonesTypes Type;
         public Sprite Icon;
+        public int Usages = 0;
     }
 }

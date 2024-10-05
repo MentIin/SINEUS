@@ -32,7 +32,7 @@ namespace CodeBase.UI.Elements.Necklace
                     otherItem.transform.localPosition = Vector3.zero;*/
 
                     
-                    _progressService.Progress.GameData.ChangePlace(activeStone.stoneType, activeStone.place, place);
+                    _progressService.Progress.GameData.ChangePlace(activeStone.stoneData, activeStone.place, place);
                     
                     
                     
