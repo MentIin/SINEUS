@@ -48,6 +48,7 @@ namespace CodeBase.Infrastructure.States
             
             playerProgress.GameData.playerPocket.Add(GameData.MagicStonesTypes.Gravity);
             playerProgress.GameData.playerPocket.Add(GameData.MagicStonesTypes.BoomerangAttack);
+            playerProgress.GameData.playerPocket.Add(GameData.MagicStonesTypes.Jump);
 
             for (int i = 0; i < 5; i++)
             {

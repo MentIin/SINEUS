@@ -136,6 +136,7 @@
               <e p="BaseStone.cs" t="Include" />
               <e p="BoomerangStone.cs" t="Include" />
               <e p="GravityStone.cs" t="Include" />
+              <e p="JumpStone.cs" t="Include" />
             </e>
             <e p="TriggerObserver.cs" t="Include" />
           </e>
