@@ -12,7 +12,7 @@ TagManager:
   - Water
   - UI
   - Mobs
-  - 
+  - Platform
   - 
   - 
   - 
@@ -46,6 +46,12 @@ TagManager:
     locked: 0
   - name: Effects
     uniqueID: 1437929853
+    locked: 0
+  - name: Projectiles
+    uniqueID: 2222912957
+    locked: 0
+  - name: Top
+    uniqueID: 1810264353
     locked: 0
   m_RenderingLayers:
   - Default
