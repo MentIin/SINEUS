@@ -23,6 +23,9 @@ namespace CodeBase.Infrastructure.Data.PlayerData
             SingleShot=2,
             ZoneSplash=3,
             BoomerangAttack=4,
+            Gravity=6,
+            Fire=7,
+            Jump=8,
         }
 
         public void ChangePlace(MagicStonesTypes activeStoneStoneType, int activeStonePlace, int newPlace)
