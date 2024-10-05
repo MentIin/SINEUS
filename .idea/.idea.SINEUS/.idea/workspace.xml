@@ -34,7 +34,6 @@
       <option value="$PROJECT_DIR$/Assets/CodeBase/Logic/Enemy/FlyingMovement.cs" />
       <option value="$PROJECT_DIR$/Assets/CodeBase/Logic/Enemy/Chekers/CheckIfSeePlayerHorizontal.cs" />
       <option value="$PROJECT_DIR$/Assets/CodeBase/Logic/Enemy/Chekers/CheckIfSeePlayerInRadius.cs" />
-      <option value="$PROJECT_DIR$/Assets/CodeBase/Logic/Enemy/AI/FlyingAI.cs" />
       <option value="$PROJECT_DIR$/Assets/CodeBase/Sounds/AttackSounds.cs" />
       <option value="$PROJECT_DIR$/Assets/CodeBase/Logic/Sounds/AttackSounds.cs" />
       <option value="$PROJECT_DIR$/Assets/CodeBase/Logic/Enemy/Chekers/CheckIfSeeTeamInRadius.cs" />
@@ -78,6 +77,7 @@
       <option value="$PROJECT_DIR$/Assets/CodeBase/Logic/Stones/BaseStone.cs" />
       <option value="$PROJECT_DIR$/Assets/CodeBase/Logic/Stones/JumpStone.cs" />
       <option value="$PROJECT_DIR$/Assets/CodeBase/Logic/Stones/GravityStone.cs" />
+      <option value="$PROJECT_DIR$/Assets/CodeBase/Logic/Enemy/AI/FlyingAI.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="2my0zQThB6EkyRO7ob6MOBJFAwc" />
@@ -131,7 +131,7 @@
       <updated>1728033773310</updated>
       <workItem from="1728033782760" duration="39952000" />
       <workItem from="1728105496514" duration="9648000" />
-      <workItem from="1728117553459" duration="17950000" />
+      <workItem from="1728117553459" duration="19026000" />
     </task>
     <servers />
   </component>

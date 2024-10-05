@@ -27,18 +27,29 @@ namespace CodeBase.Logic.Enemy.AI
             Collider2D col = CheckIfSeeTeamInRadius.GetCollider();
             if (col != null)
             {
-                Vector2 force = col.transform.position - transform.position;
-
-                if (force.magnitude < TargetDistance)
-                {
-                    AttackMelee.StartAttack();
-                    return;
-                }
-                _totalForce += force.normalized * _characterData.maxSpeed * Time.deltaTime /3f;
-                _totalForce = _totalForce - _totalForce*Time.deltaTime;
-                
-                CharacterController2D.Move(_totalForce);
+                Vector3 target = col.transform.position;
+                Follow(target);
             }
+            else
+            {
+                Follow(transform.position + Vector3.down*0.1f);
+            }
+        }
+
+        private void Follow(Vector3 target)
+        {
+            Vector2 force = target - transform.position;
+
+            if (force.magnitude < TargetDistance)
+            {
+                AttackMelee.StartAttack();
+                return;
+            }
+
+            _totalForce += force.normalized * _characterData.maxSpeed * Time.deltaTime / 3f;
+            _totalForce = _totalForce - _totalForce * Time.deltaTime;
+
+            CharacterController2D.Move(_totalForce);
         }
     }
 }
