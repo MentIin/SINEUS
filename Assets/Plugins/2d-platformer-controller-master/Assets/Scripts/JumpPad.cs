@@ -32,7 +32,7 @@ public class JumpPad : MonoBehaviour {
             if (character) {
                 character.ResetJumpsAndDashes();
             }
-            animator.SetTrigger(jumpAnimation);
+            if (animator) animator.SetTrigger(jumpAnimation);
             if (audioSource) {
                 audioSource.Play();
             }

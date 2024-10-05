@@ -5,6 +5,9 @@ namespace CodeBase.Logic.Stones
     class GravityStone : BaseStone
     {
         public CharacterController2D CharacterController;
+
+        private bool _antigravity = false;
+        private bool _active = true;
         protected override void Deactivate()
         {
             CharacterController.SetGravityScale(1f);
