@@ -8,7 +8,7 @@ namespace CodeBase.Logic.CameraLogic
     {
         [SerializeField] private Camera _camera;
         [SerializeField] private Image _shade;
-        private float _size;
+        public float _size {  get; protected set; }
 
         private void Awake()
         {
