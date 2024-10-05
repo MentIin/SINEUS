@@ -24,15 +24,9 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$USER_HOME$/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.visualscripting@1.9.4/Runtime/VisualScripting.Core/Reflection/Optimization/StaticFieldAccessor.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/CodeBase/Logic/Attacks/AttackBoomerang.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/CodeBase/Logic/Stones/BubbleStone.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <changedPaths>
-      <option value="$PROJECT_DIR$/Assets/CodeBase/Logic/Death.cs" />
-      <option value="$PROJECT_DIR$/Assets/CodeBase/Logic/Enemy/CheckPlatformEnd.cs" />
-      <option value="$PROJECT_DIR$/Assets/CodeBase/Logic/Enemy/PatrolMovement.cs" />
-      <option value="$PROJECT_DIR$/Assets/CodeBase/Logic/Animations/GetDamageAnimator.cs" />
-      <option value="$PROJECT_DIR$/Assets/CodeBase/Logic/Animations/GetDamageSimpleAnimation.cs" />
       <option value="$PROJECT_DIR$/Assets/CodeBase/Logic/Enemy/Chekers/CheckPlatformEnd.cs" />
       <option value="$PROJECT_DIR$/Assets/CodeBase/Logic/Enemy/Chekers/CheckIfSeePlayer.cs" />
       <option value="$PROJECT_DIR$/Assets/CodeBase/Logic/Enemy/AI/SwordmanAI.cs" />
@@ -52,7 +46,6 @@
       <option value="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/Services/StaticData/StaticDataService.cs" />
       <option value="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/Data/PlayerData/PlayerProgress.cs" />
       <option value="$PROJECT_DIR$/Assets/CodeBase/Logic/Animations/PlayerAnimator.cs" />
-      <option value="$PROJECT_DIR$/Assets/CodeBase/Logic/Stones/BoomerangStone.cs" />
       <option value="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/States/GameStateMachine.cs" />
       <option value="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/AssetManagement/AssetPath.cs" />
       <option value="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/States/GameLoopState.cs" />
@@ -64,21 +57,27 @@
       <option value="$PROJECT_DIR$/Assets/CodeBase/Logic/Stones/GravityStone.cs" />
       <option value="$PROJECT_DIR$/Assets/CodeBase/Logic/Attacks/AttackMelee.cs" />
       <option value="$PROJECT_DIR$/Assets/CodeBase/Logic/Attacks/BoomerangBullet.cs" />
-      <option value="$PROJECT_DIR$/Assets/CodeBase/Logic/Attacks/AttackBoomerang.cs" />
       <option value="$PROJECT_DIR$/Assets/CodeBase/Logic/Stones/FireAttackStone.cs" />
       <option value="$PROJECT_DIR$/Assets/CodeBase/Logic/Attacks/Fire.cs" />
       <option value="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/StaticData/StoneStaticData.cs" />
-      <option value="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/Data/PlayerData/GameData.cs" />
       <option value="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/States/LoadProgressState.cs" />
       <option value="$PROJECT_DIR$/Assets/CodeBase/UI/Elements/Necklace/Slot.cs" />
       <option value="$PROJECT_DIR$/Assets/CodeBase/UI/Elements/Necklace/InventoryWindow.cs" />
-      <option value="$PROJECT_DIR$/Assets/CodeBase/Logic/Stones/BaseStone.cs" />
       <option value="$PROJECT_DIR$/Assets/CodeBase/UI/Elements/Necklace/MagicStone.cs" />
       <option value="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/StaticData/Level/LevelStaticData.cs" />
       <option value="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/States/LoadLevelState.cs" />
-      <option value="$PROJECT_DIR$/Assets/Plugins/2d-platformer-controller-master/Assets/Scripts/CharacterController2D.cs" />
       <option value="$PROJECT_DIR$/Assets/Plugins/2d-platformer-controller-master/Assets/Scripts/ObjectController2D.cs" />
       <option value="$PROJECT_DIR$/Assets/Plugins/2d-platformer-controller-master/Assets/Scripts/StandOnObjectController2D.cs" />
+      <option value="$PROJECT_DIR$/Assets/Plugins/2d-platformer-controller-master/Assets/Scripts/CharacterController2D.cs" />
+      <option value="$PROJECT_DIR$/Assets/CodeBase/Logic/Stones/BoomerangStone.cs" />
+      <option value="$PROJECT_DIR$/Assets/CodeBase/Logic/Stones/BaseStone.cs" />
+      <option value="$PROJECT_DIR$/Assets/CodeBase/Logic/Stones/WaveAttackStone.cs" />
+      <option value="$PROJECT_DIR$/Assets/CodeBase/Logic/Stones/BubbleStone.cs" />
+      <option value="$PROJECT_DIR$/Assets/CodeBase/Logic/Stones/ChangeAttackStone.cs" />
+      <option value="$PROJECT_DIR$/Assets/CodeBase/Logic/Attacks/AttackBoomerang.cs" />
+      <option value="$PROJECT_DIR$/Assets/CodeBase/Logic/Attacks/AttackBubble.cs" />
+      <option value="$PROJECT_DIR$/Assets/CodeBase/Logic/Attacks/BubbleAttack.cs" />
+      <option value="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/Data/PlayerData/GameData.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="2my0zQThB6EkyRO7ob6MOBJFAwc" />
@@ -132,7 +131,7 @@
       <updated>1728033773310</updated>
       <workItem from="1728033782760" duration="39952000" />
       <workItem from="1728105496514" duration="9648000" />
-      <workItem from="1728117553459" duration="6338000" />
+      <workItem from="1728117553459" duration="8467000" />
     </task>
     <servers />
   </component>

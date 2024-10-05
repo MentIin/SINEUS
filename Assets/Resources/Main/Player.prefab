@@ -483,7 +483,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Type: 4
-  BoomerangAttack: {fileID: 5195635006389198951}
+  StoneAttack: {fileID: 5195635006389198951}
   BaseAttack: {fileID: 6883687391916002020}
   PlayerController: {fileID: 5164597347006983744}
 --- !u!1 &2243541591792252277
@@ -495,7 +495,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3176195967406589176}
-  - component: {fileID: 1435335930682604859}
+  - component: {fileID: 2986381961189507466}
   m_Layer: 6
   m_Name: CircleWave
   m_TagString: Untagged
@@ -518,7 +518,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 2670995396025498374}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1435335930682604859
+--- !u!114 &2986381961189507466
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -527,11 +527,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 2243541591792252277}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c55c92048823ce848ab59f0d0f9c7ed1, type: 3}
+  m_Script: {fileID: 11500000, guid: 8335493cc02348f2a11c56197298ccd8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   Type: 3
-  WaveAttack: {fileID: 3082270066337328508}
+  StoneAttack: {fileID: 3082270066337328508}
   BaseAttack: {fileID: 6883687391916002020}
   PlayerController: {fileID: 5164597347006983744}
 --- !u!1 &2931924833778534509
@@ -1003,7 +1003,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8801480668391867213}
-  - component: {fileID: 2540440058695262989}
+  - component: {fileID: 5560759165111566164}
   m_Layer: 6
   m_Name: BubbleStone
   m_TagString: Untagged
@@ -1026,7 +1026,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 2670995396025498374}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2540440058695262989
+--- !u!114 &5560759165111566164
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1035,11 +1035,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 5644152229464598904}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7aa66432b195497429fb56c11565d242, type: 3}
+  m_Script: {fileID: 11500000, guid: 8335493cc02348f2a11c56197298ccd8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   Type: 5
-  BubbleAttack: {fileID: 3015008114115407815}
+  StoneAttack: {fileID: 3015008114115407815}
   BaseAttack: {fileID: 6883687391916002020}
   PlayerController: {fileID: 5164597347006983744}
 --- !u!1 &5870890984200656761

@@ -13,15 +13,22 @@ namespace CodeBase.Logic.Stones
         
         private GameData _progressGameData;
 
-        private bool _active = false;
+        protected bool Active = false;
+        protected GameData GameData => AllServices.Container.Single<PersistentProgressService>().Progress.GameData;
         
         private void Start()
         {
             _progressGameData = AllServices.Container.Single<PersistentProgressService>().Progress.GameData;
             _progressGameData.MagicStoneChanged += MagicStoneChanged;
             MagicStoneChanged();
+            
+            Initialize();
         }
 
+        protected virtual void Initialize()
+        {
+            
+        }
         private void OnDestroy()
         {
             _progressGameData.MagicStoneChanged -= MagicStoneChanged;
@@ -36,16 +43,16 @@ namespace CodeBase.Logic.Stones
                 magicStonesTypesList.Add(magicStoneSerializableData.Type);
             }
             
-            if (magicStonesTypesList.Contains(Type) && !_active)
+            if (magicStonesTypesList.Contains(Type) && !Active)
             {
-                _active = true;
+                Active = true;
                 Debug.Log("Magic stone is equipped - " + Type.ToString());
                 Activate();
 
-            }else if (!magicStonesTypesList.Contains(Type) && _active)
+            }else if (!magicStonesTypesList.Contains(Type) && Active)
             {
                 Debug.Log("Magic stone is off - " + Type.ToString());
-                _active = false;
+                Active = false;
                 Deactivate();
             }
         }

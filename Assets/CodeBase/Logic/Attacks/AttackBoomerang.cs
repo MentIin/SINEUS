@@ -33,6 +33,8 @@ namespace CodeBase.Logic.Attacks
             _canAttack = false;
             yield return new WaitForSeconds(timeBeforeHit);
 
+            InvokeStarted();
+            
             Vector2 myPos = shotPos.position;
             float angle = Mathf.Atan2(mouseClickPos.y - myPos.y, mouseClickPos.x - myPos.x) * Mathf.Rad2Deg;
             Quaternion bulletRotation = Quaternion.Euler(transform.rotation.x, transform.rotation.y, angle);
