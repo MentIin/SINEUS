@@ -225,7 +225,6 @@ public class ObjectController2D : MonoBehaviour {
         
         
         if (transform.right == Vector3.left) directionX *= -1;
-        print(directionX);
         float rayLength = Mathf.Abs(deltaMove.x) + skinWidth;
         for (int i = 0; i < horizontalRayCount; i++) {
             Vector2 rayOrigin = directionX == -1 ? raycastOrigins.bottomLeft : raycastOrigins.bottomRight;

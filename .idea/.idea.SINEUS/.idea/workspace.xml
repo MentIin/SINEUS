@@ -27,10 +27,6 @@
   </component>
   <component name="IdeDocumentHistory">
     <changedPaths>
-      <option value="$PROJECT_DIR$/Assets/CodeBase/Logic/Enemy/Chekers/CheckPlatformEnd.cs" />
-      <option value="$PROJECT_DIR$/Assets/CodeBase/Logic/Enemy/Chekers/CheckIfSeePlayer.cs" />
-      <option value="$PROJECT_DIR$/Assets/CodeBase/Logic/Enemy/AI/SwordmanAI.cs" />
-      <option value="$PROJECT_DIR$/Assets/CodeBase/Logic/Attacks/Attack.cs" />
       <option value="$PROJECT_DIR$/Assets/CodeBase/Logic/Enemy/FlyingMovement.cs" />
       <option value="$PROJECT_DIR$/Assets/CodeBase/Logic/Enemy/Chekers/CheckIfSeePlayerHorizontal.cs" />
       <option value="$PROJECT_DIR$/Assets/CodeBase/Logic/Enemy/Chekers/CheckIfSeePlayerInRadius.cs" />
@@ -66,7 +62,6 @@
       <option value="$PROJECT_DIR$/Assets/CodeBase/Logic/Stones/WaveAttackStone.cs" />
       <option value="$PROJECT_DIR$/Assets/CodeBase/Logic/Stones/BubbleStone.cs" />
       <option value="$PROJECT_DIR$/Assets/CodeBase/Logic/Attacks/AttackBoomerang.cs" />
-      <option value="$PROJECT_DIR$/Assets/CodeBase/Logic/Attacks/AttackBubble.cs" />
       <option value="$PROJECT_DIR$/Assets/CodeBase/Logic/Attacks/BubbleAttack.cs" />
       <option value="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/Data/PlayerData/GameData.cs" />
       <option value="$PROJECT_DIR$/Assets/Plugins/2d-platformer-controller-master/Assets/Scripts/ObjectController2D.cs" />
@@ -78,6 +73,11 @@
       <option value="$PROJECT_DIR$/Assets/CodeBase/Logic/Stones/GravityStone.cs" />
       <option value="$PROJECT_DIR$/Assets/Plugins/2d-platformer-controller-master/Assets/Scripts/CharacterController2D.cs" />
       <option value="$PROJECT_DIR$/Assets/CodeBase/Logic/Enemy/AI/FlyingAI.cs" />
+      <option value="$PROJECT_DIR$/Assets/CodeBase/Logic/Attacks/Attack.cs" />
+      <option value="$PROJECT_DIR$/Assets/CodeBase/Logic/Attacks/AttackBubble.cs" />
+      <option value="$PROJECT_DIR$/Assets/CodeBase/Logic/Attacks/AttackProjectile.cs" />
+      <option value="$PROJECT_DIR$/Assets/CodeBase/Logic/Attacks/Projectiles/BulletBubble.cs" />
+      <option value="$PROJECT_DIR$/Assets/CodeBase/Logic/Attacks/Projectiles/Bullet.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="2my0zQThB6EkyRO7ob6MOBJFAwc" />
@@ -131,7 +131,7 @@
       <updated>1728033773310</updated>
       <workItem from="1728033782760" duration="39952000" />
       <workItem from="1728105496514" duration="9648000" />
-      <workItem from="1728117553459" duration="20539000" />
+      <workItem from="1728117553459" duration="23292000" />
     </task>
     <servers />
   </component>
