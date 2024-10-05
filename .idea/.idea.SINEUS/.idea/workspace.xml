@@ -26,8 +26,6 @@
   </component>
   <component name="IdeDocumentHistory">
     <changedPaths>
-      <option value="$PROJECT_DIR$/Assets/Plugins/2d-platformer-controller-master/Assets/Scripts/CameraController.cs" />
-      <option value="$PROJECT_DIR$/Assets/Plugins/2d-platformer-controller-master/Assets/Scripts/PlayerController.cs" />
       <option value="$PROJECT_DIR$/Assets/Plugins/2d-platformer-controller-master/Assets/Scripts/PlatformController.cs" />
       <option value="$PROJECT_DIR$/Assets/Plugins/2d-platformer-controller-master/Assets/Scripts/CharacterData.cs" />
       <option value="$PROJECT_DIR$/Assets/CodeBase/Logic/CameraLogic/CameraController.cs" />
@@ -61,7 +59,6 @@
       <option value="$PROJECT_DIR$/Assets/CodeBase/UI/Elements/Dialogs/DialogWindow.cs" />
       <option value="$PROJECT_DIR$/Assets/CodeBase/Logic/Necklace/MagicStone.cs" />
       <option value="$PROJECT_DIR$/Assets/CodeBase/UI/Elements/Necklace/Necklace.cs" />
-      <option value="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/States/GameLoopState.cs" />
       <option value="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/StaticData/StoneStaticData.cs" />
       <option value="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/Services/StaticData/StaticDataService.cs" />
       <option value="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/Data/PlayerData/PlayerProgress.cs" />
@@ -70,13 +67,16 @@
       <option value="$PROJECT_DIR$/Assets/CodeBase/UI/Elements/Necklace/Slot.cs" />
       <option value="$PROJECT_DIR$/Assets/CodeBase/UI/Elements/Necklace/InventoryWindow.cs" />
       <option value="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/Data/PlayerData/GameData.cs" />
-      <option value="$PROJECT_DIR$/Assets/CodeBase/Logic/Stones/BaseStone.cs" />
       <option value="$PROJECT_DIR$/Assets/CodeBase/Logic/Animations/PlayerAnimator.cs" />
       <option value="$PROJECT_DIR$/Assets/CodeBase/Logic/Stones/BoomerangStone.cs" />
       <option value="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/States/GameStateMachine.cs" />
       <option value="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/States/LoadLevelState.cs" />
       <option value="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/AssetManagement/AssetPath.cs" />
+      <option value="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/States/GameLoopState.cs" />
+      <option value="$PROJECT_DIR$/Assets/CodeBase/UI/Elements/Buttons/OpenWindowButton.cs" />
       <option value="$PROJECT_DIR$/Assets/CodeBase/UI/Services/UIFactory/UIFactory.cs" />
+      <option value="$PROJECT_DIR$/Assets/CodeBase/Logic/Stones/BaseStone.cs" />
+      <option value="$PROJECT_DIR$/Assets/CodeBase/Logic/Stones/GravityStone.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="2my0zQThB6EkyRO7ob6MOBJFAwc" />
@@ -121,7 +121,7 @@
       <option name="presentableId" value="Default" />
       <updated>1728033773310</updated>
       <workItem from="1728033782760" duration="39952000" />
-      <workItem from="1728105496514" duration="2268000" />
+      <workItem from="1728105496514" duration="2637000" />
     </task>
     <servers />
   </component>
