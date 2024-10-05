@@ -139,6 +139,7 @@
             <e p="GameConstants.cs" t="Include" />
             <e p="GameTimer.cs" t="Include" />
             <e p="Health.cs" t="Include" />
+            <e p="InteractionZone.cs" t="Include" />
             <e p="LogicExtensions.cs" t="Include" />
             <e p="Player" t="Include">
               <e p="PlayerController.cs" t="Include" />
