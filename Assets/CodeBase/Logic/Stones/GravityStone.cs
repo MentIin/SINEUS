@@ -1,4 +1,4 @@
-﻿using System;
+﻿using UnityEngine;
 
 namespace CodeBase.Logic.Stones
 {
@@ -8,11 +8,15 @@ namespace CodeBase.Logic.Stones
         protected override void Deactivate()
         {
             CharacterController.SetGravityScale(1f);
+            CharacterController.transform.eulerAngles = new Vector3(0f, CharacterController.transform.eulerAngles.y,
+                0f);
         }
 
         protected override void Activate()
         {
             CharacterController.SetGravityScale(-1f);
+            CharacterController.transform.eulerAngles = new Vector3(0f, CharacterController.transform.eulerAngles.y,
+                180f);
         }
     }
 }
