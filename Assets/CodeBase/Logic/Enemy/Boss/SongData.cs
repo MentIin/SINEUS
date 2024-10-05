@@ -10,6 +10,13 @@ namespace CodeBase.Logic.Enemy.Boss
         [Header("Duration in sec")]
         public float Duration = 130f;
 
-        public List<float> Timings = new List<float>();
+        public List<Timing> Timings = new List<Timing>();
+    }
+
+    [Serializable]
+    public class Timing
+    {
+        public float AppearTime;
+        public float PlevTime;
     }
 }

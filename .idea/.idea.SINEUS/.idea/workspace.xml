@@ -28,8 +28,6 @@
   </component>
   <component name="IdeDocumentHistory">
     <changedPaths>
-      <option value="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/Data/PlayerData/PlayerProgress.cs" />
-      <option value="$PROJECT_DIR$/Assets/CodeBase/Logic/Animations/PlayerAnimator.cs" />
       <option value="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/States/GameStateMachine.cs" />
       <option value="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/AssetManagement/AssetPath.cs" />
       <option value="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/States/GameLoopState.cs" />
@@ -77,6 +75,8 @@
       <option value="$PROJECT_DIR$/Assets/CodeBase/Logic/Loot/StoneReciver.cs" />
       <option value="$PROJECT_DIR$/Assets/CodeBase/Logic/Sounds/LevelAuidio.cs" />
       <option value="$PROJECT_DIR$/Assets/CodeBase/Logic/Loot/ChangeColorWhenStoneRecived.cs" />
+      <option value="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/States/BootstrapState.cs" />
+      <option value="$PROJECT_DIR$/Assets/CodeBase/Logic/Enemy/Boss/Plev.cs" />
       <option value="$PROJECT_DIR$/Assets/CodeBase/Logic/Enemy/Boss/SongData.cs" />
       <option value="$PROJECT_DIR$/Assets/CodeBase/Logic/Enemy/Boss/BossBrain.cs" />
     </changedPaths>
@@ -132,7 +132,7 @@
       <updated>1728033773310</updated>
       <workItem from="1728033782760" duration="39952000" />
       <workItem from="1728105496514" duration="9648000" />
-      <workItem from="1728117553459" duration="36674000" />
+      <workItem from="1728117553459" duration="41364000" />
     </task>
     <servers />
   </component>
