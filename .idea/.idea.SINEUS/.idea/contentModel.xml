@@ -126,6 +126,7 @@
               </e>
               <e p="Boss" t="Include">
                 <e p="BossBrain.cs" t="Include" />
+                <e p="Plev.cs" t="Include" />
                 <e p="SongData.cs" t="Include" />
               </e>
               <e p="Chekers" t="Include">
