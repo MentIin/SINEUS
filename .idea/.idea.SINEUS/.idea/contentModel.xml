@@ -99,10 +99,14 @@
               <e p="AttackBubble.cs" t="Include" />
               <e p="AttackCircleWave.cs" t="Include" />
               <e p="AttackMelee.cs" t="Include" />
+              <e p="AttackProjectile.cs" t="Include" />
               <e p="BoomerangBullet.cs" t="Include" />
               <e p="BulletBubble.cs" t="Include" />
               <e p="BulletSimple.cs" t="Include" />
               <e p="Fire.cs" t="Include" />
+              <e p="Projectiles" t="Include">
+                <e p="Bullet.cs" t="Include" />
+              </e>
               <e p="WaveBulletsHolder.cs" t="Include" />
             </e>
             <e p="CameraLogic" t="Include">

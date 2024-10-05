@@ -52,5 +52,6 @@ public class AttackBubble : Attack
     {
         StartCoroutine(AttackReload());
     }
+    
 
 }
