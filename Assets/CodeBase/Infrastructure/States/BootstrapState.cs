@@ -71,7 +71,7 @@ namespace CodeBase.Infrastructure.States
             _allServices.RegisterSingle<IInputService>(new StandaloneInputService(_coroutineRunner));
             
 
-        _allServices.RegisterSingle<GameStateMachine>(_gameStateMachine);
+           _allServices.RegisterSingle<GameStateMachine>(_gameStateMachine);
 
             
             RegisterUIFactory();
