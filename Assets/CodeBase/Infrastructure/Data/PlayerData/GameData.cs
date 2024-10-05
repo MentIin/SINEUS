@@ -23,6 +23,7 @@ namespace CodeBase.Infrastructure.Data.PlayerData
             SingleShot=2,
             ZoneSplash=3,
             BoomerangAttack=4,
+            BubbleAttack=5,
             Gravity=6,
             Fire=7,
             Jump=8,

@@ -13,13 +13,15 @@ public class BulletBubble : MonoBehaviour
     [SerializeField] private float frequency = 15;
     [SerializeField] private float magnitude = 0.3f;
     private Vector3 pos;
+    public float startTime;
 
     [SerializeField] private int lifeTime = 10;
     private void Start()
     {
-        pos= transform.localPosition;
+        pos= transform.position;
         _collider2D = GetComponent<CircleCollider2D>();
         Invoke("Lopnul", lifeTime);
+        startTime = Time.time;
 
     }
     private void Update()
@@ -50,7 +52,7 @@ public class BulletBubble : MonoBehaviour
     private void SinusMoving()
     {
         pos += transform.right * Time.deltaTime * speed;
-        transform.localPosition = pos+transform.up*Mathf.Sin((Time.time+Time.deltaTime)*frequency)*magnitude;
+        transform.position = pos+transform.up*Mathf.Sin((startTime+Time.time)*frequency)*magnitude;
     }
     private void Lopnul()
     {
