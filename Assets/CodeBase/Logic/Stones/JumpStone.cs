@@ -17,7 +17,7 @@
 
         private void Jumped()
         {
-            GameData.Use(Type);
+            GameData.Spend(Type);
             if (GameData.UsagesLeftSlots(Type) == 0)
             {
                 Active = false;

@@ -58,7 +58,7 @@ namespace CodeBase.Infrastructure.Data.PlayerData
             MagicStoneChanged?.Invoke();
         }
 
-        public void Use(MagicStonesTypes type)
+        public void Spend(MagicStonesTypes type)
         {
             foreach (var stoneSerializableData in playerSlots)
             {

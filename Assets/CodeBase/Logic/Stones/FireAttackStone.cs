@@ -25,7 +25,7 @@ namespace CodeBase.Logic.Stones
         private void AttackStarted()
         {
             if (!Active) return;
-            GameData.Use(Type);
+            GameData.Spend(Type);
             if (GameData.UsagesLeftSlots(Type) <= 0)
             {
                 Deactivate();
