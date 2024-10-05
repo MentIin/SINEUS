@@ -92,6 +92,7 @@
               <e p="GetDamageAnimator.cs" t="Include" />
               <e p="GetDamageSimpleAnimation.cs" t="Include" />
               <e p="PlayerAnimator.cs" t="Include" />
+              <e p="RiderAnimator.cs" t="Include" />
             </e>
             <e p="Attacks" t="Include">
               <e p="Attack.cs" t="Include" />
@@ -120,6 +121,7 @@
             <e p="Enemy" t="Include">
               <e p="AI" t="Include">
                 <e p="FlyingAI.cs" t="Include" />
+                <e p="RiderAI.cs" t="Include" />
                 <e p="SwordmanAI.cs" t="Include" />
               </e>
               <e p="Chekers" t="Include">

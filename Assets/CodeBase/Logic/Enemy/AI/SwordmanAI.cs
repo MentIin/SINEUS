@@ -20,7 +20,7 @@ namespace CodeBase.Logic.Enemy.AI
             int dir = checkIfSeePlayerHorizontal.Check();
             if (dir != 0)
             {
-                if (checkIfSeePlayerHorizontal.HitDistance >= TargetDistance ||  dir != transform.right.x)
+                if (checkIfSeePlayerHorizontal.HitDistance >= TargetDistance || dir != transform.right.x)
                 {
                     direction = dir;
                 }

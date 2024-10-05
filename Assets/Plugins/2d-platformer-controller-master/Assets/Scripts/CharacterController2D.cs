@@ -45,6 +45,7 @@ public class CharacterController2D : ObjectController2D {
     public bool Invulnerable => invulnerableTime > 0;
     public bool Immobile { get; set; }
     public bool Dashing { get; set; }
+    public bool Grounded { get => collisions.onGround;}
 
     public Action Jumped;
 
