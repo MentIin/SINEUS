@@ -143,6 +143,7 @@
             <e p="LogicExtensions.cs" t="Include" />
             <e p="Loot" t="Include">
               <e p="Collectable.cs" t="Include" />
+              <e p="StoneReciver.cs" t="Include" />
             </e>
             <e p="Player" t="Include">
               <e p="PlayerController.cs" t="Include" />

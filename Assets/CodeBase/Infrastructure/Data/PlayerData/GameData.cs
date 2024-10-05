@@ -13,6 +13,7 @@ namespace CodeBase.Infrastructure.Data.PlayerData
 
 
         public List<MagicStonesTypes> Looted= new List<MagicStonesTypes>();
+        public List<MagicStonesTypes> Recived= new List<MagicStonesTypes>();
         public Action MagicStoneChanged;
         
         
@@ -110,12 +111,38 @@ namespace CodeBase.Infrastructure.Data.PlayerData
 
         public void Loot(StoneStaticData staticData)
         {
+            Looted.Add(staticData.Type);
             playerPocket.Add(new MagicStoneSerializableData
             {
                 Type = staticData.Type,
                 Usages = staticData.Usages,
             });
             MagicStoneChanged?.Invoke();
+        }
+
+        public void Recive(MagicStonesTypes type)
+        {
+            foreach (var serializableData in playerPocket)
+            {
+                if (serializableData.Type == type)
+                {
+                    playerPocket.Remove(serializableData);
+                    Recived.Add(serializableData.Type);
+                    MagicStoneChanged?.Invoke();
+                    return;
+                }
+            }
+
+            for (int i = 0; i < playerSlots.Length; i++)
+            {
+                if (playerSlots[i].Type == type)
+                {
+                    playerSlots[i] = new MagicStoneSerializableData {Type = MagicStonesTypes.Null};
+                    Recived.Add(type);
+                    MagicStoneChanged?.Invoke();
+                    return;
+                }
+            }
         }
     }
 
