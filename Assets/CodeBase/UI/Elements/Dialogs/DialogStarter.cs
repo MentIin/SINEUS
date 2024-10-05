@@ -17,6 +17,10 @@ namespace CodeBase.UI.Elements.Dialogs
         {
             _uiFactory = AllServices.Container.Single<UIFactory>();
             
+            
+        }
+        public void StartDialog()
+        {
             _uiFactory.CreateDialog(StaticData, Callback);
         }
 
