@@ -87,9 +87,9 @@ namespace CodeBase.Logic.Enemy.Boss
 
             //findObjectsByType[0].gameObject.SetActive(false);
 
-            findObjectsByType[0].GetComponent<CharacterController2D>().Walk(0);
-            findObjectsByType[0].GetComponent<CharacterController2D>().enabled = false;
-            yield return new WaitForSeconds(3f);
+            Time.timeScale = 0f;
+            yield return new WaitForSecondsRealtime(3f);
+            Time.timeScale = 1f;
             findObjectsByType[0].GetComponent<Health>().TakeDamage(9999);
             Destroy(o);
         }

@@ -76,9 +76,9 @@
       <option value="$PROJECT_DIR$/Assets/CodeBase/Logic/Stones/FireAttackStone.cs" />
       <option value="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/Data/PlayerData/GameData.cs" />
       <option value="$PROJECT_DIR$/Assets/CodeBase/Logic/Death.cs" />
-      <option value="$PROJECT_DIR$/Assets/CodeBase/Logic/Enemy/Boss/BossBrain.cs" />
       <option value="$PROJECT_DIR$/Assets/CodeBase/UI/Elements/Dialogs/DialogWindow.cs" />
       <option value="$PROJECT_DIR$/Assets/CodeBase/UI/Elements/Necklace/InventoryWindow.cs" />
+      <option value="$PROJECT_DIR$/Assets/CodeBase/Logic/Enemy/Boss/BossBrain.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="2my0zQThB6EkyRO7ob6MOBJFAwc" />
@@ -133,7 +133,7 @@
       <workItem from="1728033782760" duration="39952000" />
       <workItem from="1728105496514" duration="9648000" />
       <workItem from="1728117553459" duration="41364000" />
-      <workItem from="1728187892126" duration="6961000" />
+      <workItem from="1728187892126" duration="7286000" />
     </task>
     <servers />
   </component>
