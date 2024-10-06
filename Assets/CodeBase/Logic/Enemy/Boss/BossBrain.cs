@@ -75,13 +75,13 @@ namespace CodeBase.Logic.Enemy.Boss
                 id++;
             }
 
-            Loose();
+            StartCoroutine(Loose());
 
         }
 
         private IEnumerator Loose()
         {
-            Instantiate(LooseCanvas);
+            GameObject o = Instantiate(LooseCanvas);
 
             PlayerController[] findObjectsByType = FindObjectsByType<PlayerController>(FindObjectsSortMode.None);
 
@@ -91,6 +91,7 @@ namespace CodeBase.Logic.Enemy.Boss
             findObjectsByType[0].GetComponent<CharacterController2D>().enabled = false;
             yield return new WaitForSeconds(3f);
             findObjectsByType[0].GetComponent<Health>().TakeDamage(9999);
+            Destroy(o);
         }
 
         private void Win()

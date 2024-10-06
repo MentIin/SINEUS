@@ -34,11 +34,13 @@ namespace CodeBase.UI.Elements.Necklace
 
             findObjectsByType[0].enabled = false;
             findObjectsByType[0].GetComponent<CharacterController2D>().Walk(0);
+            findObjectsByType[0].GetComponent<CharacterData>().maxSpeed = 0f;
         }
 
         private void OnDestroy()
         {
             FindObjectOfType<PlayerController>().enabled = true;
+            FindObjectOfType<PlayerController>().GetComponent<CharacterData>().maxSpeed = 5f;
             persistentProgressService.Progress.GameData.MagicStoneChanged -= MagicStoneChanged;
 
         }
