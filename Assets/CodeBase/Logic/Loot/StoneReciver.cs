@@ -42,7 +42,7 @@ namespace CodeBase.Logic.Loot
 
         public void Recive()
         {
-            _progressGameData.Recive(Data.Type);
+            _progressGameData.ReciveFromInventory(Data.Type);
         }
     }
 }
