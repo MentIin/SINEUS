@@ -12,8 +12,7 @@ namespace CodeBase.Logic.Stones
         
         protected override void Initialize()
         {
-            AttackBoomerang.AttackStarted += AttackStarted;
-            AttackMelee.AttackStarted += AttackStarted;
+            
         }
 
         private void OnDestroy()
@@ -33,12 +32,15 @@ namespace CodeBase.Logic.Stones
         }
         protected override void Deactivate()
         {
+            OnDestroy();
             AttackMelee.FirePrefab = null;
             AttackBoomerang.FirePrefab = null;
         }
 
         protected override void Activate()
         {
+            AttackBoomerang.AttackStarted += AttackStarted;
+            AttackMelee.AttackStarted += AttackStarted;
             AttackMelee.FirePrefab = FirePrefab;
             AttackBoomerang.FirePrefab = FirePrefab;
         }
