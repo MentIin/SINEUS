@@ -4,6 +4,7 @@ using CodeBase.Infrastructure.Services.Input;
 using CodeBase.Infrastructure.Services.PersistentProgress;
 using CodeBase.Infrastructure.Services.Random;
 using CodeBase.Infrastructure.Services.StaticData;
+using CodeBase.Logic;
 using CodeBase.Logic.CameraLogic;
 using CodeBase.UI;
 using CodeBase.UI.Services.UIFactory;
@@ -45,6 +46,7 @@ namespace CodeBase.Infrastructure.States
 
         public void Enter(int levelId)
         {
+            _progressService.Progress.GameData.LastLevel = levelId;
             _cameraController.SetScaleToDefault();
             _cameraController.RemoveShade();
             
@@ -60,11 +62,18 @@ namespace CodeBase.Infrastructure.States
             GameObject gameObject = _gameFactory.CreatePlayer(Vector2.zero);
             CameraFollow(gameObject.transform);
 
+            gameObject.GetComponent<Death>().Happen += OnHappen;
+            
             _uiFactory.CreateHUD();
             
             _gameStateMachine.Enter<GameLoopState>();
         }
-        
+
+        private void OnHappen()
+        {
+            _gameStateMachine.Enter<LoadLevelState, int>(_progressService.Progress.GameData.LastLevel);
+        }
+
         private void CameraFollow(Transform target)
         {
             CameraFollow cameraFollow = Camera.main.GetComponent<CameraFollow>();

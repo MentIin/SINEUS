@@ -8,6 +8,7 @@ namespace CodeBase.Infrastructure.Data.PlayerData
     [Serializable]
     public class GameData
     {
+        public int LastLevel=1;
         public List<MagicStoneSerializableData> playerPocket = new List<MagicStoneSerializableData>();
         public MagicStoneSerializableData[] playerSlots = new MagicStoneSerializableData[5];
 
@@ -15,8 +16,8 @@ namespace CodeBase.Infrastructure.Data.PlayerData
         public List<MagicStonesTypes> Looted= new List<MagicStonesTypes>();
         public List<MagicStonesTypes> Recived= new List<MagicStonesTypes>();
         public Action MagicStoneChanged;
-        
-        
+
+
         public enum MagicStonesTypes
         {
             Null=0,
