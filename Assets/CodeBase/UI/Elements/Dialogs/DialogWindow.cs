@@ -1,5 +1,7 @@
 using System;
+using CodeBase.Infrastructure.Services;
 using CodeBase.Infrastructure.StaticData.Dialogs;
+using CodeBase.Logic.Player;
 using CodeBase.UI.Services.UIFactory;
 using TMPro;
 using UnityEngine;
@@ -25,6 +27,8 @@ namespace CodeBase.UI.Elements.Dialogs
             
             Show(nodeStaticData);
         }
+
+
 
         private void Show(DialogNodeStaticData nodeStaticData)
         {

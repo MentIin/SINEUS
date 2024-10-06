@@ -4,6 +4,7 @@ using CodeBase.Infrastructure.Services;
 using CodeBase.Infrastructure.Services.PersistentProgress;
 using CodeBase.Infrastructure.Services.StaticData;
 using CodeBase.Infrastructure.StaticData;
+using CodeBase.Logic.Player;
 using UnityEngine;
 using UnityEngine.UI;
 using Object = System.Object;
@@ -29,10 +30,15 @@ namespace CodeBase.UI.Elements.Necklace
             UpdateNeckplace();
             
             persistentProgressService.Progress.GameData.MagicStoneChanged += MagicStoneChanged;
+            PlayerController[] findObjectsByType = FindObjectsByType<PlayerController>(FindObjectsSortMode.None);
+
+            findObjectsByType[0].enabled = false;
+            findObjectsByType[0].GetComponent<CharacterController2D>().Walk(0);
         }
 
         private void OnDestroy()
         {
+            FindObjectOfType<PlayerController>().enabled = true;
             persistentProgressService.Progress.GameData.MagicStoneChanged -= MagicStoneChanged;
 
         }
