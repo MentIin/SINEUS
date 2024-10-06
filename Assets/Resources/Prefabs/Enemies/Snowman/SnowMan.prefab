@@ -649,8 +649,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Team: 1
-  damage: 0
-  reload: 0.5
+  damage: 1
+  reload: 1
   timeBeforeHit: 0.1
   bulletPrefab: {fileID: 5182141462827231210, guid: d47b525ba7b50fa4ba6574a1ff01057b, type: 3}
 --- !u!1 &9093963090836587968

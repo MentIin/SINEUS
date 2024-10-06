@@ -29,7 +29,6 @@
   <component name="IdeDocumentHistory">
     <changedPaths>
       <option value="$PROJECT_DIR$/Assets/CodeBase/UI/Elements/Buttons/OpenWindowButton.cs" />
-      <option value="$PROJECT_DIR$/Assets/CodeBase/UI/Services/UIFactory/UIFactory.cs" />
       <option value="$PROJECT_DIR$/Assets/CodeBase/Logic/Player/PlayerController.cs" />
       <option value="$PROJECT_DIR$/Assets/Plugins/2d-platformer-controller-master/Assets/Scripts/JumpPad.cs" />
       <option value="$PROJECT_DIR$/Assets/CodeBase/Logic/Attacks/AttackMelee.cs" />
@@ -71,7 +70,6 @@
       <option value="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/States/BootstrapState.cs" />
       <option value="$PROJECT_DIR$/Assets/CodeBase/Logic/Enemy/Boss/SongData.cs" />
       <option value="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/StaticData/Dialogs/DialogNodeStaticData.cs" />
-      <option value="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/States/LoadLevelState.cs" />
       <option value="$PROJECT_DIR$/Assets/CodeBase/Logic/Enemy/Boss/Plev.cs" />
       <option value="$PROJECT_DIR$/Assets/CodeBase/Logic/Stones/FireAttackStone.cs" />
       <option value="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/Data/PlayerData/GameData.cs" />
@@ -79,6 +77,8 @@
       <option value="$PROJECT_DIR$/Assets/CodeBase/UI/Elements/Dialogs/DialogWindow.cs" />
       <option value="$PROJECT_DIR$/Assets/CodeBase/UI/Elements/Necklace/InventoryWindow.cs" />
       <option value="$PROJECT_DIR$/Assets/CodeBase/Logic/Enemy/Boss/BossBrain.cs" />
+      <option value="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/States/LoadLevelState.cs" />
+      <option value="$PROJECT_DIR$/Assets/CodeBase/UI/Services/UIFactory/UIFactory.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="2my0zQThB6EkyRO7ob6MOBJFAwc" />
@@ -133,7 +133,7 @@
       <workItem from="1728033782760" duration="39952000" />
       <workItem from="1728105496514" duration="9648000" />
       <workItem from="1728117553459" duration="41364000" />
-      <workItem from="1728187892126" duration="7286000" />
+      <workItem from="1728187892126" duration="7918000" />
     </task>
     <servers />
   </component>

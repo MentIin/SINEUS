@@ -7,6 +7,8 @@ using CodeBase.Infrastructure.Services.SaveLoad;
 using CodeBase.Infrastructure.Services.StaticData;
 using CodeBase.Infrastructure.States;
 using CodeBase.Infrastructure.StaticData.Dialogs;
+using CodeBase.Logic;
+using CodeBase.UI.Elements;
 using CodeBase.UI.Elements.Buttons;
 using CodeBase.UI.Elements.Dialogs;
 using CodeBase.UI.Services.Windows;
@@ -65,10 +67,12 @@ namespace CodeBase.UI.Services.UIFactory
             Object.DestroyImmediate(_uiRoot.gameObject);
         }
 
-        public void CreateHUD()
+        public void CreateHUD(Health hp)
         {
             GameObject prefab = Resources.Load<GameObject>(AssetAddress.HUD);
             GameObject go = Object.Instantiate(prefab);
+            go.GetComponentInChildren<HpBar>().Construct(hp);
+            
             go.GetComponentInChildren<OpenWindowButton>().Construct(this);
         }
     }

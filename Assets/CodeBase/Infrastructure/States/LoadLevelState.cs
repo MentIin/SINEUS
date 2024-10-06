@@ -64,7 +64,7 @@ namespace CodeBase.Infrastructure.States
 
             gameObject.GetComponent<Death>().Happen += OnHappen;
             
-            _uiFactory.CreateHUD();
+            _uiFactory.CreateHUD(gameObject.GetComponent<Health>());
             
             _gameStateMachine.Enter<GameLoopState>();
         }
