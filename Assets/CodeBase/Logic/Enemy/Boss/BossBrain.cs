@@ -1,9 +1,12 @@
 ﻿using System;
 using System.Collections;
+using CodeBase.Infrastructure.Data;
 using CodeBase.Infrastructure.Data.PlayerData;
 using CodeBase.Infrastructure.Services;
 using CodeBase.Infrastructure.Services.PersistentProgress;
+using Unity.VisualScripting;
 using UnityEngine;
+using Object = System.Object;
 using Random = UnityEngine.Random;
 
 
@@ -11,12 +14,36 @@ namespace CodeBase.Logic.Enemy.Boss
 {
     public class BossBrain : MonoBehaviour
     {
+        public GameObject LooseCanvas;
         public SongData Song;
         public GameObject PlevPrefab;
 
         private void Start()
         {
             StartCoroutine(SpawnPlevs());
+            StartCoroutine(CheckWin());
+        }
+
+        private IEnumerator CheckWin()
+        {
+            while (true)
+            {
+                yield return new WaitForSeconds(1f);
+                bool f = true;
+                foreach (Health health in FindObjectsByType<Health>(FindObjectsSortMode.None))
+                {
+                    if (health.Team == Team.Enemy)
+                    {
+                        f = false;
+                        break;
+                    }
+                }
+
+                if (f)
+                {
+                    Win();
+                }
+            }
         }
 
         // plevs
@@ -47,9 +74,22 @@ namespace CodeBase.Logic.Enemy.Boss
                 id++;
             }
 
+            Loose();
 
-            GameData data = AllServices.Container.Single<PersistentProgressService>().Progress.GameData;
+        }
+
+        private void Loose()
+        {
+            Instantiate(LooseCanvas);
             
+            
+        }
+
+        private void Win()
+        {
+            StopAllCoroutines();
+            GameData data = AllServices.Container.Single<PersistentProgressService>().Progress.GameData;
+
             data.Recive(GameData.MagicStonesTypes.BossHead);
         }
 
