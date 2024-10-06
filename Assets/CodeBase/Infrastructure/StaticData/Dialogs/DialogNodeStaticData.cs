@@ -1,6 +1,7 @@
 using System;
 using NaughtyAttributes;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 namespace CodeBase.Infrastructure.StaticData.Dialogs
 {
@@ -15,7 +16,7 @@ namespace CodeBase.Infrastructure.StaticData.Dialogs
         [TextArea]
         public string Text;
 
-        public Sprite icon;
+        [FormerlySerializedAs("icon")] public Sprite Icon;
 
 
         [Space(10)]

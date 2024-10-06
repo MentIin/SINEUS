@@ -36,7 +36,7 @@ namespace CodeBase.UI.Elements.Dialogs
             }
             _textMeshPro.text = _nodeStaticData.Text;
             _nameTextField.text=_nodeStaticData.Name;
-            _iconImage.sprite = _nodeStaticData.icon;
+            _iconImage.sprite = _nodeStaticData.Icon;
 
 
 

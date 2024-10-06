@@ -138,6 +138,7 @@
               <e p="PatrolMovement.cs" t="Include" />
             </e>
             <e p="Enviroment" t="Include">
+              <e p="ChangeAudioTrigger.cs" t="Include" />
               <e p="KilingZone.cs" t="Include" />
               <e p="ParalaxBehaviour.cs" t="Include" />
             </e>
@@ -154,6 +155,7 @@
             <e p="Player" t="Include">
               <e p="PlayerController.cs" t="Include" />
             </e>
+            <e p="Portal.cs" t="Include" />
             <e p="Sounds" t="Include">
               <e p="AttackSounds.cs" t="Include" />
               <e p="LevelAuidio.cs" t="Include" />
