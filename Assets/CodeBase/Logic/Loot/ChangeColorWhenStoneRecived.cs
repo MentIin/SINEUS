@@ -10,6 +10,7 @@ namespace CodeBase.Logic.Loot
     {
         public StoneStaticData Data;
         public SpriteRenderer renderer;
+        [SerializeField] private Color myGray = new Color(55,55,55,255);
 
         private GameData _progressGameData;
 
@@ -29,7 +30,7 @@ namespace CodeBase.Logic.Loot
             }
             else
             {
-                renderer.color = Color.gray;
+                renderer.color = myGray;
             }
         }
 

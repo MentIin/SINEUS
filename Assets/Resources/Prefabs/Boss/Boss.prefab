@@ -47,10 +47,10 @@ MonoBehaviour:
   Song:
     Duration: 130
     Timings:
-    - AppearTime: 1
-      PlevTime: 2
-    - AppearTime: 3
-      PlevTime: 7
-    - AppearTime: 5
-      PlevTime: 7
+    - AppearTime: 31
+      PlevTime: 33
+    - AppearTime: 59
+      PlevTime: 62
+    - AppearTime: 97
+      PlevTime: 100
   PlevPrefab: {fileID: 7558172691941738424, guid: 45555573129759c4f9bde3bf60461680, type: 3}
