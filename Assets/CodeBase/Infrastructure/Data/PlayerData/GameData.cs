@@ -29,6 +29,8 @@ namespace CodeBase.Infrastructure.Data.PlayerData
             Gravity=6,
             Fire=7,
             Jump=8,
+            
+            BossHead=10,
         }
 
         public void ChangePlace(MagicStoneSerializableData activeStoneStoneType, int activeStonePlace, int newPlace)
@@ -121,7 +123,7 @@ namespace CodeBase.Infrastructure.Data.PlayerData
             MagicStoneChanged?.Invoke();
         }
 
-        public void Recive(MagicStonesTypes type)
+        public void ReciveFromInventory(MagicStonesTypes type)
         {
             foreach (var serializableData in playerPocket)
             {
@@ -144,6 +146,14 @@ namespace CodeBase.Infrastructure.Data.PlayerData
                     return;
                 }
             }
+        }
+
+        public void Recive(MagicStonesTypes type)
+        {
+            if (Recived.Contains(type)) return;
+            
+            Recived.Add(type);
+            MagicStoneChanged?.Invoke();
         }
     }
 

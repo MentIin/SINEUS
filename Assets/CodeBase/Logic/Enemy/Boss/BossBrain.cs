@@ -1,5 +1,8 @@
 ﻿using System;
 using System.Collections;
+using CodeBase.Infrastructure.Data.PlayerData;
+using CodeBase.Infrastructure.Services;
+using CodeBase.Infrastructure.Services.PersistentProgress;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
@@ -26,7 +29,8 @@ namespace CodeBase.Logic.Enemy.Boss
                 float toWait;
                 if (id >= Song.Timings.Count)
                 {
-                    toWait = 10000f;
+                    
+                    break;
                 }
                 else
                 {
@@ -42,6 +46,11 @@ namespace CodeBase.Logic.Enemy.Boss
 
                 id++;
             }
+
+
+            GameData data = AllServices.Container.Single<PersistentProgressService>().Progress.GameData;
+            
+            data.Recive(GameData.MagicStonesTypes.BossHead);
         }
 
         private void Spawn(float time)
