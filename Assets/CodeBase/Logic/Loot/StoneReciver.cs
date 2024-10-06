@@ -31,7 +31,7 @@ namespace CodeBase.Logic.Loot
             }
             else
             {
-                renderer.color = Color.black;
+                renderer.color = Color.gray;
             }
         }
 

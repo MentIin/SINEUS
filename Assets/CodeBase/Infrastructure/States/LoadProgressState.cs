@@ -47,7 +47,7 @@ namespace CodeBase.Infrastructure.States
             PlayerProgress playerProgress = new PlayerProgress();
 
             //playerProgress.GameData.playerPocket.Add(GameData.MagicStonesTypes.Gravity);
-            playerProgress.GameData.playerPocket.Add(new MagicStoneSerializableData
+            /*playerProgress.GameData.playerPocket.Add(new MagicStoneSerializableData
             {
                 Type = GameData.MagicStonesTypes.Jump,
                 Usages = 2
@@ -66,7 +66,7 @@ namespace CodeBase.Infrastructure.States
             {
                 Type = GameData.MagicStonesTypes.Gravity,
                 Usages = 10
-            });
+            });*/
 
             for (int i = 0; i < 5; i++)
             {

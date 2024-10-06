@@ -13,4 +13,5 @@ MonoBehaviour:
   m_Name: WaveAttack
   m_EditorClassIdentifier: 
   Type: 3
-  Icon: {fileID: 21300000, guid: 7288ff52eb2493a4f995fd9621a620a0, type: 3}
+  Icon: {fileID: 21300000, guid: c9f09925923c69d4c8d085e2349cf068, type: 3}
+  Usages: 20

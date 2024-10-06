@@ -20,6 +20,6 @@ MonoBehaviour:
     \u0432\u043C\u0435\u0448\u0430\u043B\u0441\u044F \u0432 \u0433\u0430\u0440\u043C\u043E\u043D\u0438\u044E
     \u0432\u0440\u0435\u043C\u0435\u043D \u0438 \u0437\u0430\u043F\u0443\u0442\u0430\u043B
     \u0432\u0441\u0435 \u201C\u041E\u201D."
-  icon: {fileID: -9047516357461717769, guid: 70812eeeceff0714d8ab1c0ca4e16953, type: 3}
+  icon: {fileID: 21300000, guid: 265ef169cd258394a813b28ddc474ce7, type: 3}
   HaveCallback: 0
   CallbackId: 0

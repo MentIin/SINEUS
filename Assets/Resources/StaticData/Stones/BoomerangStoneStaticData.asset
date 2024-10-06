@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: BoomerangStoneStaticData
   m_EditorClassIdentifier: 
   Type: 4
-  Icon: {fileID: 104265018347861113, guid: 512058ebddb86af4fa8dd361fd0ec2c5, type: 3}
-  Usages: 3
+  Icon: {fileID: 21300000, guid: 699e70e0165be804ebb0e5b1534e7185, type: 3}
+  Usages: 20
