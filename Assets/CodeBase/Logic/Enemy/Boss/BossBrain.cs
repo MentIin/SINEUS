@@ -85,12 +85,12 @@ namespace CodeBase.Logic.Enemy.Boss
 
             PlayerController[] findObjectsByType = FindObjectsByType<PlayerController>(FindObjectsSortMode.None);
 
-            findObjectsByType[0].gameObject.SetActive(false);
+            //findObjectsByType[0].gameObject.SetActive(false);
 
+            findObjectsByType[0].GetComponent<CharacterController2D>().Walk(0);
+            findObjectsByType[0].GetComponent<CharacterController2D>().enabled = false;
             yield return new WaitForSeconds(3f);
             findObjectsByType[0].GetComponent<Health>().TakeDamage(9999);
-            
-
         }
 
         private void Win()
