@@ -73,12 +73,12 @@
       <option value="$PROJECT_DIR$/Assets/CodeBase/Logic/Sounds/LevelAuidio.cs" />
       <option value="$PROJECT_DIR$/Assets/CodeBase/Logic/Loot/ChangeColorWhenStoneRecived.cs" />
       <option value="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/States/BootstrapState.cs" />
-      <option value="$PROJECT_DIR$/Assets/CodeBase/Logic/Enemy/Boss/Plev.cs" />
       <option value="$PROJECT_DIR$/Assets/CodeBase/Logic/Enemy/Boss/SongData.cs" />
       <option value="$PROJECT_DIR$/Assets/CodeBase/Logic/Enemy/Boss/BossBrain.cs" />
       <option value="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/StaticData/Dialogs/DialogNodeStaticData.cs" />
       <option value="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/Data/PlayerData/GameData.cs" />
       <option value="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/States/LoadLevelState.cs" />
+      <option value="$PROJECT_DIR$/Assets/CodeBase/Logic/Enemy/Boss/Plev.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="2my0zQThB6EkyRO7ob6MOBJFAwc" />
@@ -133,7 +133,7 @@
       <workItem from="1728033782760" duration="39952000" />
       <workItem from="1728105496514" duration="9648000" />
       <workItem from="1728117553459" duration="41364000" />
-      <workItem from="1728187892126" duration="1455000" />
+      <workItem from="1728187892126" duration="2661000" />
     </task>
     <servers />
   </component>

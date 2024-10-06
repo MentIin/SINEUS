@@ -17,6 +17,7 @@ namespace CodeBase.Logic.Enemy.Boss
         {
             yield return new WaitForSeconds(time);
             GameObject go = Instantiate(Plevok);
+            go.transform.parent = Camera.main.transform;
             go.transform.position = Animator.transform.position;
             Animator.SetTrigger("plev");
         }
