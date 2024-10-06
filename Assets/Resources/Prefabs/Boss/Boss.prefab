@@ -44,6 +44,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8ef3841c45bd4dfb8e887cc021fb0a2a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  LooseCanvas: {fileID: 4329586769049793503, guid: fa4a77d345c5eb644a2bb2fcb9c3b802, type: 3}
   Song:
     Duration: 130
     Timings:
