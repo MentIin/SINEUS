@@ -4,6 +4,7 @@ using CodeBase.Infrastructure.Data;
 using CodeBase.Infrastructure.Data.PlayerData;
 using CodeBase.Infrastructure.Services;
 using CodeBase.Infrastructure.Services.PersistentProgress;
+using CodeBase.Logic.Player;
 using Unity.VisualScripting;
 using UnityEngine;
 using Object = System.Object;
@@ -78,11 +79,18 @@ namespace CodeBase.Logic.Enemy.Boss
 
         }
 
-        private void Loose()
+        private IEnumerator Loose()
         {
             Instantiate(LooseCanvas);
+
+            PlayerController[] findObjectsByType = FindObjectsByType<PlayerController>(FindObjectsSortMode.None);
+
+            findObjectsByType[0].gameObject.SetActive(false);
+
+            yield return new WaitForSeconds(3f);
+            findObjectsByType[0].GetComponent<Health>().TakeDamage(9999);
             
-            
+
         }
 
         private void Win()

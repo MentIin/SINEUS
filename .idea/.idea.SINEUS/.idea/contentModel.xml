@@ -139,6 +139,7 @@
             </e>
             <e p="Enviroment" t="Include">
               <e p="ChangeAudioTrigger.cs" t="Include" />
+              <e p="ForestBlock.cs" t="Include" />
               <e p="KilingZone.cs" t="Include" />
               <e p="ParalaxBehaviour.cs" t="Include" />
             </e>
