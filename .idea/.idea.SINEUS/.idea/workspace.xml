@@ -28,7 +28,6 @@
   </component>
   <component name="IdeDocumentHistory">
     <changedPaths>
-      <option value="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/AssetManagement/AssetPath.cs" />
       <option value="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/States/GameLoopState.cs" />
       <option value="$PROJECT_DIR$/Assets/CodeBase/UI/Elements/Buttons/OpenWindowButton.cs" />
       <option value="$PROJECT_DIR$/Assets/CodeBase/UI/Services/UIFactory/UIFactory.cs" />
@@ -78,6 +77,7 @@
       <option value="$PROJECT_DIR$/Assets/CodeBase/Logic/Enemy/Boss/Plev.cs" />
       <option value="$PROJECT_DIR$/Assets/CodeBase/Logic/Stones/FireAttackStone.cs" />
       <option value="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/Data/PlayerData/GameData.cs" />
+      <option value="$PROJECT_DIR$/Assets/CodeBase/Logic/Death.cs" />
       <option value="$PROJECT_DIR$/Assets/CodeBase/Logic/Enemy/Boss/BossBrain.cs" />
     </changedPaths>
   </component>
@@ -133,7 +133,7 @@
       <workItem from="1728033782760" duration="39952000" />
       <workItem from="1728105496514" duration="9648000" />
       <workItem from="1728117553459" duration="41364000" />
-      <workItem from="1728187892126" duration="5274000" />
+      <workItem from="1728187892126" duration="5892000" />
     </task>
     <servers />
   </component>

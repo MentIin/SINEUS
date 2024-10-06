@@ -57,7 +57,7 @@ namespace CodeBase.Logic.Enemy.Boss
                 float toWait;
                 if (id >= Song.Timings.Count)
                 {
-                    
+                    yield return new WaitForSeconds(Song.Duration - sum);
                     break;
                 }
                 else
